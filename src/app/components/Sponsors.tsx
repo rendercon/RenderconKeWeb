@@ -44,7 +44,7 @@ const Sponsors = () => {
             </div>
             )) : (
                 <p className="text-slate-400 text-xl font-mono">
-                    Leverage our platform to put your brand in the spotlight.Become a part of Rendercon Kenya&apos;s mission to nurture innovation and best practices within the React ecosystem.
+                    Leverage our platform to put your brand in the spotlight. Become a part of Rendercon Kenya&apos;s mission to nurture innovation and best practices within the React ecosystem.
                     <br/> Reach out for our sponsorship packages <a href="#" onClick={handleEmailClick}>HERE</a>.
                 </p>
             )}
