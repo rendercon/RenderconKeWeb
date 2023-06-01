@@ -1,6 +1,8 @@
 import './globals.css'
 import { Krona_One } from 'next/font/google'
 
+import { Analytics } from '@vercel/analytics/react'
+
 
 
 const kronaOne = Krona_One({
@@ -20,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={kronaOne.className}>{children}</body>
+      <body className={kronaOne.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
