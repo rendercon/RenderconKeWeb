@@ -1,3 +1,4 @@
+import { Button } from './Button'
 import { Container } from './Container'
 
 export function Header() {
@@ -12,6 +13,9 @@ export function Header() {
             <p>•</p>
             <p>Nairobi, Kenya</p>
           </div>
+        </div>
+        <div className="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
+          <Button href="#">Ticket info coming soon</Button>
         </div>
       </Container>
     </header>
