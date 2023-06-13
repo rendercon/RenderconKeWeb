@@ -5,6 +5,9 @@ import { Header } from './components/Header'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
 import Sponsors from './components/Sponsors'
+import { Speakers } from './components/Speakers'
+import Partners from './components/Partners'
+import Contacts from './components/Contacts'
 
 const sourceCodePro = Source_Code_Pro({
   weight: ['400'],
@@ -22,7 +25,10 @@ export default function Home() {
     <Header />
     <main>
       <Hero />
+      <Speakers />
       <Sponsors />
+      <Partners />
+      <Contacts />
     </main>
     <Footer />
     {/* <main className="flex min-h-screen flex-col items-center p-24">
