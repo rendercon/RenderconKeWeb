@@ -20,20 +20,28 @@ const Contacts = (props: Props) => {
                 </dl>
               </div>
               <div>
-                <h3 className="text-lg font-medium leading-6 text-slate-200">Partnerships</h3>
+                <h3 className="text-lg font-medium leading-6 text-slate-200">Youtube</h3>
                 <dl className="mt-2 text-base text-gray-500">
                   <div>
-                    <dt className="sr-only">Email</dt>
-                    <dd className='font-mono text-xl'>partnerships@rendercon.org</dd>
+                    <dt className="sr-only">Youtube Link</dt>
+                    <dd className='font-mono text-xl'>
+                      <a href="https://www.youtube.com/channel/UC0bCcG8gHUL4njDOpQGcMIA" className="hover:text-slate-100" target="_blank" rel="noopener noreferrer">
+                      RenderconORG
+                      </a>
+                      </dd>
                   </div>
                 </dl>
               </div>
               <div>
-                <h3 className="text-lg font-medium leading-6 text-slate-200">Twitter</h3>
+                <h3 className="text-lg font-medium leading-6 text-slate-200">Twitter </h3>
                 <dl className="mt-2 text-base text-gray-500">
                   <div>
                     <dt className="sr-only">Twitter Handle</dt>
-                    <dd className='font-mono text-xl'>@renderconke</dd>
+                    <dd className='font-mono text-xl'>
+                      <a href="https://twitter.com/renderconke" className="hover:text-slate-100" target="_blank" rel="noopener noreferrer">
+                      @renderconke
+                      </a>
+                      </dd>
                   </div>
                 </dl>
               </div>
@@ -42,7 +50,11 @@ const Contacts = (props: Props) => {
                 <dl className="mt-2 text-base text-gray-500">
                   <div>
                     <dt className="sr-only">Linkedin</dt>
-                    <dd className='font-mono text-xl'>Rendercon Kenya</dd>
+                    <dd className='font-mono text-xl'>
+                      <a href="https://www.linkedin.com/company/renderconke/" className="hover:text-slate-100" target="_blank" rel="noopener noreferrer">
+                      Rendercon Kenya
+                      </a>
+                      </dd>
                   </div>
                 </dl>
               </div>
