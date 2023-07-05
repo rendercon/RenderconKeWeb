@@ -82,7 +82,7 @@ export function Speakers() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="speakers-title"
-            className="font-display text-4xl font-medium tracking-tighter text-slate-200 sm:text-5xl"
+            className="font-display text-4xl font-medium tracking-tighter text-slate-300 sm:text-5xl"
           >
             Our Speakers
           </h2>
