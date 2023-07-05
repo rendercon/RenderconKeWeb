@@ -18,7 +18,7 @@ export function Header() {
             <p>Nairobi, Kenya</p>
           </div>
         </div>
-        <div className="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
+        <div className="mt-5 sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
           <Button href="">Ticket info coming soon</Button>
         </div>
       </Container>
