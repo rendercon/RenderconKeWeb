@@ -5,20 +5,23 @@ import Image from 'next/image'
 import { Container } from './Container';
 
 import LogoReactAdvancedLondon from '../images/logos/ReactAdvancedLondon.png'
+import LogoReactDevsKe from '../images/logos/ReactdevskeLogo.png';
 
 
 type Partners = {
     name: string;
     logo: any;
+    link: string;
 }
 
 
 
-const partners: any = [
+const partners: Partners[] = [
     // partners name and logo goes here
     {
-        // name: 'ReactAdvancedLondon',
-        // logo: LogoReactAdvancedLondon,
+        name: 'ReactDevsKe',
+        logo: LogoReactDevsKe,
+        link: 'https://reactdevske.org'
     },
   ]
 
@@ -39,21 +42,22 @@ const Partners = () => {
         <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-slate-200 sm:text-5xl">
                 Our Partners
         </h2>
-        <p className="text-slate-400 text-xl mt-20 font-mono">
-            We are always looking for partners to help us create an amazaing conference experience for our attendees. <br/> 
-            If you are interested in partnering with us, please reach out to us <a href="#" onClick={handleEmailClick}><u>HERE</u></a>.
-        </p>
             
-        {/* <div className="mx-auto mt-20 grid max-w-max grid-cols-1 place-content-center gap-x-32 gap-y-12 sm:grid-cols-3 md:gap-x-16 lg:gap-x-32">
+        <div className="mx-auto mt-20 grid max-w-max grid-cols-1 place-content-center gap-x-32 gap-y-12 sm:grid-cols-3 md:gap-x-16 lg:gap-x-32">
           { partners.map((partner: any) => (
             <div
-              key={partner.name}
-              className="flex items-center justify-center"
+            key={partner.name}
+            className="flex items-center justify-center"
             >
-              <Image src={partner.logo} alt={partner.name} unoptimized height={150} />
+              <a href={partner.link} target="_blank" rel="noopener noreferrer">
+                <Image src={partner.logo} alt={partner.name} unoptimized height={150} />
+              </a>
             </div>
           ))}
-        </div> */}
+        </div>
+          <p className="text-slate-400 text-xl mt-20 font-mono text-center">
+              For more information on partnerships, please reach out to us <a href="#" onClick={handleEmailClick}><u>HERE</u></a>.
+          </p>
       </Container>
     </section>
   )
