@@ -6,6 +6,7 @@ import { Container } from './Container';
 
 import LogoReactAdvancedLondon from '../images/logos/ReactAdvancedLondon.png'
 import LogoReactDevsKe from '../images/logos/ReactdevskeLogo.png';
+import LogoOscaNairobi from '../images/logos/osca_nairobi_logo.jpg';
 
 
 type Partners = {
@@ -22,6 +23,11 @@ const partners: Partners[] = [
         name: 'ReactDevsKe',
         logo: LogoReactDevsKe,
         link: 'https://reactdevske.org'
+    },
+    {
+        name: 'OSCA Nairobi',
+        logo: LogoOscaNairobi,
+        link: 'https://github.com/OSCA-Nairobi'
     },
   ]
 
