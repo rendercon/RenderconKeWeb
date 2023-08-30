@@ -1,21 +1,28 @@
 'use client';
 
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import { Container } from './Container';
-
+import LogoDevKenya from '../images/logos/devkenya_logo.png';
 
 
 
 type Sponsors = {
     name: string;
-    logo: string;
+    logo: string | StaticImageData;
+    link: string;
 }
 
 
 
 const sponsors: Sponsors[] = [
     // sponsor name and logo goes here
+    {
+        name: 'Dev Kenya',
+        logo: LogoDevKenya,
+        link: 'https://devkenya.com'
+    }
+
   ]
 
 const Sponsors = () => {
@@ -38,12 +45,20 @@ const Sponsors = () => {
         <div className="mx-auto mt-20 max-w-max grid-cols-1 place-content-center gap-x-32 gap-y-12 sm:grid-cols-3 md:gap-x-16 lg:gap-x-32">
           { sponsors.length > 0 ? 
           sponsors.map((sponsor) => (
+            <>
             <div
               key={sponsor.name}
               className="flex items-center justify-center"
             >
-              <Image src={sponsor.logo} alt={sponsor.name} unoptimized />
+              <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                <Image src={sponsor.logo} alt={sponsor.name} unoptimized height={150}/>
+              </a>
             </div>
+
+              <p className="text-slate-400 text-xl font-mono text-center pt-5">
+                <br/> Reach out for our sponsorship packages <a href="#" onClick={handleEmailClick}><u>HERE</u></a>.
+              </p>
+              </>
             )) : (
                 <p className="text-slate-400 text-xl font-mono text-center">
                     Leverage our platform to put your brand on the spotlight. Become a part of Rendercon Kenya&apos;s mission to nurture innovation and best practices within the React ecosystem.
