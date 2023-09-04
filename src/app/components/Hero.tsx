@@ -34,7 +34,7 @@ const Hero = () => {
 
             <a 
             className="inline-flex justify-center rounded-lg bg-slate-600 px-4 py-2 text-base font-semibold font-mono text-white cursor-pointer hover:bg-slate-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500 active:text-white/70"
-            href="https://bit.ly/rckewv1" target="_blank" rel="noopener noreferrer">Buy Wave 1 Ticket</a>
+            href="https://bit.ly/rckewv2" target="_blank" rel="noopener noreferrer">Buy Wave 2 Ticket</a>
             </div>
             
           </div>
