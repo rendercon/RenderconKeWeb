@@ -4,10 +4,11 @@ import Image from 'next/image'
 
 import { Container } from './Container';
 
-import LogoReactAdvancedLondon from '../images/logos/ReactAdvancedLondon.png'
+// import LogoReactAdvancedLondon from '../images/logos/ReactAdvancedLondon.png'
 import LogoReactDevsKe from '../images/logos/ReactdevskeLogo.png';
 import LogoOscaNairobi from '../images/logos/osca_nairobi_logo.jpg';
 import LogoSpaceYaTech from '../images/logos/SPACEYATECH_LOGO.jpg';
+import LogoSupaBase from '../images/logos/supabase_logo_wordmark.png';
 
 
 type Partners = {
@@ -34,7 +35,12 @@ const partners: Partners[] = [
       name: 'Space Ya Tech',
       logo: LogoSpaceYaTech,
       link: 'https://spaceyatech.com/'
-  },
+    },
+    {
+      name: 'Supabase',
+      logo: LogoSupaBase,
+      link: 'https://supabase.com/'
+    },
   ]
 
 const Partners = () => {
