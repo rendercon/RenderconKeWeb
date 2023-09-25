@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useId, useState } from 'react'
+import { use, useEffect, useId, useState } from 'react'
 import Image from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
@@ -8,26 +8,12 @@ import clsx from 'clsx'
 import { Container } from './Container'
 import { DiamondIcon } from './DiamondIcon'
 
+import { days } from '@/utils/speakers'
+import { Button } from './Button'
+import Link from 'next/link'
 
 
-const days = [
-  {
-    name: 'Conference Day 1',
-    date: 'Sept 29',
-    dateTime: '2023-09-29',
-    speakers: [
-      
-    ],
-  },
-  {
-    name: 'Conference Day 2',
-    date: 'Sept 30',
-    dateTime: '2023-09-30',
-    speakers: [
-     
-    ],
-  },
-]
+
 
 
 type ImageClipPathsProps = {
@@ -53,6 +39,9 @@ function ImageClipPaths({ id, ...props }: ImageClipPathsProps) {
 }
 
 export function Speakers() {
+
+  const [isSSR, setIsSSR] = useState(true);
+
   let id = useId()
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
@@ -71,6 +60,19 @@ export function Speakers() {
     }
   }, [])
 
+
+  useEffect(() => {
+    setIsSSR(false);
+  }, [])
+  
+  const generateRandomSpeakers = (arr: any, count: number) => {
+      const shuffled = arr.sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, count);
+  };
+
+
+
+
   return (
     <section
       id="speakers"
@@ -78,6 +80,8 @@ export function Speakers() {
       className="py-20 sm:py-32"
     >
       <ImageClipPaths id={id} />
+      {
+        isSSR ? null :    
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
@@ -87,12 +91,10 @@ export function Speakers() {
             Our Speakers
           </h2>
           <p className="mt-4 font-mono text-2xl tracking-tight text-slate-400">
-            Learn from the best in the industry and level up your skills. 
-            Speaker schedule coming out soon!
-            
+            Learn from the best in the industry and level up your skills.            
           </p>
         </div>
-        {/* <Tab.Group
+        <Tab.Group
           as="div"
           className="mt-14 grid grid-cols-1 items-start gap-x-8 gap-y-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
           vertical={tabOrientation === 'vertical'}
@@ -138,14 +140,18 @@ export function Speakers() {
             </Tab.List>
           </div>
           <Tab.Panels className="lg:col-span-3">
-            {days.map((day) => (
+            {days.map((day) => {
+
+              const randomSpeakers = generateRandomSpeakers(day.speakers, 6);
+              
+              return (
               <Tab.Panel
                 key={day.dateTime}
                 className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3 [&:not(:focus-visible)]:focus:outline-none"
                 unmount={false}
               >
-                { day.speakers.length > 0 ?
-                day.speakers.map((speaker: any, speakerIndex: number) => (
+                { randomSpeakers.length > 0 ?
+                randomSpeakers.map((speaker: any, speakerIndex: number) => (
                   <div key={speakerIndex}>
                     <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
                       <div
@@ -164,18 +170,19 @@ export function Speakers() {
                       >
                         <Image
                           className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-                          src={speaker.image}
+                          src={speaker.profilePicture}
                           alt=""
                           priority
                           sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                          layout="fill"
                         />
                       </div>
                     </div>
-                    <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
-                      {speaker.name}
+                    <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-400">
+                      {speaker.fullName}
                     </h3>
                     <p className="mt-1 text-base tracking-tight text-slate-500">
-                      {speaker.role}
+                      {speaker.tagLine}
                     </p>
                   </div>
                 )) : (
@@ -189,10 +196,23 @@ export function Speakers() {
                   </div>  
                 )}
               </Tab.Panel>
-            ))}
+              )
+                })}
           </Tab.Panels>
-        </Tab.Group> */}
+        </Tab.Group>
+        <div className='flex flex-col lg:flex-row justify-center mt-12 gap-12' >
+            <Button>
+              <Link 
+                href="https://sessionize.com/view/ftr0a860/SpeakerWall?format=Embed_Styled_Html&isDark=True&title=RenderCon%20Kenya%202023" target="_blank" rel="noopener noreferrer">More Speaker info</Link>
+            </Button>
+
+            <Button>
+              <Link 
+                href="https://sessionize.com/view/dkvl0l4d/GridSmart?format=Embed_Styled_Html&isDark=True&title=RenderCon%20Kenya%202023" target="_blank" rel="noopener noreferrer">Event Schedule</Link>
+            </Button>
+        </div>
       </Container>
+    }
     </section>
   )
 }

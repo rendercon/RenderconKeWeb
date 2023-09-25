@@ -43,7 +43,7 @@ const Hero = () => {
             {[
               ['Speakers', '30+'],
               ['Venue', 'KCA University'],
-              ['Location', 'Nairobi, Kenya'],
+              ['Location', 'Main Campus, Nairobi'],
             ].map(([name, value]) => (
               <div key={name}>
                 <dt className="font-mono text-sm text-slate-400">{name}</dt>
