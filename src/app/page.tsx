@@ -9,6 +9,7 @@ import { Speakers } from './components/Speakers'
 import Partners from './components/Partners'
 import Contacts from './components/Contacts'
 import Technologies from './components/Technologies'
+import Community from './components/Community'
 
 const sourceCodePro = Source_Code_Pro({
   weight: ['400'],
@@ -28,6 +29,7 @@ export default function Home() {
       <Hero />
       <Technologies />
       <Speakers />
+      <Community />
       <Sponsors />
       <Partners />
       <Contacts />
