@@ -84,6 +84,19 @@ export function Speakers() {
         isSSR ? null :    
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0">
+              <h2
+                id="speakers-title"
+                className="font-display text-4xl font-medium tracking-tighter text-slate-300 sm:text-5xl"
+              >
+                Our Speakers
+              </h2>
+              <p className="mt-4 font-mono text-2xl tracking-tight text-slate-400">
+                Learn from the best in the industry and level up your skills. 
+                Call for Speakers is <a href="https://bit.ly/rcke24cfp" target="_blank" rel="noopener noreferrer"><u>NOW OPEN</u></a>.
+                
+              </p>
+        </div>
+        {/* <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="speakers-title"
             className="font-display text-4xl font-medium tracking-tighter text-slate-300 sm:text-5xl"
@@ -93,8 +106,8 @@ export function Speakers() {
           <p className="mt-4 font-mono text-2xl tracking-tight text-slate-400">
             Learn from the best in the industry and level up your skills.            
           </p>
-        </div>
-        <Tab.Group
+        </div> */}
+        {/* <Tab.Group
           as="div"
           className="mt-14 grid grid-cols-1 items-start gap-x-8 gap-y-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
           vertical={tabOrientation === 'vertical'}
@@ -102,7 +115,7 @@ export function Speakers() {
           <div className="relative -mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:block sm:overflow-visible sm:pb-0">
             <div className="absolute bottom-0 left-0.5 top-2 hidden w-px bg-slate-200 lg:block" />
             <Tab.List className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 whitespace-nowrap px-4 sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
-               {/* @ts-ignore */}
+
               {({ selectedIndex }) =>
                 days.map((day, dayIndex) => (
                   <div key={day.dateTime} className="relative lg:pl-8">
@@ -200,8 +213,8 @@ export function Speakers() {
               )
                 })}
           </Tab.Panels>
-        </Tab.Group>
-        <div className='flex flex-col lg:flex-row justify-center mt-12 gap-12' >
+        </Tab.Group> */}
+        {/* <div className='flex flex-col lg:flex-row justify-center mt-12 gap-12' >
             <Button>
               <Link 
                 href="https://sessionize.com/view/ftr0a860/SpeakerWall?format=Embed_Styled_Html&isDark=True&title=RenderCon%20Kenya%202023" target="_blank" rel="noopener noreferrer">More Speaker info</Link>
@@ -211,7 +224,7 @@ export function Speakers() {
               <Link 
                 href="https://sessionize.com/view/dkvl0l4d/GridSmart?format=Embed_Styled_Html&isDark=True&title=RenderCon%20Kenya%202023" target="_blank" rel="noopener noreferrer">Event Schedule</Link>
             </Button>
-        </div>
+        </div> */}
       </Container>
     }
     </section>
