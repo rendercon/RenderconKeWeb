@@ -17,11 +17,7 @@ type Sponsors = {
 
 const sponsors: Sponsors[] = [
     // sponsor name and logo goes here
-    {
-        name: 'Dev Kenya',
-        logo: LogoDevKenya,
-        link: 'https://devkenya.com'
-    }
+
 
   ]
 
