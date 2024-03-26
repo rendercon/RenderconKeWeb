@@ -21,7 +21,7 @@ export default function Home() {
     <>
     <Head>
       <title>RenderconKe 2024 — The premier conference experience for Web and Mobile</title>
-      <meta name="description" content="RenderconKe 2023 is a conference for Web and Mobile developers. We bring together a diverse group of people from all across the world to share their knowledge and experience." />
+      <meta name="description" content="RenderconKe 2024 is a conference for Web and Mobile developers. We bring together a diverse group of people from all across the world to share their knowledge and experience." />
     </Head>
     
     <Header />
@@ -38,7 +38,7 @@ export default function Home() {
     {/* <main className="flex min-h-screen flex-col items-center p-24">
       <h1
         className="text-6xl font-bold text-center text-stone-50 pb-10"
-      >RenderconKe 2023
+      >RenderconKe 2024
       </h1>
       <p
         className={`text-2xl font-medium text-center text-stone-50 ${sourceCodePro.className}`}
