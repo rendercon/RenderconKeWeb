@@ -19,15 +19,15 @@ export function Header() {
             <p>Nairobi, Kenya</p>
           </div>
         </div>
-        <div className="mt-5 sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
+        {/* <div className="mt-5 sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
           <Button href="#">Ticket info coming soon</Button>
-        </div>
-        {/* <div className="mt-5 pl-10  sm:mt-10 sm:flex md:pl-0 lg:pl-0 lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
+        </div> */}
+        <div className="mt-5 pl-10  sm:mt-10 sm:flex md:pl-0 lg:pl-0 lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
           <Button>
           <Link 
-            href="https://bit.ly/rckewv3" target="_blank" rel="noopener noreferrer">Get Tickets</Link>
-            </Button>
-        </div> */}
+            href="https://bit.ly/rcke24rpl" target="_blank" rel="noopener noreferrer">Get Early Bird</Link>
+          </Button>
+        </div>
       </Container>
     </header>
   )
