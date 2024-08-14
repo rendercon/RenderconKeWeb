@@ -25,7 +25,7 @@ export function Header() {
         <div className="mt-5 pl-10  sm:mt-10 sm:flex md:pl-0 lg:pl-0 lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
           <Button>
           <Link 
-            href="https://bit.ly/rcke24rpl" target="_blank" rel="noopener noreferrer">Get Early Bird</Link>
+            href="https://bit.ly/rcke24wv1" target="_blank" rel="noopener noreferrer">Get Ticket</Link>
           </Button>
         </div>
       </Container>

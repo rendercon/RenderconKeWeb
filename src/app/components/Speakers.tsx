@@ -91,9 +91,9 @@ export function Speakers() {
                 Our Speakers
               </h2>
               <p className="mt-4 font-mono text-2xl tracking-tight text-slate-400">
-                Learn from the best in the industry and level up your skills. 
-                Call for Speakers is <a href="https://bit.ly/rcke24cfp" target="_blank" rel="noopener noreferrer"><u>NOW OPEN</u></a>.
-                
+                Learn from the best in the industry and level up your skills.
+                <br />
+                Speaker schedule coming out soon!     
               </p>
         </div>
         {/* <div className="mx-auto max-w-2xl lg:mx-0">
