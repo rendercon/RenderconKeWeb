@@ -11,8 +11,8 @@ const Contacts = (props: Props) => {
             <h2 className="text-2xl font-bold text-slate-200 sm:text-3xl sm:tracking-tight">Get in touch</h2>
             <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-0">
               <div>
-                <h3 className="text-lg font-medium leading-6 text-slate-200">More Information</h3>
-                <dl className="mt-2 text-base text-gray-500">
+                <h3 className="text-lg font-medium leading-6 text-slate-100">More Information</h3>
+                <dl className="mt-2 text-base text-slate-300">
                   <div>
                     <dt className="sr-only">Email</dt>
                     <dd className='font-mono text-xl'>info@rendercon.org</dd>
@@ -20,8 +20,8 @@ const Contacts = (props: Props) => {
                 </dl>
               </div>
               <div>
-                <h3 className="text-lg font-medium leading-6 text-slate-200">Youtube</h3>
-                <dl className="mt-2 text-base text-gray-500">
+                <h3 className="text-lg font-medium leading-6 text-slate-100">Youtube</h3>
+                <dl className="mt-2 text-base text-slate-300">
                   <div>
                     <dt className="sr-only">Youtube Link</dt>
                     <dd className='font-mono text-xl'>
@@ -33,8 +33,8 @@ const Contacts = (props: Props) => {
                 </dl>
               </div>
               <div>
-                <h3 className="text-lg font-medium leading-6 text-slate-200">Twitter </h3>
-                <dl className="mt-2 text-base text-gray-500">
+                <h3 className="text-lg font-medium leading-6 text-slate-100">Twitter </h3>
+                <dl className="mt-2 text-base text-slate-300">
                   <div>
                     <dt className="sr-only">Twitter Handle</dt>
                     <dd className='font-mono text-xl'>
@@ -46,8 +46,8 @@ const Contacts = (props: Props) => {
                 </dl>
               </div>
               <div>
-                <h3 className="text-lg font-medium leading-6 text-slate-200">LinkedIn</h3>
-                <dl className="mt-2 text-base text-gray-500">
+                <h3 className="text-lg font-medium leading-6 text-slate-100">LinkedIn</h3>
+                <dl className="mt-2 text-base text-slate-300">
                   <div>
                     <dt className="sr-only">Linkedin</dt>
                     <dd className='font-mono text-xl'>

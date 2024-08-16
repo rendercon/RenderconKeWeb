@@ -79,7 +79,7 @@ const Partners = () => {
             </div>
           ))}
         </div>
-          <p className="text-slate-400 text-xl mt-20 font-mono text-center">
+          <p className="text-slate-200 text-xl mt-20 font-mono text-center">
               For more information on sponsorship and partnership, please reach out to us <a href="#" onClick={handleEmailClick}><u>HERE</u></a>.
           </p>
       </Container>

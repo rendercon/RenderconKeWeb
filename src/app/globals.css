@@ -18,10 +18,23 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  background: 
+  /* linear-gradient(45deg, #10002b, #240046, #3c096c); */
+  #240046
+  /* linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
+
+
+/* @keyframes gradientAnimation {
+  0%, 100% {
+    background: linear-gradient(45deg, #10002b, #240046);
+  }
+  50% {
+    background: linear-gradient(45deg, #240046, #3c096c);
+  }
+} */
