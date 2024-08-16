@@ -20,6 +20,14 @@ export const metadata = {
     image: 'https://res.cloudinary.com/djgfcdjgn/image/upload/v1711373281/rendercon_24_sessionize_banner_s00r58.png',    
 }
 
+// const gradientStyle = {
+//   width: '100%',
+//   height: '100vh',
+//   background: 'linear-gradient(45deg, #10002b, #240046)',
+//   backgroundSize: '400% 400%',
+//   animation: 'gradientAnimation 10s ease infinite',
+// }
+
 export default function RootLayout({
   children,
 }: {
@@ -27,7 +35,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={kronaOne.className}>
+      <body className={kronaOne.className} 
+      // style={gradientStyle}
+      >
         {children}
         <Analytics />
       </body>
