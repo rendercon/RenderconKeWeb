@@ -1,6 +1,7 @@
 "use client"
 
-import { use, useEffect, useId, useState } from 'react'
+import { use, useEffect, useId, useMemo, useState } from 'react'
+
 import Image from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
@@ -14,6 +15,12 @@ import Link from 'next/link'
 
 
 
+type Speaker = {
+  id: string;
+  fullName: string;
+  profilePicture: string;
+  sessions: { name: string }[];
+};
 
 
 type ImageClipPathsProps = {
@@ -82,7 +89,7 @@ export function Speakers() {
   };
   
 
-    const randomSpeakers = generateRandomSpeakers(speakerList, 8);
+    const randomSpeakers = useMemo(() => generateRandomSpeakers(speakerList, 8), [speakerList]);
     
   
   useEffect(() => {
@@ -123,24 +130,23 @@ export function Speakers() {
               role="list"
               className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
             >
-              {visibleSpeakers.map((speaker) => (
+              {visibleSpeakers.map((speaker: Speaker) => (
                 <li key={speaker.id}>
-                  <img className="aspect-[14/13] w-full rounded-2xl object-cover" src={speaker.profilePicture} alt="" />
+                  <img className="relative aspect-[14/13] w-full rounded-2xl object-cover" src={speaker.profilePicture} alt="" />
                   <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{speaker.fullName}</h3>
                   <p className="text-sm leading-6 text-slate-300">{speaker.sessions[0].name}</p>
                 </li>
               ))}
             </ul>
             <div className='mt-5'>
-
-            {!showAllSpeakers && speakerList.length > 8 && (
-              <span
-              className="mt-8 text-2xl font-medium text-slate-300 cursor-pointer hover:underline"
-              onClick={toggleShowAllSpeakers}
-              >
-                See More...
-              </span>
-            )}
+              {!showAllSpeakers && speakerList.length > 8 && (
+                <span
+                  className="mt-8 text-2xl font-medium text-slate-300 cursor-pointer hover:underline"
+                  onClick={toggleShowAllSpeakers}
+                >
+                  See More...
+                </span>
+              )}
             </div>
           </div>
         </Container>
