@@ -4,7 +4,7 @@ type Props = {}
 
 const Contacts = (props: Props) => {
   return (
-    <div className="bg-slate">
+    <div className="px-6">
       <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
         <div className="divide-y-2 divide-gray-200">
           <div className="lg:grid lg:grid-cols-3 lg:gap-8">
@@ -15,7 +15,7 @@ const Contacts = (props: Props) => {
                 <dl className="mt-2 text-base text-slate-300">
                   <div>
                     <dt className="sr-only">Email</dt>
-                    <dd className='font-mono text-xl'>info@rendercon.org</dd>
+                    <a href="mailto: info@rendercon.org" className='hover:underline hover:text-[#eee712]'>info@rendercon.org</a>
                   </div>
                 </dl>
               </div>
@@ -25,23 +25,33 @@ const Contacts = (props: Props) => {
                   <div>
                     <dt className="sr-only">Youtube Link</dt>
                     <dd className='font-mono text-xl'>
-                      <a href="https://www.youtube.com/channel/UC0bCcG8gHUL4njDOpQGcMIA" className="hover:text-slate-100" target="_blank" rel="noopener noreferrer">
-                      RenderconORG
+                      <a 
+                        href="https://www.youtube.com/channel/UC0bCcG8gHUL4njDOpQGcMIA" 
+                        className="hover:text-[#eee712] hover:underline" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        RenderconORG
                       </a>
-                      </dd>
+                    </dd>
                   </div>
                 </dl>
               </div>
               <div>
-                <h3 className="text-lg font-medium leading-6 text-slate-100">Twitter </h3>
+                <h3 className="text-lg font-medium leading-6 text-slate-100">X (Twitter)</h3>
                 <dl className="mt-2 text-base text-slate-300">
                   <div>
                     <dt className="sr-only">Twitter Handle</dt>
                     <dd className='font-mono text-xl'>
-                      <a href="https://twitter.com/renderconke" className="hover:text-slate-100" target="_blank" rel="noopener noreferrer">
-                      @renderconke
+                      <a 
+                        href="https://twitter.com/renderconke" 
+                        className="hover:text-[#eee712] hover:underline" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        @renderconke
                       </a>
-                      </dd>
+                    </dd>
                   </div>
                 </dl>
               </div>
@@ -51,10 +61,15 @@ const Contacts = (props: Props) => {
                   <div>
                     <dt className="sr-only">Linkedin</dt>
                     <dd className='font-mono text-xl'>
-                      <a href="https://www.linkedin.com/company/renderconke/" className="hover:text-slate-100" target="_blank" rel="noopener noreferrer">
-                      Rendercon Kenya
+                      <a 
+                        href="https://www.linkedin.com/company/renderconke/" 
+                        className="hover:text-[#eee712] hover:underline"  
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        Rendercon Kenya
                       </a>
-                      </dd>
+                    </dd>
                   </div>
                 </dl>
               </div>
