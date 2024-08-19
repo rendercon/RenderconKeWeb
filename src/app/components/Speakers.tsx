@@ -89,7 +89,7 @@ export function Speakers() {
   };
   
 
-    const randomSpeakers = useMemo(() => generateRandomSpeakers(speakerList, 8), [speakerList]);
+    const randomSpeakers = useMemo(() => generateRandomSpeakers(speakerList, 6), [speakerList]);
     
   
   useEffect(() => {
@@ -114,7 +114,7 @@ export function Speakers() {
       {
         isSSR ? null :
         <Container>
-          <div className="mx-auto max-w-2xl lg:mx-0">
+          <div className="mx-auto max-w-3xl text-center flex flex-col align-center items-center justify-center w-full ">
             <h2
               id="speakers-title"
               className="font-display text-4xl font-medium tracking-tighter text-slate-100 sm:text-5xl"
@@ -125,23 +125,23 @@ export function Speakers() {
               Learn from the best in the industry and level up your skills.
             </p>
           </div>
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-8xl px-6 lg:px-8">
             <ul
               role="list"
-              className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
+              className="mx-auto mt-20 grid max-w-4xl lg:max-w-9xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3"
             >
               {visibleSpeakers.map((speaker: Speaker) => (
                 <li key={speaker.id}>
-                  <img className="relative aspect-[14/13] w-full rounded-2xl object-cover" src={speaker.profilePicture} alt="" />
+                  <img className="relative aspect-[14/13] w-[full] rounded-xl object-cover" src={speaker.profilePicture} alt="" />
                   <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{speaker.fullName}</h3>
                   <p className="font-mono text-sm leading-6 text-slate-300">{speaker.sessions[0].name}</p>
                 </li>
               ))}
             </ul>
-            <div className='mt-5'>
+            <div className='mt-5 flex align-center items-center justify-center'>
               {!showAllSpeakers && speakerList.length > 8 && (
                 <span
-                  className="mt-8 text-2xl font-medium text-slate-300 cursor-pointer hover:underline"
+                  className="mt-8 text-2xl font-medium text-[#eee712] cursor-pointer hover:underline"
                   onClick={toggleShowAllSpeakers}
                 >
                   See More...
