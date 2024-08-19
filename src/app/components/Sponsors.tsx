@@ -52,13 +52,13 @@ const Sponsors = () => {
             </div>
 
               <p className="text-slate-400 text-xl font-mono text-center pt-5">
-                <br/> Reach out for our sponsorship packages <a href="#" onClick={handleEmailClick}><u>HERE</u></a>.
+                <br/> Reach out for our sponsorship packages <a href="mailto: sponsors@rendercon.org" className='hover:underline text-[#eee712]'>here</a>
               </p>
               </>
             )) : (
                 <p className="text-slate-300 text-xl font-mono text-center">
                     Leverage our platform to put your brand on the spotlight. Become a part of Rendercon Kenya&apos;s mission to nurture innovation and best practices within the React ecosystem.
-                    <br/> Reach out for our sponsorship packages <a href="#" onClick={handleEmailClick}><u>HERE</u></a>.
+                    <br/> Reach out for our sponsorship packages <a href="mailto: sponsors@rendercon.org" className='hover:underline text-[#eee712]'>here</a>
                 </p>
             )}
         </div>
