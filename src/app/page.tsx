@@ -26,6 +26,7 @@ export default function Home() {
     
     <Header />
     <main>
+      <div id="home"></div>
       <Hero />
       <Technologies />
       <Speakers />

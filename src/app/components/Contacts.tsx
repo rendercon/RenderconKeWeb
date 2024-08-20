@@ -4,7 +4,7 @@ type Props = {}
 
 const Contacts = (props: Props) => {
   return (
-    <div className="px-6">
+    <div className="px-6" id="contacts">
       <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
         <div className="divide-y-2 divide-gray-200">
           <div className="lg:grid lg:grid-cols-3 lg:gap-8">
