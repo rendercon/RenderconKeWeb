@@ -38,7 +38,8 @@ function MobileNavbar(props: TNavbar){
   )
 }
 
-function LargeScreenNavbar(scrolled:TNavbar){
+function LargeScreenNavbar(props: TNavbar){
+  const {scrolled} = props
 
   return(
     <header className={`relative z-50 pb-11 lg:pt-8 md:sticky top-0 ${scrolled? 'bg-[#240046] bg-opacity-100' : "bg-[#42208c] bg-opacity-80"}`} >
