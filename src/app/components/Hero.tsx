@@ -20,6 +20,14 @@ const Hero = () => {
             This is more than just a conference - it&apos;s an opportunity to connect, share, and learn from the brightest minds in the industry
             </p>
           </div>
+          <div className="w-full flex items-center justify-center text-2xl font-mono text-yellow-400 mt-10 font-bold">
+            <p className='mr-2'>
+              <time dateTime="2024-10-04">4th</time> - 
+              <time dateTime="2024-10-05"> 5th October 2024</time>
+            </p>
+            <p> •</p>
+            <p className={'ml-2'}>Nairobi, Kenya</p>
+          </div>
 
           <div className='pt-10 lg:flex'>
             {/* <div className='pb-10 lg:pr-10'>
@@ -29,6 +37,7 @@ const Hero = () => {
             href="https://bit.ly/rcke24cfp" target="_blank" rel="noopener noreferrer">Submit your Session</a>
             
             </div> */}
+      
 
           <div className='flex items-center align-center justify-center lg:mx-auto'>
 
