@@ -42,7 +42,7 @@ function LargeScreenNavbar(props: TNavbar){
   const {scrolled} = props
 
   return(
-    <header className={`relative z-50 pb-11 lg:pt-8 md:sticky top-0 ${scrolled? 'bg-[#240046] bg-opacity-100' : "bg-[#42208c] bg-opacity-80"}`} >
+    <header className={`relative z-50 pb-11 lg:pt-8 md:sticky top-0 ${scrolled? 'bg-[#240046] bg-opacity-100 border-b-2' : "bg-[#42208c] bg-opacity-80"}`} >
       <Container className="flex flex-wrap items-center justify-between align-center sm:justify-between lg:flex-nowrap">
         <div className="mt-10 lg:mt-0 lg:grow lg:basis-0">
           <Link href="#home"><Image src={renderconWB} alt={'Rendercon white background logo'} unoptimized height={60}/></Link>
