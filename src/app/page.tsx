@@ -33,7 +33,6 @@ export default function Home() {
       <Community />
       <Sponsors />
       <Partners />
-      <Contacts />
     </main>
     <Footer />
     {/* <main className="flex min-h-screen flex-col items-center p-24">
