@@ -52,7 +52,6 @@ export function Speakers() {
   const fetchSpeakers = async () => {
     const res = await fetch('https://sessionize.com/api/v2/d899srzm/view/Speakers')
     const data = await res.json()
-    console.log("Speaker Data ==> \n", data)
     setSpeakerList(data)
   }
 
