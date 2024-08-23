@@ -42,7 +42,7 @@ function LargeScreenNavbar(props: TNavbar){
   const {scrolled} = props
 
   return(
-    <header className={`relative z-50 pb-11 lg:pt-8 md:sticky top-0 ${scrolled? 'bg-[#240046] bg-opacity-90' : "bg-[#42208c] bg-opacity-80"}`} >
+    <header className={`relative z-50 pb-11 lg:pt-8 md:sticky top-0 ${scrolled? 'bg-[#240046] bg-opacity-100' : "bg-[#42208c] bg-opacity-80"}`} >
       <Container className="flex flex-wrap items-center justify-between align-center sm:justify-between lg:flex-nowrap">
         <div className="mt-10 lg:mt-0 lg:grow lg:basis-0">
           <Link href="#home"><Image src={renderconWB} alt={'Rendercon white background logo'} unoptimized height={60}/></Link>
@@ -66,7 +66,7 @@ function LargeScreenNavbar(props: TNavbar){
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false)
-
+  
   useEffect(() => {
     const checkScroll = () => {
       setScrolled(window.scrollY > 200); 
@@ -75,16 +75,17 @@ export function Header() {
     window.addEventListener('scroll', checkScroll);
     return () => window.removeEventListener('scroll', checkScroll);
   }, []);
-
+  
   useEffect(() => {
     function checkInnerWidth(){
-      const windowInnerWidth = window.innerWidth
-      if (windowInnerWidth <= 1023) {
+      if (window.innerWidth <= 1023) {
         setShowMobileMenu(true);
       }else{
         setShowMobileMenu(false)
       }
     }
+
+    checkInnerWidth();
 
     window.addEventListener('resize', checkInnerWidth)
     return () => window.removeEventListener('resize', checkInnerWidth)
