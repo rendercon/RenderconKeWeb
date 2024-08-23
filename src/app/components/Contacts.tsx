@@ -1,7 +1,18 @@
+'use client';
+
 import React from 'react';
 import { FaEnvelope, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Contacts = () => {
+
+  const addr = "info";
+  const tld = "rendercon.org";
+
+  const handleEmailClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    window.location.href = `mailto:${addr}@${tld}`;
+  }
+
   return (
     <div className="flex items-center">
       <div className="flex items-center mx-auto mb-10">
@@ -9,9 +20,9 @@ const Contacts = () => {
           <h2 className="text-2xl font-bold text-slate-200 sm:text-3xl sm:tracking-tight">Get in touch</h2> 
           <div className='flex ml-6 gap-5'>
             <div className="flex items-center">
-              <a href="mailto: info@rendercon.org" className="hover:text-[#eee712]">
+              <button onClick={handleEmailClick} className="hover:text-[#eee712] bg-transparent border-none p-0">
                 <FaEnvelope className="text-white text-3xl hover:fill-current hover:text-[#eee712]" />
-              </a>
+              </button>
             </div>
             
             <div className="flex items-center">
