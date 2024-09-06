@@ -30,7 +30,7 @@ const Sponsors = () => {
   };
 
   return (
-    <section id="sponsors" aria-label="Sponsors" className="py-20 sm:py-32">
+    <section id="sponsors" aria-label="Sponsors" className="py-8 sm:py-32">
       <Container>
         <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-slate-200 sm:text-5xl">
           Our Sponsors
@@ -73,6 +73,15 @@ const Sponsors = () => {
             </p>
           )}
         </div>
+        <div className="flex justify-center pt-16">
+  <a 
+    href="/sponsorships"  
+    className="text-2xl hover:underline hover: text-[#eee712]"
+  >
+    Learn More About Our Sponsors..
+  </a>
+</div>
+
       </Container>
     </section>
   );
