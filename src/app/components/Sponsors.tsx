@@ -13,8 +13,7 @@ type Sponsors = {
 };
 
 const sponsors: Sponsors[] = [
-  {
-    name: "ReactDevsKe", logo: LogoReactDevsKe, link: "https://reactdevske.org"},
+  { name: "ReactDevsKe", logo: LogoReactDevsKe, link: "https://reactdevske.org"},
     { name: "Lemonade", logo: LogoLemonade, link: "https://mylemonade.io/" },
   { name: "Payd", logo: LogoPayd, link: "https://paydexp.com/" },
 ];
