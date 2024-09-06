@@ -53,7 +53,7 @@ const Partners = () => {
     };
 
     return (
-        <section id="partners" aria-label="Partners" className="py-20 sm:py-32">
+        <section id="partners" aria-label="Partners" className="sm:py-2">
             <Container>
                 <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-slate-200 sm:text-5xl">
                     Sponsors & Partners Hall of Fame
