@@ -50,7 +50,7 @@ const Community = () => {
           </div>
 
           <div className='flex flex-col lg:flex-row justify-center mt-12 gap-12 mx-8' >
-            <Button>
+            <Button className='max-w-lg flex justify-center align-middle items-center mx-auto'>
               <Link 
                 href="https://bit.ly/rcke23pics" target="_blank" rel="noopener noreferrer">View Gallery</Link>
             </Button>
