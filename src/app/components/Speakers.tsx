@@ -7,7 +7,7 @@ import { FiUser } from 'react-icons/fi';
 // Skeleton Loader for the speaker cards
 const SkeletonLoader = () => (
   <div className="animate-pulse">
-    <div className="relative aspect-[14/13] w-[100%] bg-purple-700 rounded-xl"><FiUser className="text-[#b19eaf] h-[100%] w-[100%] p-6" /></div>
+    <div className="relative aspect-[14/13] w-[90%] bg-purple-700 rounded-xl"><FiUser className="text-[#b19eaf] h-[100%] w-[100%] p-6" /></div>
     <div className="mt-6 h-4 bg-purple-800 rounded w-3/4"></div>
     <div className="mt-4 h-3 bg-purple-900 rounded w-1/2"></div>
   </div>
@@ -110,7 +110,7 @@ export function Speakers() {
     <section
       id="speakers"
       aria-labelledby="speakers-title"
-      className="pt-20 sm:pt-32 pb-10 sm:pb-10"
+      className="pt-10 lg:pt-24 pb-10 sm:pb-10"
     >
       <ImageClipPaths id={id} />
       {
@@ -119,19 +119,19 @@ export function Speakers() {
           <div className="mx-auto max-w-3xl text-center flex flex-col align-center items-center justify-center w-full">
             <h2
               id="speakers-title"
-              className="font-display text-4xl font-medium tracking-tighter text-slate-100 sm:text-5xl"
+              className="font-display text-3xl font-medium tracking-tighter text-slate-100 sm:text-4xl"
             >
               Our Speakers
             </h2>
-            <p className="mt-4 font-mono text-2xl tracking-tight text-slate-200">
+            <p className="mt-4 font-mono text-lg sm:text-xl tracking-tight text-slate-200">
               Learn from the best in the industry and level up your skills.
             </p>
           </div>
           
           {/* Show skeleton loaders while loading */}
           {loading ? (
-            <div className="mx-auto max-w-8xl px-6 lg:px-8">
-              <div className="mx-auto mt-20 grid max-w-4xl lg:max-w-9xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto mt-10 sm:mt-20 grid grid-cols-1 gap-x-4 sm:gap-x-8 gap-y-10 sm:gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
                 {[...Array(6)].map((_, index) => (
                   <div key={index}>
                     <SkeletonLoader />
@@ -140,24 +140,24 @@ export function Speakers() {
               </div>
             </div>
           ) : error ? (
-            <div className="text-center text-red-500 text-xl mt-8">
+            <div className="text-center text-red-500 text-lg sm:text-xl mt-8">
               Failed to load speakers. Please try again later.
             </div>
           ) : (
-            <div className="mx-auto max-w-8xl px-6 lg:px-8">
-              <div className="mx-auto mt-20 grid max-w-4xl lg:max-w-9xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto mt-10 sm:mt-20 grid grid-cols-1 gap-x-4 sm:gap-x-8 gap-y-10 sm:gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
                 {visibleSpeakers.map((speaker: Speaker) => (
                   <div key={speaker.id}>
-                    <img className="relative aspect-[14/13] w-[100%] rounded-xl object-cover bg-purple-900" src={speaker.profilePicture} alt={speaker.fullName} />
-                    <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{speaker.fullName}</h3>
-                    <p className="font-mono text-sm leading-6 text-slate-300">{speaker.sessions[0].name}</p>
+                    <img className="relative aspect-[14/13] w-full sm:w-[80%] lg:w-[90%] mx-auto rounded-xl object-cover bg-purple-900" src={speaker.profilePicture} alt={speaker.fullName} />
+                    <h3 className="mt-4 sm:mt-6 text-lg font-semibold leading-6 sm:leading-8 tracking-tight text-white">{speaker.fullName}</h3>
+                    <p className="font-mono text-sm leading-5 sm:leading-6 text-slate-300">{speaker.sessions[0].name}</p>
                   </div>
                 ))}
               </div>
               <div className='mt-5 flex align-center items-center justify-center'>
                 {!showAllSpeakers && speakerList.length > 8 && (
                   <span
-                    className="mt-8 text-2xl font-medium text-[#eee712] cursor-pointer hover:underline"
+                    className="mt-8 text-lg sm:text-2xl font-medium text-[#eee712] cursor-pointer hover:underline"
                     onClick={toggleShowAllSpeakers}
                   >
                     See More...

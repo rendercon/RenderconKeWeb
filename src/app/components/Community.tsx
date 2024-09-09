@@ -5,12 +5,12 @@ import Link from 'next/link'
 
 const Community = () => {
   return (
-    <section className="mt-10 overflow-hidden sm:mt-10">
+    <section className="mt-10 overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
               <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-                <h2 className="font-display text-4xl font-medium tracking-tighter text-slate-200 sm:text-5xl">Our Community</h2>
-                <p className="mt-4 font-mono text-2xl tracking-tight leading-8 text-slate-300">
+                <h2 className="font-display font-medium tracking-tighter text-slate-200 text-2xl md:text-3xl">Our Community</h2>
+                <p className="mt-4 font-mono text-xl md:text-xl tracking-tight leading-8 text-slate-300">
                   A conference experience is only as good as the community that attends it. We are proud to have a diverse community of developers, designers, and tech enthusiasts from all across the world.
                 </p>
               </div>

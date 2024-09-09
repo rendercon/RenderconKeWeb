@@ -78,7 +78,7 @@ function Sponsorship() {
   return (
     <>
       <Header />
-      <section id="sponsors" aria-label="Sponsors" className="pt-10 sm:pt-32 sm:pb-20 bg-[#240046]">
+      <section id="sponsors" aria-label="Sponsors" className="pt-10 sm:pt-32 sm:pb-20 bg-[#240046] font-mono">
         <div className="container mx-auto px-6">
           {/* Title */}
           <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-purple-300 sm:text-5xl">
@@ -96,7 +96,7 @@ function Sponsorship() {
               sponsors.map((sponsor) => (
                 <div
                   key={sponsor.name}
-                  className="bg-[white] rounded-lg shadow-lg p-4 flex flex-col items-center h-[550px]"
+                  className="bg-[white] rounded-lg shadow-lg p-4 flex flex-col items-center min-h-[550px]"
                 >
                   <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
                     <Image
