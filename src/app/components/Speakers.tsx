@@ -2,11 +2,12 @@
 
 import { useEffect, useId, useMemo, useState } from 'react'
 import { Container } from './Container'
+import { FiUser } from 'react-icons/fi';
 
 // Skeleton Loader for the speaker cards
 const SkeletonLoader = () => (
   <div className="animate-pulse">
-    <div className="relative aspect-[14/13] w-[100%] bg-purple-700 rounded-xl"></div>
+    <div className="relative aspect-[14/13] w-[100%] bg-purple-700 rounded-xl"><FiUser className="text-[#b19eaf] h-[100%] w-[100%] p-6" /></div>
     <div className="mt-6 h-4 bg-purple-800 rounded w-3/4"></div>
     <div className="mt-4 h-3 bg-purple-900 rounded w-1/2"></div>
   </div>
