@@ -30,9 +30,9 @@ const Sponsors = () => {
   };
 
   return (
-    <section id="sponsors" aria-label="Sponsors" className="py-8 sm:py-32">
+    <section id="sponsors" aria-label="Sponsors" className="py-8 sm:py-32 text-sm md:text-xl">
       <Container>
-        <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-slate-200 sm:text-5xl">
+        <h2 className="mx-auto max-w-2xl text-center font-display text-3xl font-medium tracking-tighter text-slate-200 lg:text-5xl">
           Our Sponsors
         </h2>
         <div className="mx-auto flex items-center justify-center gap-8 mt-20 flex-col md:flex-row">
@@ -58,7 +58,7 @@ const Sponsors = () => {
               </div>
             ))
           ) : (
-            <p className="text-slate-300 text-xl font-mono text-center">
+            <p className="text-slate-300 text-sm md:text-xl font-mono text-center">
               Leverage our platform to put your brand on the spotlight. Become a
               part of RenderCon Kenya&apos;s mission to nurture innovation and
               best practices within the React ecosystem.
@@ -76,7 +76,7 @@ const Sponsors = () => {
         <div className="flex justify-center pt-16">
   <a 
     href="/sponsorships"  
-    className="text-xl hover:underline hover: text-[#eee712]"
+    className="text-md md:text-xl hover:underline hover: text-[#eee712]"
   >
     Learn More About Our Sponsors..
   </a>
