@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import React from 'react'
 
 type NavbarProps = {
-  onLinkClick: () => void;
+  onLinkClick?: () => void;
 }
 
 function Navbar({ onLinkClick }: NavbarProps) {

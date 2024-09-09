@@ -53,7 +53,7 @@ function LargeScreenNavbar(props: TNavbar){
           <Link href="#home"><Image src={renderconWB} alt={'Rendercon white background logo'} unoptimized height={60}/></Link>
         </div>
         <div className={'flex flex-col font-mono text-gray-50 items-center justify-center'}>
-          <Navbar/>
+          <Navbar />
         </div>
         <div className="mt-5 pl-10  sm:mt-10 sm:flex md:pl-0 lg:pl-0 lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
           <Button>
