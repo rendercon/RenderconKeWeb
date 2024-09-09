@@ -1,19 +1,16 @@
 "use client"
-
-import { use, useEffect, useId, useMemo, useState } from 'react'
-
-import Image from 'next/image'
-import { Tab } from '@headlessui/react'
-import clsx from 'clsx'
-
+import { useEffect, useId, useMemo, useState } from 'react'
 import { Container } from './Container'
-import { DiamondIcon } from './DiamondIcon'
-
-import { days } from '@/utils/speakers'
-import { Button } from './Button'
-import Link from 'next/link'
 
 
+// Skeleton Loader for the speaker cards
+const SkeletonLoader = () => (
+  <div className="animate-pulse">
+    <div className="relative aspect-[14/13] w-[100%] bg-purple-700 rounded-xl"></div>
+    <div className="mt-6 h-4 bg-purple-800 rounded w-3/4"></div>
+    <div className="mt-4 h-3 bg-purple-900 rounded w-1/2"></div>
+  </div>
+);
 
 type Speaker = {
   id: string;
@@ -22,9 +19,8 @@ type Speaker = {
   sessions: { name: string }[];
 };
 
-
 type ImageClipPathsProps = {
-    id: string;
+  id: string;
 }
 
 function ImageClipPaths({ id, ...props }: ImageClipPathsProps) {
@@ -47,12 +43,23 @@ function ImageClipPaths({ id, ...props }: ImageClipPathsProps) {
 
 export function Speakers() {
 
-  const [speakerList, setSpeakerList] = useState([]);
+  const [speakerList, setSpeakerList] = useState<Speaker[]>([]);
+  const [loading, setLoading] = useState(true); // Loading state
+  const [error, setError] = useState(false);   // Error state
 
   const fetchSpeakers = async () => {
-    const res = await fetch('https://sessionize.com/api/v2/d899srzm/view/Speakers')
-    const data = await res.json()
-    setSpeakerList(data)
+    setLoading(true); // Start loading
+    setError(false);  // Reset error state
+    try {
+      const res = await fetch('https://sessionize.com/api/v2/d899srzm/view/Speakers')
+      if (!res.ok) throw new Error("Failed to fetch speakers");
+      const data = await res.json();
+      setSpeakerList(data);
+    } catch (error) {
+      setError(true); // Handle error state
+    } finally {
+      setLoading(false); // End loading
+    }
   }
 
   useEffect(() => {
@@ -61,8 +68,8 @@ export function Speakers() {
 
   const [isSSR, setIsSSR] = useState(true);
 
-  let id = useId()
-  let [tabOrientation, setTabOrientation] = useState('horizontal')
+  let id = useId();
+  let [tabOrientation, setTabOrientation] = useState('horizontal');
 
   useEffect(() => {
     let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
@@ -79,18 +86,13 @@ export function Speakers() {
     }
   }, [])
 
-
-
-  
   const generateRandomSpeakers = (arr: any, count: number) => {
     const shuffled = arr.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
   };
-  
 
-    const randomSpeakers = useMemo(() => generateRandomSpeakers(speakerList, 6), [speakerList]);
-    
-  
+  const randomSpeakers = useMemo(() => generateRandomSpeakers(speakerList, 6), [speakerList]);
+
   useEffect(() => {
     setIsSSR(false);
   }, [])
@@ -113,7 +115,7 @@ export function Speakers() {
       {
         isSSR ? null :
         <Container>
-          <div className="mx-auto max-w-3xl text-center flex flex-col align-center items-center justify-center w-full ">
+          <div className="mx-auto max-w-3xl text-center flex flex-col align-center items-center justify-center w-full">
             <h2
               id="speakers-title"
               className="font-display text-4xl font-medium tracking-tighter text-slate-100 sm:text-5xl"
@@ -124,30 +126,49 @@ export function Speakers() {
               Learn from the best in the industry and level up your skills.
             </p>
           </div>
-          <div className="mx-auto max-w-8xl px-6 lg:px-8">
-            <ul
-              role="list"
-              className="mx-auto mt-20 grid max-w-4xl lg:max-w-9xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3"
-            >
-              {visibleSpeakers.map((speaker: Speaker) => (
-                <li key={speaker.id}>
-                  <img className="relative aspect-[14/13] w-[100%] rounded-xl object-cover" src={speaker.profilePicture} alt="" />
-                  <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{speaker.fullName}</h3>
-                  <p className="font-mono text-sm leading-6 text-slate-300">{speaker.sessions[0].name}</p>
-                </li>
-              ))}
-            </ul>
-            <div className='mt-5 flex align-center items-center justify-center'>
-              {!showAllSpeakers && speakerList.length > 8 && (
-                <span
-                  className="mt-8 text-2xl font-medium text-[#eee712] cursor-pointer hover:underline"
-                  onClick={toggleShowAllSpeakers}
-                >
-                  See More...
-                </span>
-              )}
+          
+          {/* Show skeleton loaders while loading */}
+          {loading ? (
+            <div className="mx-auto max-w-8xl px-6 lg:px-8">
+              <ul
+                role="list"
+                className="mx-auto mt-20 grid max-w-4xl lg:max-w-9xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3"
+              >
+                {[...Array(6)].map((_, index) => (
+                  <li key={index}>
+                    <SkeletonLoader />
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          ) : error ? (
+            <ErrorMessage />
+          ) : (
+            <div className="mx-auto max-w-8xl px-6 lg:px-8">
+              <ul
+                role="list"
+                className="mx-auto mt-20 grid max-w-4xl lg:max-w-9xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3"
+              >
+                {visibleSpeakers.map((speaker: Speaker) => (
+                  <li key={speaker.id}>
+                    <img className="relative aspect-[14/13] w-[100%] rounded-xl object-cover bg-purple-900" src={speaker.profilePicture} alt={speaker.fullName} />
+                    <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{speaker.fullName}</h3>
+                    <p className="font-mono text-sm leading-6 text-slate-300">{speaker.sessions[0].name}</p>
+                  </li>
+                ))}
+              </ul>
+              <div className='mt-5 flex align-center items-center justify-center'>
+                {!showAllSpeakers && speakerList.length > 8 && (
+                  <span
+                    className="mt-8 text-2xl font-medium text-[#eee712] cursor-pointer hover:underline"
+                    onClick={toggleShowAllSpeakers}
+                  >
+                    See More...
+                  </span>
+                )}
+              </div>
+            </div>
+          )}
         </Container>
       }
     </section>
