@@ -3,6 +3,7 @@ import { Header } from '../components/Header'
 import Footer from '../components/Footer'
 import AboutUs from '../components/About'
 import Organisers from '../components/Organisers'
+import Technologies from '../components/Technologies'
 
 export default function About() {
     
@@ -16,6 +17,9 @@ export default function About() {
         <Header />
         <main className={'min-h-[800px]'}>
             <AboutUs/>
+            <Technologies/>
+            <br />
+            <br />
             <Organisers/>
         </main>
         <Footer />

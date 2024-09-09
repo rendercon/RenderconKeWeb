@@ -76,7 +76,7 @@ const Sponsors = () => {
         <div className="flex justify-center pt-16">
   <a 
     href="/sponsorships"  
-    className="text-2xl hover:underline hover: text-[#eee712]"
+    className="text-xl hover:underline hover: text-[#eee712]"
   >
     Learn More About Our Sponsors..
   </a>
