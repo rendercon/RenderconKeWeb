@@ -35,16 +35,6 @@ export default function Home() {
       <Partners />
     </main>
     <Footer />
-    {/* <main className="flex min-h-screen flex-col items-center p-24">
-      <h1
-        className="text-6xl font-bold text-center text-stone-50 pb-10"
-      >RenderconKe 2024
-      </h1>
-      <p
-        className={`text-2xl font-medium text-center text-stone-50 ${sourceCodePro.className}`}
-      >Initializing...
-      </p>
-    </main> */}
     </>
   )
 }

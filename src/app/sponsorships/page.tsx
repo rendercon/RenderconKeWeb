@@ -8,6 +8,7 @@ import LogoPayd from '../images/logos/payd.png';
 import LogoReactDevsKe from '../images/logos/ReactdevskeLogo.png';
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
+import Technologies from '../components/Technologies';
 
 type Sponsors = {
   name: string;
@@ -77,10 +78,10 @@ function Sponsorship() {
   return (
     <>
       <Header />
-      <section id="sponsors" aria-label="Sponsors" className="py-10 sm:py-32 bg-[#240046]">
+      <section id="sponsors" aria-label="Sponsors" className="pt-10 sm:pt-32 sm:pb-20 bg-[#240046]">
         <div className="container mx-auto px-6">
           {/* Title */}
-          <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-purple-500 sm:text-5xl">
+          <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-purple-300 sm:text-5xl">
             Our Sponsors
           </h2>
 
@@ -90,12 +91,12 @@ function Sponsorship() {
           </p>
 
           {/* Sponsors List */}
-          <div className="mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16 mt-20">
+          <div className="mx-auto grid grid-cols-1 2xl:grid-cols-2 gap-16 mt-20 items-center">
             {sponsors.length > 0 ? (
               sponsors.map((sponsor) => (
                 <div
                   key={sponsor.name}
-                  className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center"
+                  className="bg-[white] rounded-lg shadow-lg p-4 flex flex-col items-center h-[550px]"
                 >
                   <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
                     <Image
@@ -201,6 +202,9 @@ function Sponsorship() {
           </div>
         </div>
       </section>
+      <Technologies/>
+            <br />
+            <br />
       <Footer />
     </>
   );
