@@ -46,7 +46,6 @@ const organisers: Organisers[] = [
 function Organisers() {
   return (
     <Container className="pb-10 min-h-[800px]">
-      <hr className='pb-20'/>
       <h3 className="text-slate-200 text-3xl pb-10 text-center">
         <span className='text-[#eee712] font-extrabold'>Organizing</span> Team
       </h3>

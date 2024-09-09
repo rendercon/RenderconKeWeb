@@ -72,7 +72,7 @@ const Partners = () => {
                     ))}
                 </div>
 
-                <p className="text-slate-200 text-xl mt-20 font-mono text-center">
+                <p className="text-slate-200 text-xl mt-20 font-mono text-center mb-10">
                     For more information on sponsorship and partnership, please reach out to us{' '}
                     <a href="#" onClick={handleEmailClick} className="hover:underline text-[#eee712]">
                         here

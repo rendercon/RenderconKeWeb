@@ -35,12 +35,12 @@ const Sponsors = () => {
         <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-slate-200 sm:text-5xl">
           Our Sponsors
         </h2>
-        <div className="mx-auto flex items-center justify-center gap-24 mt-20 flex-col md:flex-row">
+        <div className="mx-auto flex items-center justify-center gap-8 mt-20 flex-col md:flex-row">
           {sponsors.length > 0 ? (
             sponsors.map((sponsor) => (
               <div
                 key={sponsor.name}
-                className="flex  items-center justify-center"
+                className="flex  items-center justify-center md:border-b-0 border-b-2 py-10"
               >
                 <a
                   href={sponsor.link}
