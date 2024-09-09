@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from './Container';
-import { FaUserTie, FaUserGraduate, FaUserMd } from 'react-icons/fa';
+import { FaUserTie, FaUserMd,  FaUserSecret } from 'react-icons/fa';
 import { FiUserCheck, FiUser } from 'react-icons/fi';
 
 type Organisers = {
@@ -19,7 +19,7 @@ const organisers: Organisers[] = [
   },
   {
     name: "Rama Ochieng'",
-    icon: <FaUserGraduate className="text-[#1b0233] h-[100px] w-[100px]" />, // Icon representing learning and expertise
+    icon: <FaUserSecret className="text-[#1b0233] h-[100px] w-[100px]" />, // Icon representing learning and expertise
     link: "https://www.linkedin.com/in/ramaochieng/",
     description: 'Frontend Software Engineer & Designer (React.js/React Native, JavaScript/Typescript, Next.js) | Open Source Maintainer & Contributor',
   },
