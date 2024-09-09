@@ -107,7 +107,7 @@ export function Speakers() {
     <section
       id="speakers"
       aria-labelledby="speakers-title"
-      className="py-20 sm:py-32"
+      className="pt-20 sm:pt-32 pb-10 sm:pb-10"
     >
       <ImageClipPaths id={id} />
       {
@@ -131,7 +131,7 @@ export function Speakers() {
             >
               {visibleSpeakers.map((speaker: Speaker) => (
                 <li key={speaker.id}>
-                  <img className="relative aspect-[14/13] w-[full] rounded-xl object-cover" src={speaker.profilePicture} alt="" />
+                  <img className="relative aspect-[14/13] w-[100%] rounded-xl object-cover" src={speaker.profilePicture} alt="" />
                   <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{speaker.fullName}</h3>
                   <p className="font-mono text-sm leading-6 text-slate-300">{speaker.sessions[0].name}</p>
                 </li>
