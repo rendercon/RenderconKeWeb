@@ -149,8 +149,8 @@ export function Speakers() {
                 {visibleSpeakers.map((speaker: Speaker) => (
                   <div key={speaker.id}>
                     <img className="relative aspect-[14/13] w-full sm:w-[80%] lg:w-[90%] mx-auto rounded-xl object-cover bg-purple-900" src={speaker.profilePicture} alt={speaker.fullName} />
-                    <h3 className="mt-4 sm:mt-6 text-lg font-semibold leading-6 sm:leading-8 tracking-tight text-white">{speaker.fullName}</h3>
-                    <p className="font-mono text-sm leading-5 sm:leading-6 text-slate-300">{speaker.sessions[0].name}</p>
+                    <h3 className="mt-4 sm:mt-6 text-lg font-semibold leading-6 sm:leading-8 tracking-tight text-white text-center">{speaker.fullName}</h3>
+                    <p className="font-mono text-sm leading-5 sm:leading-6 text-slate-300 text-center">{speaker.sessions[0].name}</p>
                   </div>
                 ))}
               </div>
