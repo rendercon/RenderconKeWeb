@@ -1,7 +1,7 @@
 "use client"
+
 import { useEffect, useId, useMemo, useState } from 'react'
 import { Container } from './Container'
-
 
 // Skeleton Loader for the speaker cards
 const SkeletonLoader = () => (
@@ -130,33 +130,29 @@ export function Speakers() {
           {/* Show skeleton loaders while loading */}
           {loading ? (
             <div className="mx-auto max-w-8xl px-6 lg:px-8">
-              <ul
-                role="list"
-                className="mx-auto mt-20 grid max-w-4xl lg:max-w-9xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3"
-              >
+              <div className="mx-auto mt-20 grid max-w-4xl lg:max-w-9xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
                 {[...Array(6)].map((_, index) => (
-                  <li key={index}>
+                  <div key={index}>
                     <SkeletonLoader />
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           ) : error ? (
-            <ErrorMessage />
+            <div className="text-center text-red-500 text-xl mt-8">
+              Failed to load speakers. Please try again later.
+            </div>
           ) : (
             <div className="mx-auto max-w-8xl px-6 lg:px-8">
-              <ul
-                role="list"
-                className="mx-auto mt-20 grid max-w-4xl lg:max-w-9xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3"
-              >
+              <div className="mx-auto mt-20 grid max-w-4xl lg:max-w-9xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
                 {visibleSpeakers.map((speaker: Speaker) => (
-                  <li key={speaker.id}>
+                  <div key={speaker.id}>
                     <img className="relative aspect-[14/13] w-[100%] rounded-xl object-cover bg-purple-900" src={speaker.profilePicture} alt={speaker.fullName} />
                     <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{speaker.fullName}</h3>
                     <p className="font-mono text-sm leading-6 text-slate-300">{speaker.sessions[0].name}</p>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
               <div className='mt-5 flex align-center items-center justify-center'>
                 {!showAllSpeakers && speakerList.length > 8 && (
                   <span
