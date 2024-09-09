@@ -47,7 +47,7 @@ function AboutUs() {
             enthusiasts from around the world. It's supported by key sponsors
             such as
             <a
-              href="https://reactdevs.org"
+              href="https://reactdevske.org"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#caf0f8] underline hover:text-[#eee712] transition"
@@ -57,7 +57,7 @@ function AboutUs() {
             </a>
             ,
             <a
-              href="https://payd.com"
+              href="https://web.mypayd.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#caf0f8] underline hover:text-[#eee712] transition"
@@ -67,7 +67,7 @@ function AboutUs() {
             </a>
             , and
             <a
-              href="https://lemonade.com"
+              href="https://mylemonade.io/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#caf0f8] underline hover:text-[#eee712] transition"
