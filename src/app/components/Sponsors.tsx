@@ -10,12 +10,14 @@ type Sponsors = {
   name: string;
   logo: string | StaticImageData;
   link: string;
+  height: number;
+  width: number;
 };
 
 const sponsors: Sponsors[] = [
-  { name: "ReactDevsKe", logo: LogoReactDevsKe, link: "https://reactdevske.org"},
-    { name: "Lemonade", logo: LogoLemonade, link: "https://mylemonade.io/" },
-  { name: "Payd", logo: LogoPayd, link: "https://paydexp.com/" },
+  { name: "ReactDevsKe", logo: LogoReactDevsKe, link: "https://reactdevske.org", height: 100, width: 200},
+    { name: "Lemonade", logo: LogoLemonade, link: "https://mylemonade.io/", height: 200, width: 500},
+  { name: "Payd", logo: LogoPayd, link: "https://paydexp.com/", height: 200, width: 300},
 ];
 
 const Sponsors = () => {
@@ -35,7 +37,7 @@ const Sponsors = () => {
         <h2 className="mx-auto max-w-2xl text-center font-display text-3xl font-medium tracking-tighter text-slate-200 lg:text-5xl">
           Our Sponsors
         </h2>
-        <div className="mx-auto flex items-center justify-center gap-8 mt-20 flex-col md:flex-row">
+        <div className="mx-auto flex items-center justify-center gap-12 mt-12 flex-col md:flex-row">
           {sponsors.length > 0 ? (
             sponsors.map((sponsor) => (
               <div
@@ -51,8 +53,8 @@ const Sponsors = () => {
                     src={sponsor.logo}
                     alt={sponsor.name}
                     unoptimized
-                    height={200}
-                    width={400}
+                    height={sponsor.height}
+                    width={sponsor.width}
                   />
                 </a>
               </div>
