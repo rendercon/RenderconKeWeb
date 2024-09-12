@@ -13,7 +13,7 @@ const Technologies = (props: Props) => {
         <span className="text-[#61DAFB]">React Native</span>,&nbsp;
         <span className="text-[#FF4154]">React Query</span>,&nbsp;
         <span className="text-[#CA4245]">React Router</span>,&nbsp;
-        <span className="text-[#000000]">Next.js</span>,&nbsp;
+        <span className="text-[#fff]">Next.js</span>,&nbsp;
         <span className="text-[#764ABC]">Redux</span>,&nbsp;
         <span className="text-[#3A69A8]">Remix</span>,&nbsp;
         <span className="text-[#E33332]">React Testing Library</span>,&nbsp;
@@ -35,7 +35,7 @@ const Technologies = (props: Props) => {
         <span className="text-[#61DAFB]">React Native</span>,&nbsp;
         <span className="text-[#FF4154]">React Query</span>,&nbsp;
         <span className="text-[#CA4245]">React Router</span>,&nbsp;
-        <span className="text-[#000000]">Next.js</span>,&nbsp;
+        <span className="text-[#fff]">Next.js</span>,&nbsp;
         <span className="text-[#764ABC]">Redux</span>,&nbsp;
         <span className="text-[#3A69A8]">Remix</span>,&nbsp;
         <span className="text-[#E33332]">React Testing Library</span>,&nbsp;
