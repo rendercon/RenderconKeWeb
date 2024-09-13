@@ -131,7 +131,7 @@ export function Speakers() {
           {/* Show skeleton loaders while loading */}
           {loading ? (
             <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-              <div className="mx-auto mt-10 sm:mt-20 grid grid-cols-1 gap-x-4 sm:gap-x-8 gap-y-10 sm:gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mx-auto mt-10 sm:mt-20 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-10 sm:gap-y-14 lg:grid-cols-3">
                 {[...Array(6)].map((_, index) => (
                   <div key={index}>
                     <SkeletonLoader />
@@ -145,12 +145,12 @@ export function Speakers() {
             </div>
           ) : (
             <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-              <div className="mx-auto mt-10 sm:mt-20 grid grid-cols-1 gap-x-4 sm:gap-x-8 gap-y-10 sm:gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mx-auto mt-10 sm:mt-20 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-10 sm:gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
                 {visibleSpeakers.map((speaker: Speaker) => (
                   <div key={speaker.id}>
                     <img className="relative aspect-[14/13] w-full sm:w-[80%] lg:w-[90%] mx-auto rounded-xl object-cover bg-purple-900" src={speaker.profilePicture} alt={speaker.fullName} />
-                    <h3 className="mt-4 sm:mt-6 text-lg font-semibold leading-6 sm:leading-8 tracking-tight text-white text-center">{speaker.fullName}</h3>
-                    <p className="font-mono text-sm leading-5 sm:leading-6 text-slate-300 text-center">{speaker.sessions[0].name}</p>
+                    <h3 className="mt-4 sm:mt-6 text-md md:text-lg font-semibold leading-6 sm:leading-8 tracking-tight text-white text-center">{speaker.fullName}</h3>
+                    <p className="font-mono text-xs md:text-sm leading-5 sm:leading-6 text-slate-300 text-center">{speaker.sessions[0].name}</p>
                   </div>
                 ))}
               </div>
