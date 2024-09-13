@@ -14,7 +14,7 @@ const Footer = () => {
         <Contacts />
       </div>
       <Container className="flex flex-col items-center justify-center font-mono md:flex-row">
-        <p className="mt-6 text-base text-slate-200 md:mt-0">
+        <p className="mt-6 text-base text-slate-200 md:mt-0 text-center">
           Copyright &copy; {new Date().getFullYear()} RenderCon Kenya
         </p>
       </Container>
