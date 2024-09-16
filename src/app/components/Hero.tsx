@@ -1,5 +1,7 @@
+'use client'
 import React from "react";
 import { Container } from "./Container";
+import CountdownTimer from "./CountdownTimer";
 
 const Hero = () => {
   return (
@@ -40,6 +42,8 @@ const Hero = () => {
             href="https://bit.ly/rcke24cfp" target="_blank" rel="noopener noreferrer">Submit your Session</a>
             
             </div> */}
+
+            <CountdownTimer/>
 
             <div className="flex items-center align-center justify-center lg:mx-auto">
               
