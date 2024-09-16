@@ -1,34 +1,25 @@
-"use client"
-import Link from 'next/link'
-import { useState, useEffect } from 'react'
-import React from 'react'
+"use client";
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 type NavbarProps = {
   onLinkClick?: () => void;
-}
+};
 
 function Navbar({ onLinkClick }: NavbarProps) {
-  const [isMounted, setIsMounted] = useState(false);
-  const [activePath, setActivePath] = useState<string | null>(null);
+  const [activePath, setActivePath] = useState<string>("");
 
   useEffect(() => {
-    // Only run this effect on the client (after component has mounted)
-    setIsMounted(true);
-
     if (typeof window !== 'undefined') {
       const currentPath = window.location.hash || window.location.pathname;
       setActivePath(currentPath);
     }
-  }, []);
+  }, []); // Runs only once, when component mounts
 
-  const isActive = (href: string) => {
-    return activePath === href;
-  };
-
-  if (!isMounted) return null; // Prevent SSR issues by not rendering the component until it's mounted
+  const isActive = (href: string) => activePath === href;
 
   return (
-    <ul className="w-full lg:w-[400px] flex flex-col items-end h-[120px] lg:h-auto lg:flex-row font-mono justify-between lg:items-center">
+    <ul className="w-full lg:w-[400px] flex flex-col items-end h-[120px] lg:h-auto lg:flex-row font-mono justify-between lg:items-center md:mx-auto font-semibold">
       <li onClick={onLinkClick}>
         <Link href="/about" className={`${isActive("/about") ? 'font-extrabold text-yellow-400' : 'text-slate-200'}`}>
           About

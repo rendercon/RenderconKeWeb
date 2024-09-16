@@ -1,7 +1,9 @@
 import React from 'react';
 import { Container } from './Container';
-import { FaUserTie, FaUserMd,  FaUserSecret } from 'react-icons/fa';
+import { FaUserTie, FaUserMd,  FaUserSecret, FaUserAstronaut } from 'react-icons/fa';
 import { FiUserCheck, FiUser } from 'react-icons/fi';
+import { BsPersonBadge } from 'react-icons/bs';
+
 
 type Organisers = {
   name: string;
@@ -31,13 +33,13 @@ const organisers: Organisers[] = [
   },
   {
     name: "Ben Wasonga",
-    icon: <FiUserCheck className="text-[#2e72f0] h-[100px] w-[100px]" />, // Icon for trustworthiness and involvement
+    icon: <FaUserAstronaut className="text-[#2e72f0] h-[100px] w-[100px]" />, // Icon for trustworthiness and involvement
     link: "https://www.linkedin.com/in/benwasonga/",
     description: 'Innovative Technical Support Engineer | Web Development Enthusiast | Community Builder | B.Ed English and Literature',
   },
   {
     name: "Sisco Cherono",
-    icon: <FiUser className="text-[#edeff0] h-[100px] w-[100px]" />, // Simple user icon for versatility
+    icon: <FiUserCheck className="text-[#edeff0] h-[100px] w-[100px]" />, // Simple user icon for versatility
     link: "https://www.linkedin.com/company/renderconke/",
     description: 'Web Development Enthusiast | Community Builder | Frontend Developer',
   },

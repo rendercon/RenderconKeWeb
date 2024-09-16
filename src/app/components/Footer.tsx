@@ -7,7 +7,7 @@ const Footer = () => {
     <footer
       id="contacts"
       aria-label="Contacts"
-      className="py-6 bg-[#240046] border-t-[2px] border-[#42208c]"
+      className="py-6 bg-[#240046]"
     >
       <div className="flex flex-col justify-center gap-9">
         <EventsInfo />
