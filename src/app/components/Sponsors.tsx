@@ -102,7 +102,7 @@ const Sponsors = () => {
         <div className="flex justify-center pt-8">
           <a
             href="/sponsorships"
-            className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
+            className="text-xs md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
             >
             Learn More About Our Sponsors
           </a>

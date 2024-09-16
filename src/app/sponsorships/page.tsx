@@ -5,7 +5,7 @@ import Image, { StaticImageData } from 'next/image';
 import { FaTwitter, FaLinkedin, FaGlobe, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import LogoLemonade from '../images/logos/lemonage_logo.jpg';
 import LogoPayd from '../images/logos/payd.png';
-import LogoReactDevsKe from '../images/logos/ReactdevskeLogo.png';
+import LogoReactDevsKe from '../images/logos/reactdevske.png';
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
 import Technologies from '../components/Technologies';
@@ -202,9 +202,9 @@ function Sponsorship() {
           </div>
         </div>
       </section>
-      <Technologies/>
-            <br />
-            <br />
+      <div className="mt-16">
+        <Technologies />
+      </div>
       <Footer />
     </>
   );
