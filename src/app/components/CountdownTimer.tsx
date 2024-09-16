@@ -49,7 +49,7 @@ function CountdownTimer() {
   }, []);
 
   return (
-    <div className="flex justify-center space-x-4 text-center text-white p-2 mt-4 mb-12 mx-auto bg-purple-500 rounded-lg w-fit items-center">
+    <div className="flex justify-center space-x-4 text-center text-white p-4 mt-4 mb-8 mx-auto bg-purple-500 rounded-lg w-fit items-center">
       {timeLeft.days + timeLeft.hours + timeLeft.minutes + timeLeft.seconds > 0 ? (
         <>
           <div>

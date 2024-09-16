@@ -25,6 +25,8 @@ const Hero = () => {
               industry.
             </p>
           </div>
+          <CountdownTimer/>
+
           <div className="w-full flex flex-col lg:flex-row items-center justify-center text-md lg:text-2xl font-mono text-yellow-400 mt-8 sm:mt-10 font-bold">
             <p className="mr-2 flex items-center">
               <time dateTime="2024-10-04">4th</time> -
@@ -43,7 +45,6 @@ const Hero = () => {
             
             </div> */}
 
-            <CountdownTimer/>
 
             <div className="flex items-center align-center justify-center lg:mx-auto">
               
