@@ -8,6 +8,7 @@ import LogoReactDevsKe from '../images/logos/ReactdevskeLogo.png';
 import LogoOscaNairobi from '../images/logos/osca_nairobi_logo.jpg';
 import LogoSpaceYaTech from '../images/logos/SPACEYATECH_LOGO.jpg';
 import LogoSupaBase from '../images/logos/supabase_logo_wordmark.png';
+import Technologies from './Technologies';
 
 type Partners = {
     name: string;
@@ -55,7 +56,7 @@ const Partners = () => {
     return (
         <section id="partners" aria-label="Partners" className="sm:py-2">
             <Container>
-                <h2 className="mx-auto max-w-2xl text-center font-display text-3xl font-medium tracking-tighter text-slate-200 sm:text-5xl">
+                <h2 className="mx-auto max-w-2xl text-center font-display text-3xl font-medium tracking-tighter text-slate-200 lg:text-5xl">
                     Sponsors & Partners Hall of Fame
                 </h2>
 
@@ -79,6 +80,9 @@ const Partners = () => {
                     </a>
                 </p>
             </Container>
+            <div className='mt-16'>
+      <Technologies/>
+      </div>
         </section>
     );
 };

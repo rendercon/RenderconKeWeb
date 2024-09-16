@@ -1,13 +1,16 @@
-"use client"
+"use client";
 
-import { useEffect, useId, useMemo, useState } from 'react'
-import { Container } from './Container'
-import { FiUser } from 'react-icons/fi';
+import { useEffect, useId, useMemo, useState } from "react";
+import { Container } from "./Container";
+import { FiUser } from "react-icons/fi";
+import Technologies from "./Technologies";
 
 // Skeleton Loader for the speaker cards
 const SkeletonLoader = () => (
   <div className="animate-pulse">
-    <div className="relative aspect-[14/13] w-[90%] bg-purple-700 rounded-xl"><FiUser className="text-[#b19eaf] h-[100%] w-[100%] p-6" /></div>
+    <div className="relative aspect-[14/13] w-[90%] bg-purple-700 rounded-xl">
+      <FiUser className="text-[#b19eaf] h-[100%] w-[100%] p-6" />
+    </div>
     <div className="mt-6 h-4 bg-purple-800 rounded w-3/4"></div>
     <div className="mt-4 h-3 bg-purple-900 rounded w-1/2"></div>
   </div>
@@ -22,7 +25,7 @@ type Speaker = {
 
 type ImageClipPathsProps = {
   id: string;
-}
+};
 
 function ImageClipPaths({ id, ...props }: ImageClipPathsProps) {
   return (
@@ -39,20 +42,21 @@ function ImageClipPaths({ id, ...props }: ImageClipPathsProps) {
         </clipPath>
       </defs>
     </svg>
-  )
+  );
 }
 
 export function Speakers() {
-
   const [speakerList, setSpeakerList] = useState<Speaker[]>([]);
   const [loading, setLoading] = useState(true); // Loading state
-  const [error, setError] = useState(false);   // Error state
+  const [error, setError] = useState(false); // Error state
 
   const fetchSpeakers = async () => {
     setLoading(true); // Start loading
-    setError(false);  // Reset error state
+    setError(false); // Reset error state
     try {
-      const res = await fetch('https://sessionize.com/api/v2/d899srzm/view/Speakers')
+      const res = await fetch(
+        "https://sessionize.com/api/v2/d899srzm/view/Speakers"
+      );
       if (!res.ok) throw new Error("Failed to fetch speakers");
       const data = await res.json();
       setSpeakerList(data);
@@ -61,42 +65,45 @@ export function Speakers() {
     } finally {
       setLoading(false); // End loading
     }
-  }
+  };
 
   useEffect(() => {
-    fetchSpeakers()
-  }, [])
+    fetchSpeakers();
+  }, []);
 
   const [isSSR, setIsSSR] = useState(true);
 
   let id = useId();
-  let [tabOrientation, setTabOrientation] = useState('horizontal');
+  let [tabOrientation, setTabOrientation] = useState("horizontal");
 
   useEffect(() => {
-    let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
+    let lgMediaQuery = window.matchMedia("(min-width: 1024px)");
 
     function onMediaQueryChange({ matches }: any) {
-      setTabOrientation(matches ? 'vertical' : 'horizontal')
+      setTabOrientation(matches ? "vertical" : "horizontal");
     }
 
-    onMediaQueryChange(lgMediaQuery)
-    lgMediaQuery.addEventListener('change', onMediaQueryChange)
+    onMediaQueryChange(lgMediaQuery);
+    lgMediaQuery.addEventListener("change", onMediaQueryChange);
 
     return () => {
-      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
-    }
-  }, [])
+      lgMediaQuery.removeEventListener("change", onMediaQueryChange);
+    };
+  }, []);
 
   const generateRandomSpeakers = (arr: any, count: number) => {
     const shuffled = arr.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
   };
 
-  const randomSpeakers = useMemo(() => generateRandomSpeakers(speakerList, 6), [speakerList]);
+  const randomSpeakers = useMemo(
+    () => generateRandomSpeakers(speakerList, 6),
+    [speakerList]
+  );
 
   useEffect(() => {
     setIsSSR(false);
-  }, [])
+  }, []);
 
   const [showAllSpeakers, setShowAllSpeakers] = useState(false);
 
@@ -113,8 +120,7 @@ export function Speakers() {
       className="pt-10 lg:pt-24 pb-10 sm:pb-10"
     >
       <ImageClipPaths id={id} />
-      {
-        isSSR ? null :
+      {isSSR ? null : (
         <Container>
           <div className="mx-auto max-w-3xl text-center flex flex-col align-center items-center justify-center w-full">
             <h2
@@ -127,7 +133,7 @@ export function Speakers() {
               Learn from the best in the industry and level up your skills.
             </p>
           </div>
-          
+
           {/* Show skeleton loaders while loading */}
           {loading ? (
             <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
@@ -148,26 +154,37 @@ export function Speakers() {
               <div className="mx-auto mt-10 sm:mt-20 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-10 sm:gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
                 {visibleSpeakers.map((speaker: Speaker) => (
                   <div key={speaker.id}>
-                    <img className="relative aspect-[14/13] w-full sm:w-[80%] lg:w-[90%] mx-auto rounded-xl object-cover bg-purple-900" src={speaker.profilePicture} alt={speaker.fullName} />
-                    <h3 className="mt-4 sm:mt-6 text-md md:text-lg font-semibold leading-6 sm:leading-8 tracking-tight text-white text-center">{speaker.fullName}</h3>
-                    <p className="font-mono text-xs md:text-sm leading-5 sm:leading-6 text-slate-300 text-center">{speaker.sessions[0].name}</p>
+                    <img
+                      className="relative aspect-[14/13] w-full sm:w-[80%] lg:w-[90%] mx-auto rounded-xl object-cover bg-purple-900"
+                      src={speaker.profilePicture}
+                      alt={speaker.fullName}
+                    />
+                    <h3 className="mt-4 sm:mt-6 text-md md:text-lg font-semibold leading-6 sm:leading-8 tracking-tight text-white text-center">
+                      {speaker.fullName}
+                    </h3>
+                    <p className="font-mono text-xs md:text-sm leading-5 sm:leading-6 text-slate-300 text-center">
+                      {speaker.sessions[0].name}
+                    </p>
                   </div>
                 ))}
               </div>
-              <div className='mt-5 flex align-center items-center justify-center'>
+              <div className="mt-5 flex align-center items-center justify-center">
                 {!showAllSpeakers && speakerList.length > 8 && (
                   <span
-                    className="mt-8 text-lg sm:text-2xl font-medium text-[#eee712] cursor-pointer hover:underline"
+                  className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
                     onClick={toggleShowAllSpeakers}
                   >
-                    See More...
+                    See More
                   </span>
                 )}
               </div>
             </div>
           )}
         </Container>
-      }
+      )}
+      <div className="mt-16">
+        <Technologies />
+      </div>
     </section>
-  )
+  );
 }

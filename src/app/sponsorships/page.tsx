@@ -195,8 +195,8 @@ function Sponsorship() {
             <a
               href="#"
               onClick={handleEmailClick}
-              className="text-2xl bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg"
-            >
+              className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
+              >
               Become a Sponsor
             </a>
           </div>
