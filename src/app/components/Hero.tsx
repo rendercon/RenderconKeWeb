@@ -33,7 +33,7 @@ const Hero = () => {
               <time dateTime="2024-10-05"> 5th October 2024</time>
               <p className={"hidden lg:block"}>•</p>
             </p>
-            <p className={"ml-2"}>Nairobi, Kenya</p>
+            <p className={"ml-2"}>CUEA, Nairobi</p>
           </div>
 
           <div className="pt-8 sm:pt-10 lg:flex">
