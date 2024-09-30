@@ -17,7 +17,7 @@ const EventsInfo = () => {
         {/* Venue */}
         <div className="flex items-center gap-2">
           <FaRegBuilding className="text-[#eee712] text-sm" />
-          <p className="text-xs text-slate-300"> <span className="font-bold">TBA</span></p>
+          <p className="text-xs text-slate-300"> <span className="font-bold">CUEA</span></p>
         </div>
 
         {/* Location */}
