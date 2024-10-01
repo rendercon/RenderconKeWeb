@@ -108,7 +108,7 @@ interface SessionDetailsProps {
 
 // SessionDetails component to show details of a selected session
 const SessionDetails: React.FC<SessionDetailsProps> = ({ session, onBack }) => (
-  <div className="bg-violet-900 text-white p-6 rounded-lg mb-6">
+  <div className="bg-violet-900 text-white p-6 rounded-lg mb-6  max-w-5xl mx-auto">
     <button onClick={onBack} className="text-yellow-500 mb-4">← Back to schedule</button>
     <h1 className="text-2xl font-bold mb-4">{session.title}</h1>
     <div className="flex items-center space-x-0 mb-4 flex-wrap gap-4">
