@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useEffect, useId, useMemo, useState } from "react";
 import { FiUser } from "react-icons/fi";
 import { FaArrowLeft } from "react-icons/fa"; // Importing the back arrow icon
@@ -47,7 +48,7 @@ function ImageClipPaths({ id, ...props }: ImageClipPathsProps) {
   );
 }
 
-export function Speakers() {
+function Schedule() {
   const [speakerList, setSpeakerList] = useState<Speaker[]>([]);
   const [loading, setLoading] = useState(true); // Loading state
   const [error, setError] = useState(false); // Error state
@@ -110,7 +111,7 @@ export function Speakers() {
           
           <Container>
             {selectedSpeaker ? (
-              <div className="fixed inset-0 z-50 overflow-y-auto">
+              <div className="fixed inset-0 z-50 overflow-y-auto flex justify-center items-start">
                 <SpeakerDetails speaker={selectedSpeaker} onBack={() => setSelectedSpeaker(null)} />
               </div>
             ) : (
@@ -191,7 +192,7 @@ type SpeakerDetailsProps = {
 };
 
 const SpeakerDetails: React.FC<SpeakerDetailsProps> = ({ speaker, onBack }) => (
-  <div className="bg-violet-900 text-white p-6 rounded-lg mb-6 md:mx-10 relative z-50 mt-6">
+  <div className="bg-violet-900 text-white p-6 rounded-lg mb-6 md:mx-10 relative z-50 mt-6 w-2/3 mx-auto">
     <button onClick={onBack} className="text-yellow-500 mb-4 flex items-center">
       {/* Adding the back arrow icon */}
       <FaArrowLeft className="mr-2" /> Back to speakers
@@ -212,3 +213,7 @@ const SpeakerDetails: React.FC<SpeakerDetailsProps> = ({ speaker, onBack }) => (
     <p className="text-sm">{speaker.bio || "No bio available."}</p>
   </div>
 );
+
+
+
+export default Schedule;
