@@ -44,7 +44,7 @@ function AboutUs() {
           <p className="text-sm md:text-md lg:text-lg  leading-6 font-mono">
             The event highlights the importance of community, bringing together
             a diverse mix of developers, designers, engineers, and tech
-            enthusiasts from around the world. It's supported by key sponsors
+            enthusiasts from around the world. It`&apos;`s supported by key sponsors
             such as
             <a
               href="https://reactdevske.org"
