@@ -70,7 +70,7 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ sessions, onSelectSession }) 
     {sessions.map((session, idx) => (
       <div
         key={idx}
-        className="border border-w-1 text-white p-6 rounded-lg mb-6 cursor-pointer hover:bg-purple-800 transition"
+        className="border border-w-1 text-white p-6 rounded-lg mb-6 cursor-pointer hover:bg-purple-800 transition max-w-4xl mx-auto"
         onClick={() => onSelectSession(session)} // Click handler to show session details
       >
         <div className="flex items-center space-x-0 mb-4 flex-wrap gap-4">
