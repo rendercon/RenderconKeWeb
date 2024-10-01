@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useEffect, useId, useState } from "react";
 import { Container } from "./Container";
 import { FiUser, FiArrowLeft } from "react-icons/fi"; // Import FiArrowLeft for the back icon
