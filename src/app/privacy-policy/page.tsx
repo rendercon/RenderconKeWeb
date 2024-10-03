@@ -1,8 +1,11 @@
 import { Container } from "../components/Container";
+import Footer from "../components/Footer";
+import { Header } from "../components/Header";
 
 export default function PrivacyPolicyPage() {
   return (
     <Container className="text-center lg:text-left">
+      <Header/>
       <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <div>
           <h2 className="font-display text-4xl font-medium text-center tracking-tighter text-slate-300 sm:text-5xl">
@@ -76,6 +79,8 @@ export default function PrivacyPolicyPage() {
           </p>
         </div>
       </div>
+      <Footer/>
+
     </Container>
   );
 }

@@ -16,7 +16,7 @@ export default function CodeOfConductPage() {
             <p className="mt-4 font-mono text-2xl tracking-tight text-slate-400">
               All attendees, speakers, sponsors, and volunteers at RenderCon are required to follow this Code of Conduct. Organizers will strictly enforce it throughout the events and community gatherings. We expect cooperation from all participants to help ensure a safe environment for everybody.
               <br/><br/>
-              In case you have identified a breach of our CoC, please approach our crew (look for SUDO or CREW tags on crew members, or purple reflector jackets labeled "CREW") immediately or contact our CoC enforcement team — <span className="font-black text-slate-300">coc@rendercon.org</span>.
+              In case you have identified a breach of our CoC, please approach our crew (look for SUDO or CREW tags on crew members, or purple reflector jackets labeled &ldquo;CREW&rdquo;) immediately or contact our CoC enforcement team &mdash; <span className="font-black text-slate-300">coc@rendercon.org</span>.
             </p>
 
             <h4 className="font-display mt-12 text-xl font-medium tracking-tighter text-slate-300 sm:text-2xl">
