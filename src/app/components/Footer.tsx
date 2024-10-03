@@ -13,7 +13,7 @@ const Footer = () => {
         <EventsInfo />
         <Contacts />
       </div>
-      <div className="flex flex-col items-center justify-center font-mono flex-col">
+      <div className="flex items-center justify-center font-mono flex-col">
         <p className="mt-6 text-base text-slate-200 md:mt-0 text-center">
           Copyright &copy; {new Date().getFullYear()} RenderCon Kenya
         </p>
