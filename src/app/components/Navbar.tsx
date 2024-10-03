@@ -22,9 +22,9 @@ function Navbar({ onLinkClick }: NavbarProps) {
     <ul className="w-full lg:w-[400px] flex flex-col items-end h-[120px] lg:h-auto lg:flex-row font-mono justify-between lg:items-center md:mx-auto font-semibold">
       <li onClick={onLinkClick}>
         <Link
-          href="/schedule-agenda"
+          href="/schedule"
           className={`${
-            isActive("/schedule-agenda")
+            isActive("/schedule")
               ? "font-extrabold text-yellow-400"
               : "text-slate-200"
           }`}
