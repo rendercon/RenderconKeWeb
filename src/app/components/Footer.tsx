@@ -30,6 +30,12 @@ const Footer = () => {
           >
             Privacy Policy
           </Link>
+          <Link
+            href="/media-policy"
+            className="hover:underline text-yellow-300 underline hover:text-yellow-500"
+          >
+            Media Policy
+          </Link>
         </div>
       </div>
     </footer>
