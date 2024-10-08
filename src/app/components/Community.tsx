@@ -55,12 +55,26 @@ const Community = () => {
       </div>
 
      
-      <div className="flex justify-center pt-16">
+      <div className="flex justify-center pt-16 gap-5">
           <a
             href="https://bit.ly/rcke23pics"
             className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
             >
-            View Gallery
+            View Gallery(2023)
+          </a>
+
+          <a
+            href="https://t.ly/0UbEr"
+            className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
+            >
+            View Gallery Day 1
+          </a>
+
+          <a
+            href="https://t.ly/Lb4nr"
+            className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
+            >
+            View Gallery  Day 2
           </a>
         </div>
       <div className="mt-16">
