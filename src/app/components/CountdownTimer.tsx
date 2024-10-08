@@ -9,7 +9,7 @@ type TimeRemaining = {
 
 function CountdownTimer() {
   // Set the date we're counting down to
-  const countDownDate = new Date('October 4, 2024 08:00:00').getTime();
+  const countDownDate = new Date('October 3, 2025 08:00:00').getTime();
 
   // State for holding time left
   const [timeLeft, setTimeLeft] = useState<TimeRemaining>(calculateTimeLeft());
@@ -70,7 +70,7 @@ function CountdownTimer() {
           </div>
         </>
       ) : (
-        <p className="text-2xl font-bold">Event Ongoing!!</p>
+        <p className="text-2xl font-bold">Event Ended!!</p>
       )}
     </div>
   );

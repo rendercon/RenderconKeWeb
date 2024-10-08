@@ -3,9 +3,10 @@
 import React from "react";
 import { useEffect, useId, useState } from "react";
 import { Container } from "./Container";
-import { FiUser, FiArrowLeft } from "react-icons/fi"; // Import FiArrowLeft for the back icon
+import { FiUser, FiArrowLeft } from "react-icons/fi"; // Import FiArrowLeft for the back icon 
 import Technologies from "./Technologies";
-import Link from 'next/link'; // Import Link for smooth scrolling
+import Link from 'next/link';
+import Image from 'next/image';
 
 // Skeleton Loader for the speaker cards
 const SkeletonLoader = () => (
@@ -55,8 +56,8 @@ export function Speakers() {
   const [selectedSpeaker, setSelectedSpeaker] = useState<Speaker | null>(null); // State for selected speaker
 
   const fetchSpeakers = async () => {
-    setLoading(true); // Start loading
-    setError(false); // Reset error state
+    setLoading(true);
+    setError(false); 
     try {
       const res = await fetch(
         "https://sessionize.com/api/v2/d899srzm/view/Speakers"
@@ -65,9 +66,9 @@ export function Speakers() {
       const data = await res.json();
       setSpeakerList(data);
     } catch (error) {
-      setError(true); // Handle error state
+      setError(true);
     } finally {
-      setLoading(false); // End loading
+      setLoading(false);
     }
   };
 
@@ -118,11 +119,11 @@ export function Speakers() {
                 <div className="mx-auto max-w-3xl text-center flex flex-col align-center items-center justify-center w-full">
                   <h2
                     id="speakers-title"
-                    className="font-display text-3xl font-medium tracking-tighter text-slate-100 sm:text-4xl"
+                    className="font-display text-3xl font-medium tracking-tighter text-slate-100 sm:text-3xl"
                   >
-                    Our Speakers
+                    Our Speakers from the 2024 Edition
                   </h2>
-                  <p className="mt-4 font-mono text-lg sm:text-xl tracking-tight text-slate-200">
+                  <p className="mt-4 font-mono text-md sm:text-md tracking-tight text-slate-200">
                     Learn from the best in the industry and level up your skills.
                   </p>
                 </div>

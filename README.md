@@ -1,3 +1,3 @@
-# RenderconKe 2024 Website
+# RenderconKe 2025 Website
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

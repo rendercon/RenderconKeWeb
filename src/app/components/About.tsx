@@ -15,7 +15,7 @@ function AboutUs() {
           </h4>
           <p className="text-sm md:text-md lg:text-lg  leading-6 font-mono ">
             RenderCon Kenya is a premier tech conference focused on React and
-            React Native, set to take place on October 4th-5th 2024, in Nairobi.
+            React Native, set to take place in Nairobi, Kenya.
             RenderCon offers a platform for software engineers, developers,
             enterpreneurs and designers of all experience levels to explore the
             dynamic world of web and mobile development. The event provides an
