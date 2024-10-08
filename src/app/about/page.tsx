@@ -11,8 +11,8 @@ export default function About() {
   return (
     <>
         <Head>
-            <title>RenderconKe 2024 — About us</title>
-            <meta name="description" content="RenderconKe 2024 is a conference for Web and Mobile developers. Here is the about us page. Get to know us" />
+            <title>RenderconKe 2025 — About us</title>
+            <meta name="description" content="RenderconKe 2025 is a conference for Web and Mobile developers. Here is the about us page. Get to know us" />
         </Head>
 
         <Header />
