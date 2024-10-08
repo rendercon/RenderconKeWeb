@@ -20,8 +20,8 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>RenderconKe 2024 — The premier conference experience for Web and Mobile</title>
-      <meta name="description" content="RenderconKe 2024 is a conference for Web and Mobile developers. We bring together a diverse group of people from all across the world to share their knowledge and experience." />
+      <title>RenderconKe 2025 — The premier conference experience for Web and Mobile</title>
+      <meta name="description" content="RenderconKe 2025 is a conference for Web and Mobile developers. We bring together a diverse group of people from all across the world to share their knowledge and experience." />
     </Head>
     
     <Header />
