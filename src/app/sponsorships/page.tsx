@@ -82,7 +82,7 @@ function Sponsorship() {
         <div className="container mx-auto px-6">
           {/* Title */}
           <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-purple-300 sm:text-5xl">
-            Our Sponsors
+            Our Sponsors from 2024
           </h2>
 
           {/* Attendees as Sponsors */}
