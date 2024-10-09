@@ -58,8 +58,8 @@ const Sponsors = () => {
       className="py-8 sm:py-24 text-sm md:text-xl"
     >
       <Container>
-        <h2 className="mx-auto max-w-2xl text-center font-display text-3xl font-medium tracking-tighter text-slate-200 lg:text-5xl">
-          Our Sponsors
+        <h2 className="mx-auto max-w-2xl text-center font-display text-3xl font-medium tracking-tighter text-slate-200 lg:text-4xl">
+          Our Sponsors from 2024
         </h2>
         <div className="mx-auto flex items-center justify-center gap-6 mt-8 flex-col md:flex-row">
           {sponsors.length > 0 ? (
