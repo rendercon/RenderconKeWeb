@@ -25,35 +25,42 @@ const Hero = () => {
               industry.
             </p>
           </div>
-          {/* <CountdownTimer/> */}
+          <CountdownTimer/>
 
-          <div className="w-full flex flex-col lg:flex-row items-center justify-center text-md lg:text-2xl font-mono text-yellow-400 mt-8 sm:mt-10 font-bold">
-            <p className="mr-2 flex items-center">
-              {/* <time dateTime="2025-10-03">3rd</time> -
+            <div className="w-full flex flex-col items-center justify-center text-md lg:text-2xl font-mono text-yellow-400 mt-8 sm:mt-10 font-bold">
+            <p className="flex items-center">
+              {/* <time dateTime="2025-10-03">3rd</time> - */}
               <time dateTime="2025-10-04"> 4th October 2025</time>
-              <p className={"hidden lg:block"}>•</p> */}
-              <p className={"ml-2"}>Dates and Venue To be announced</p>
+              {/* <p className={"hidden lg:block"}>•</p> */}
+              {/* <p className={"ml-2"}>Dates and Venue To be announced</p> */}
             </p>
-            {/* <p className={"ml-2"}>CUEA, Nairobi</p> */}
-          </div>
+            <p>Pride Inn Azure — Westlands, Nairobi</p>
+            </div>
 
           <div className="pt-8 sm:pt-10 lg:flex">
             {/* <div className='pb-10 lg:pr-10'>
 
             <a 
             className="inline-flex justify-center rounded-lg bg-slate-600 px-4 py-2 text-base font-semibold font-mono text-white cursor-pointer hover:bg-slate-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500 active:text-white/70"
-            href="https://bit.ly/rcke24cfp" target="_blank" rel="noopener noreferrer">Submit your Session</a>
+            href="https://bit.ly/rcke25cfp" target="_blank" rel="noopener noreferrer">Submit your Session</a>
             
             </div> */}
 
 
-            <div className="flex items-center align-center justify-center lg:mx-auto">
+            <div className="flex items-center gap-5 align-center justify-center lg:mx-auto">
               
                 <a
-                  href="#"
+                  href="https://bit.ly/rcke25cfp" target="_blank" rel="noopener noreferrer"
                   className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
                 >
-                  Tickets TBA
+                  Submit your Session
+                </a>
+
+                <a
+                  href="https://bit.ly/rcke25adv" target="_blank" rel="noopener noreferrer"
+                  className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
+                >
+                  Get Tickets Here
                 </a>
             </div>
           </div>
