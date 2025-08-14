@@ -72,11 +72,11 @@ export function Header() {
           <div className="flex items-center justify-between w-full">
             <Navbar /> {/* Full Navbar links */}
             <a
-              href="#"
-              className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
-            >
-              Tickets TBA
-            </a>
+                  href="https://bit.ly/rcke25adv" target="_blank" rel="noopener noreferrer"
+                  className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
+                >
+                  Get Tickets Here
+                </a>
           </div>
         )}
       </Container>
@@ -88,11 +88,11 @@ export function Header() {
             <Navbar onLinkClick={closeMenu} /> {/* Mobile Navbar links */}
           </div>
           <a
-            href="#"
-            className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
-          >
-            Tickets TBA
-          </a>
+                  href="https://bit.ly/rcke25adv" target="_blank" rel="noopener noreferrer"
+                  className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
+                >
+                  Get Tickets Here
+                </a>
         </div>
       )}
     </header>
