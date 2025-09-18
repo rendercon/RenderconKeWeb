@@ -49,12 +49,12 @@ const Hero = () => {
 
             <div className="flex items-center gap-5 align-center justify-center lg:mx-auto">
               
-                <a
+                {/* <a
                   href="https://bit.ly/rcke25cfp" target="_blank" rel="noopener noreferrer"
                   className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
                 >
                   Submit your Session
-                </a>
+                </a> */}
 
                 <a
                   href="https://bit.ly/rcke25adv" target="_blank" rel="noopener noreferrer"
