@@ -2,6 +2,12 @@ import React from "react";
 import { Button } from "./Button";
 import Link from "next/link";
 import Technologies from "./Technologies";
+import Image from "next/image";
+
+import ImageOne from "../images/assets/conf_web_asset_1.webp";
+import ImageTwo from "../images/assets/conf_web_asset_2.webp";
+import ImageThree from "../images/assets/conf_web_asset_3.webp";
+import ImageFour from "../images/assets/conf_web_asset_4.webp";
 
 const Community = () => {
   return (
@@ -21,30 +27,38 @@ const Community = () => {
           </div>
           <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
             <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-              <img
-                src="https://res.cloudinary.com/djgfcdjgn/image/upload/v1708514361/RKY_4305_1_jnwhup.jpg"
+              <Image
+                src={ImageFour}
+                width={592}
+                height={432}
                 alt=""
                 className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
               />
             </div>
             <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
               <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
-                <img
-                  src="https://res.cloudinary.com/djgfcdjgn/image/upload/v1708514436/RKY_4577_1_atxxpn.jpg"
+                <Image
+                  src={ImageThree}
                   alt=""
+                  width={384}
+                  height={288}
                   className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                 />
               </div>
               <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
-                <img
-                  src="https://res.cloudinary.com/djgfcdjgn/image/upload/v1728465508/rendercon_community-2_p4y9u9.png"
+                <Image
+                  src={ImageTwo}
+                  width={592}
+                  height={432}
                   alt=""
                   className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                 />
               </div>
               <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
-                <img
-                  src="https://res.cloudinary.com/djgfcdjgn/image/upload/v1728463995/Rendercon_Kenya-community_image_axoalz.jpg"
+                <Image
+                  src={ImageOne}
+                  width={384}
+                  height={288}
                   alt=""
                   className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                 />
