@@ -21,8 +21,7 @@ const Community = () => {
             <p className="mt-4 font-mono text-lg md:text-xl tracking-tight leading-8 text-slate-300">
               A conference experience is only as good as the community that
               attends it. We are proud to have a diverse community of
-              developers, designers, and tech enthusiasts from all across the
-              world.
+              developers, designers, and tech enthusiasts from all across the globe.
             </p>
           </div>
           <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
