@@ -6,6 +6,7 @@ import { FaTwitter, FaLinkedin, FaGlobe, FaFacebook, FaInstagram, FaYoutube } fr
 import LogoLemonade from '../images/logos/lemonage_logo.jpg';
 import LogoPayd from '../images/logos/payd.png';
 import LogoReactDevsKe from '../images/logos/reactdevske.png';
+import LogoCloudinaryBlue from "../images/logos/cloudinary_stacked_logo_box.png";
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
 import Technologies from '../components/Technologies';
@@ -20,6 +21,21 @@ type Sponsors = {
 
 const sponsors: Sponsors[] = [
   {
+    name: 'Cloudinary',
+    logo: LogoCloudinaryBlue,
+    link: 'https://cloudinary.com/',
+    description:
+      'Cloudinary is a cloud-based media management platform that enables developers and businesses to store, optimize, transform, and deliver images and videos with powerful APIs, AI-powered editing tools, and seamless integrations for scalable, high-performing digital experiences.',
+    socials: {
+      twitter: 'https://twitter.com/cloudinary',
+      linkedin: 'https://www.linkedin.com/company/cloudinary',
+      facebook: 'https://facebook.com/cloudinary',
+      instagram: 'https://instagram.com/cloudinary',
+      youtube: 'https://www.youtube.com/cloudinary',
+      website: 'https://cloudinary.com/',
+    },
+  },
+  {
     name: 'ReactDevsKe',
     logo: LogoReactDevsKe,
     link: 'https://reactdevske.org',
@@ -30,37 +46,7 @@ const sponsors: Sponsors[] = [
       linkedin: 'https://www.linkedin.com/company/reactdevske',
       website: 'https://reactdevske.org',
     },
-  },
-  {
-    name: 'Lemonade',
-    logo: LogoLemonade,
-    link: 'https://mylemonade.io/',
-    description:
-      'Lemonade offers secure, seamless digital payment solutions across Africa. Their omnichannel wallet enables businesses, consumers, and developers to manage payments across all networks. With customizable APIs, Lemonade ensures branded, compliant transactions, while enhancing accessibility and financial control for organizations.',
-    socials: {
-      twitter: 'https://twitter.com/mylemonade_io',
-      linkedin: 'https://www.linkedin.com/company/lemonadepayment/',
-      facebook: 'https://www.facebook.com/lemonadepayment',
-      instagram: 'https://www.instagram.com/lemonadepayment/',
-      youtube: 'https://www.youtube.com/@lemonadepayment',
-      website: 'https://mylemonade.io/',
-    },
-  },
-  {
-    name: 'Payd',
-    logo: LogoPayd,
-    link: 'https://paydexp.com/',
-    description:
-      'Payd offers secure, user-friendly digital payment solutions for managing savings and transactions. With an emphasis on simplicity and accessibility, Payd provides seamless integration across financial systems, empowering users and businesses with efficient, secure financial control.',
-    socials: {
-      twitter: 'https://twitter.com/paydhq',
-      linkedin: 'https://www.linkedin.com/company/paydexp',
-      facebook: 'https://www.facebook.com/mypaydapp',
-      instagram: 'https://instagram.com/paydhq',
-      youtube: 'https://youtube.com/paydhq',
-      website: 'https://paydexp.com/',
-    },
-  },
+  }
 ];
 
 function Sponsorship() {
@@ -82,7 +68,7 @@ function Sponsorship() {
         <div className="container mx-auto px-6">
           {/* Title */}
           <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-purple-300 sm:text-5xl">
-            Our Sponsors from 2024
+            Our Sponsors
           </h2>
 
           {/* Attendees as Sponsors */}

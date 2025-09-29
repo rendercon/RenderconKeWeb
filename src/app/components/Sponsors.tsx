@@ -2,9 +2,8 @@
 
 import Image, { StaticImageData } from "next/image";
 import { Container } from "./Container";
-import LogoLemonade from "../images/logos/lemonade.png";
-import LogoPayd from "../images/logos/payd.png";
 import LogoReactDevsKe from "../images/logos/ReactdevskeLogo.png";
+import LogoCloudinary from "../images/logos/cloudinary_logo_white.png";
 import { Button } from "./Button";
 import Link from "next/link";
 
@@ -17,27 +16,13 @@ type Sponsors = {
 };
 
 const sponsors: Sponsors[] = [
-  {
-    name: "ReactDevsKe",
-    logo: LogoReactDevsKe,
-    link: "https://reactdevske.org",
-    height: 200,
-    width: 500,
-  },
-  {
-    name: "Lemonade",
-    logo: LogoLemonade,
-    link: "https://mylemonade.io/",
-    height: 200,
-    width: 500,
-  },
-  {
-    name: "Payd",
-    logo: LogoPayd,
-    link: "https://paydexp.com/",
-    height: 200,
-    width: 300,
-  },
+    {
+      name: "Cloudinary",
+      logo: LogoCloudinary,
+      link: "https://cloudinary.com/",
+      height: 200,
+      width: 500,
+    }
 ];
 
 const Sponsors = () => {
@@ -59,7 +44,7 @@ const Sponsors = () => {
     >
       <Container>
         <h2 className="mx-auto max-w-2xl text-center font-display text-3xl font-medium tracking-tighter text-slate-200 lg:text-4xl">
-          Our Sponsors from 2024
+          Our Sponsors
         </h2>
         <div className="mx-auto flex items-center justify-center gap-6 mt-8 flex-col md:flex-row">
           {sponsors.length > 0 ? (
