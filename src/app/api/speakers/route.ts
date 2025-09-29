@@ -33,7 +33,7 @@ const speakerData = [
     "linkedin_url": "https://www.linkedin.com/in/kenneth-mathari/",
     "other_social": "https://github.com/KennethMathari",
     "speaker_bio": "Mobile Developer with a strong focus on native & cross-platform mobile app development. I’ve spent the last few years building mobile app solutions that prioritize clean architecture, great user experiences, and scalable codebases. I’m also a strong advocate for open source, and I enjoy exploring how community-driven libraries can accelerate mobile development and bring developers together.",
-    "speaker_image": "https://media.licdn.com/dms/image/v2/D4D03AQFNgYxt3GDiyQ/profile-displayphoto-shrink_800_800/B4DZeHFSVmGUAg-/0/1750318000297?e=1758758400&v=beta&t=F1-TCMsyIXpYrjixYpoe8Kyefs9zrpgIxcgKKrM3Klo",
+    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/kenneth_mathari-Jdd4n28i8sAjrl0SjNBq7SmGqqY04V.jpg",
     "session_title": "The Hidden Cost of Copy-Paste: Why Your App Should Depend on People, Not Just Code",
     "session_abstract": "In today’s fast-paced mobile development, it’s easy to copy-paste code or drop in open source libraries without a second thought but every dependency comes with people, context, and consequences. This talk explores the often-overlooked human side of open source, highlighting the importance of understanding the communities behind the code. Through real-world stories and practical insights, we’ll learn how to evaluate project health, engage with maintainers, and contribute meaningfully, even as consumers. By shifting our mindset from passive use to active participation, we can build more secure, resilient, and collaborative mobile apps.",
     "co_presenter_info": null
@@ -105,7 +105,7 @@ const speakerData = [
     "linkedin_url": "https://www.linkedin.com/in/titus-thumbi-103882190/",
     "other_social": "https://www.linkedin.com/in/titus-thumbi-103882190/",
     "speaker_bio": "https://www.linkedin.com/in/titus-thumbi-103882190/",
-    "speaker_image": "https://media.licdn.com/dms/image/v2/C5603AQEWqqNHN8b3kQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1649407928091?e=1758758400&v=beta&t=JQLTl98xjM27Y4Hmtpyxnhg9uJiQiynHLq6D_-o4KUM",
+    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/titus_gikandi-KBc4JltPkgUfvcdFacfttTulV5h16Z.jpg",
     "session_title": "“Breaking Down the Frontend, Holding It Together: Microfrontends in a Monorepo”",
     "session_abstract": "Microfrontends are a powerful way to scale frontend development across teams, but they often introduce challenges like duplicated tooling, inconsistent dependencies, and siloed workflows. A monorepo can help solve these problems by providing a single source of truth, unified build and test pipelines, and a structure that supports both autonomy and alignment. In this session, we’ll break down practical strategies, common pitfalls, and real-world lessons on combining microfrontends with a monorepo. You’ll leave with patterns and best practices to keep your frontend architecture both modular and maintainable, while empowering teams to deliver faster with confidence.",
     "co_presenter_info": null
