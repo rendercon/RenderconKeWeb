@@ -8,6 +8,8 @@ import LogoReactDevsKe from '../images/logos/ReactdevskeLogo.png';
 import LogoOscaNairobi from '../images/logos/osca_nairobi_logo.jpg';
 import LogoSpaceYaTech from '../images/logos/SPACEYATECH_LOGO.jpg';
 import LogoSupaBase from '../images/logos/supabase_logo_wordmark.png';
+import LogoLemonade from "../images/logos/lemonade.png";
+import LogoPayd from "../images/logos/payd.png";
 import Technologies from './Technologies';
 
 type Partners = {
@@ -17,6 +19,16 @@ type Partners = {
 };
 
 const partners: Partners[] = [
+    {
+        name: "Lemonade",
+        logo: LogoLemonade,
+        link: "https://mylemonade.io/",
+    },
+    {
+        name: "Payd",
+        logo: LogoPayd,
+        link: "https://paydexp.com/",
+    },
     {
         name: 'Dev Kenya',
         logo: LogoDevKenya,
