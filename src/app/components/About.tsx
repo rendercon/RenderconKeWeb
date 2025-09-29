@@ -44,37 +44,14 @@ function AboutUs() {
           <p className="text-sm md:text-md lg:text-lg  leading-6 font-mono">
             The event highlights the importance of community, bringing together
             a diverse mix of developers, designers, engineers, and tech
-            enthusiasts from around the world. It`&apos;`s supported by key sponsors
-            such as
-            <a
-              href="https://reactdevske.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#caf0f8] underline hover:text-[#eee712] transition"
-            >
-              {" "}
-              ReactDevsKe Community
-            </a>
-            ,
-            <a
-              href="https://web.mypayd.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#caf0f8] underline hover:text-[#eee712] transition"
-            >
-              {" "}
-              Payd
-            </a>
-            , and
-            <a
-              href="https://mylemonade.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#caf0f8] underline hover:text-[#eee712] transition"
-            >
-              {" "}
-              Lemonade
-            </a>
+            enthusiasts from around the world. It&apos;s supported by key sponsors
+            who share a commitment to advancing technology and innovation.
+            RenderCon is more than just a conference; it&apos;s a celebration of the
+            React ecosystem and a catalyst for growth and development within the
+            tech community.
+            <br />
+            <br />
+            Join us in Nairobi for an unforgettable experience
             , with an array of workshops, talks, and networking opportunities.
             <br />
             <br />

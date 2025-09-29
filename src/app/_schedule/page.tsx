@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 
 const SchedulePage = () => {
   const { schedule, isLoading } = useSchedule();
-  const [activeDay, setActiveDay] = useState<'day1' | 'day2'>('day1');
+  const [activeDay, setActiveDay] = useState<'day1'>('day1');
   const [selectedSession, setSelectedSession] = useState<Session | null>(null); // Track the selected session
 
   if (isLoading) {
@@ -22,7 +22,7 @@ const SchedulePage = () => {
       <div className="py-10 px-6 min-h-screen">
         {/* Tabs for switching between days */}
         <div className="flex justify-center mb-8">
-          <button
+          {/* <button
             className={`text-xl font-semibold px-4 py-2 ${
               activeDay === 'day1' ? 'text-yellow-500 border-b-2 border-yellow-500' : 'text-gray-400'
             }`}
@@ -32,17 +32,17 @@ const SchedulePage = () => {
             }}
           >
             Fri, Day 1
-          </button>
+          </button> */}
           <button
             className={`text-xl font-semibold px-4 py-2 ${
-              activeDay === 'day2' ? 'text-yellow-500 border-b-2 border-yellow-500' : 'text-gray-400'
+              activeDay === 'day1' ? 'text-yellow-500 border-b-2 border-yellow-500' : 'text-gray-400'
             }`}
             onClick={() => {
-              setActiveDay('day2');
+              setActiveDay('day1');
               setSelectedSession(null); // Reset the selected session when switching days
             }}
           >
-            Sat, Day 2
+            Sat 04th October
           </button>
         </div>
 
@@ -77,13 +77,13 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ sessions, onSelectSession }) 
           {session.speakers.map((speaker, index) => (
             <div key={index} className="flex items-center justify-center gap-5">
               <img
-                src={speaker.profilePicture || '/path-to-default-image'}
-                alt={speaker.fullName}
+                src={speaker.speaker_image || '/path-to-default-image'}
+                alt={speaker.fullname}
                 className="w-24 h-24 rounded-[10px]"
               />
               <div className="ml-4">
-                <p className="font-semibold text-yellow-500">{speaker.fullName}</p>
-                <p className="text-sm">{speaker.tagLine}</p>
+                <p className="font-semibold text-yellow-500">{speaker.fullname}</p>
+                <p className="text-sm">{speaker.title_role}</p>
               </div>
             </div>
           ))}
@@ -115,13 +115,13 @@ const SessionDetails: React.FC<SessionDetailsProps> = ({ session, onBack }) => (
       {session.speakers.map((speaker, index) => (
         <div key={index} className="flex items-center justify-center gap-5">
           <img
-            src={speaker.profilePicture || '/path-to-default-image'}
-            alt={speaker.fullName}
+            src={speaker.speaker_image || '/path-to-default-image'}
+            alt={speaker.fullname}
             className="w-24 h-24 rounded-[10px]"
           />
           <div className="ml-4">
-            <p className="font-semibold text-yellow-500">{speaker.fullName}</p>
-            <p className="text-sm">{speaker.tagLine}</p>
+            <p className="font-semibold text-yellow-500">{speaker.fullname}</p>
+            <p className="text-sm">{speaker.title_role}</p>
           </div>
         </div>
       ))}

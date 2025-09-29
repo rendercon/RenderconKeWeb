@@ -7,6 +7,7 @@ import { FiUser, FiArrowLeft } from "react-icons/fi"; // Import FiArrowLeft for 
 import Technologies from "./Technologies";
 import Link from 'next/link';
 import Image from 'next/image';
+import { Speaker } from "../../utils/types";
 
 // Skeleton Loader for the speaker cards
 const SkeletonLoader = () => (
@@ -19,13 +20,13 @@ const SkeletonLoader = () => (
   </div>
 );
 
-type Speaker = {
-  id: string;
-  fullName: string;
-  profilePicture: string;
-  sessions: { name: string }[];
-  bio?: string; // Add speaker bio if available
-};
+// type Speaker = {
+//   id: string;
+//   fullName: string;
+//   profilePicture: string;
+//   sessions: { name: string }[];
+//   bio?: string; // Add speaker bio if available
+// };
 
 type ImageClipPathsProps = {
   id: string;
@@ -60,7 +61,7 @@ export function Speakers() {
     setError(false); 
     try {
       const res = await fetch(
-        "https://sessionize.com/api/v2/d899srzm/view/Speakers"
+        "/api/speakers"
       );
       if (!res.ok) throw new Error("Failed to fetch speakers");
       const data = await res.json();
@@ -121,7 +122,7 @@ export function Speakers() {
                     id="speakers-title"
                     className="font-display text-3xl font-medium tracking-tighter text-slate-100 sm:text-3xl"
                   >
-                    Our Speakers from the 2024 Edition
+                    Our Speakers
                   </h2>
                   <p className="mt-4 font-mono text-md sm:text-md tracking-tight text-slate-200">
                     Learn from the best in the industry and level up your skills.
@@ -150,14 +151,14 @@ export function Speakers() {
                         <div key={speaker.id} onClick={() => handleSpeakerClick(speaker)}>
                           <img
                             className="relative aspect-[14/13] w-full sm:w-[80%] lg:w-[90%] mx-auto rounded-xl object-cover bg-purple-900 cursor-pointer"
-                            src={speaker.profilePicture}
-                            alt={speaker.fullName}
+                            src={speaker.speaker_image}
+                            alt={speaker.fullname}
                           />
                           <h3 className="mt-4 sm:mt-6 text-md md:text-lg font-semibold leading-6 sm:leading-8 tracking-tight text-white text-center">
-                            {speaker.fullName}
+                            {speaker.fullname}
                           </h3>
                           <p className="font-mono text-xs md:text-sm leading-5 sm:leading-6 text-slate-300 text-center">
-                            {speaker.sessions[0].name}
+                            {speaker.session_title}
                           </p>
                         </div>
                       ))}
@@ -198,19 +199,19 @@ const SpeakerDetails: React.FC<SpeakerDetailsProps> = ({ speaker, onBack }) => (
         <FiArrowLeft className="mr-2" /> Back to speakers
       </button>
     </Link>
-    <h1 className="text-2xl font-bold mb-4 ml-[30%]">{speaker.fullName}</h1>
+    <h1 className="text-2xl font-bold mb-4 ml-[30%]">{speaker.fullname}</h1>
     <img
       className="relative w-full max-w-md mx-auto rounded-xl object-cover bg-purple-900 mb-4"
-      src={speaker.profilePicture}
-      alt={speaker.fullName}
+      src={speaker.speaker_image}
+      alt={speaker.fullname}
     />
     <h3 className="text-lg font-bold mb-2 text-yellow-500">Session</h3>
     <ul className="mb-4">
-      {speaker.sessions.map((session, idx) => (
-        <li key={idx} className="text-sm">{session.name}</li>
-      ))}
+      {speaker.session_title ? (
+        <li className="text-sm">{speaker.session_title}</li>
+      ) : ("Session details not available.")}
     </ul>
     <h3 className="text-lg text-yellow-500 font-bold mb-2">Bio</h3>
-    <p className="text-sm">{speaker.bio || "No bio available."}</p>
+    <p className="text-sm">{speaker.speaker_bio || "No bio available."}</p>
   </div>
 );

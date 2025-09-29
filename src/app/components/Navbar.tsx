@@ -20,7 +20,7 @@ function Navbar({ onLinkClick }: NavbarProps) {
 
   return (
     <ul className="w-full lg:w-[400px] flex flex-col items-end h-[120px] lg:h-auto lg:flex-row font-mono justify-between lg:items-center md:mx-auto font-semibold">
-      <li onClick={onLinkClick}>
+      {/* <li onClick={onLinkClick}>
         <Link
           href="/schedule"
           className={`${
@@ -31,7 +31,7 @@ function Navbar({ onLinkClick }: NavbarProps) {
         >
           Schedule
         </Link>
-      </li>
+      </li> */}
       <li onClick={onLinkClick}>
         <Link
           href="/about"

@@ -1,10 +1,16 @@
 // types.ts
-export interface Speaker {
+export type Speaker = {
     id: string;
-    fullName: string;
-    tagLine?: string;
-    profilePicture?: string;
-  }
+    fullname: string;
+    title_role: string;
+    linkedin_url: string;
+    other_social: string;
+    speaker_bio: string | null;
+    speaker_image: string;
+    session_title: string;
+    session_abstract: string;
+    co_presenter_info: string | null;
+};
   
   export interface Room {
     id: number;
