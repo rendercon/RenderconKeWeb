@@ -21,7 +21,7 @@ const speakerData = [
     "linkedin_url": "https://www.linkedin.com/in/roywanyoike/",
     "other_social": "https://github.com/Roy-Wanyoike",
     "speaker_bio": "https://sessionize.com/royford-wanyoike/",
-    "speaker_image": "https://photos.google.com/photo/AF1QipMh7UP2POpmIUPdpK4G6z5AyMFv0X2FdOjlELwM",
+    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/royford_wanyoike-M5OvoXpCgybZ79sccnMMuREpxo2OMQ.jpg",
     "session_title": "From Pages Router to App Router: A Practical Migration Roadmap in Next.js 14",
     "session_abstract": "Next.js has evolved rapidly, and with the introduction of the App Router, developers face both exciting opportunities and real migration challenges. In this talk, I’ll share a hands-on roadmap for migrating an existing React/Next.js project from the Pages Router to the new App Router. We’ll cover practical steps, common pitfalls, and proven strategies for adopting features like server components, streaming, and data fetching. By the end, attendees will leave with a clear step-by-step migration playbook they can apply immediately in their projects.",
     "co_presenter_info": null
