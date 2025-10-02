@@ -200,11 +200,16 @@ const SpeakerDetails: React.FC<SpeakerDetailsProps> = ({ speaker, onBack }) => (
       </button>
     </Link>
     <h1 className="text-2xl font-bold mb-4 ml-[30%]">{speaker.fullname}</h1>
-    <img
-      className="relative w-full max-w-md mx-auto rounded-xl object-cover bg-purple-900 mb-4"
+    <div className="flex justify-center mb-4">
+      <Image
+      className="relative aspect-[14/13] w-[50%] sm:w-[40%] lg:w-[35%] rounded-xl object-cover bg-purple-900"
       src={speaker.speaker_image}
       alt={speaker.fullname}
-    />
+      width={700}
+      height={700}
+
+      />
+    </div>
     <h3 className="text-lg font-bold mb-2 text-yellow-500">Session</h3>
     <ul className="mb-4">
       {speaker.session_title ? (
@@ -212,6 +217,11 @@ const SpeakerDetails: React.FC<SpeakerDetailsProps> = ({ speaker, onBack }) => (
       ) : ("Session details not available.")}
     </ul>
     <h3 className="text-lg text-yellow-500 font-bold mb-2">Bio</h3>
-    <p className="text-sm">{speaker.speaker_bio || "No bio available."}</p>
+    <div className="max-h-48 overflow-y-auto text-sm pr-2" style={{
+      scrollbarWidth: 'thin',
+      scrollbarColor: '#3B0764 #581C87'
+    }}>
+      <p>{speaker.speaker_bio || "No bio available."}</p>
+    </div>
   </div>
 );
