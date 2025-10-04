@@ -58,6 +58,18 @@ function Navbar({ onLinkClick }: NavbarProps) {
       </li>
       <li onClick={onLinkClick}>
         <Link
+          href="/speakers-schedule"
+          className={`${
+            isActive("/speakers-schedule")
+              ? "font-extrabold text-yellow-400"
+              : "text-slate-200"
+          }`}
+        >
+          Speaker Schedule
+        </Link>
+      </li>
+      <li onClick={onLinkClick}>
+        <Link
           href="#sponsors"
           className={`${
             isActive("#sponsors")
