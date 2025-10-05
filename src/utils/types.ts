@@ -16,7 +16,6 @@ export type SpeakerSubmission = {
     id: string;
     email: string;
     fullName: string;
-    phoneNumber: string;
     titleRole: string;
     linkedinProfile: string;
     socialMediaLinks: string;
@@ -27,18 +26,6 @@ export type SpeakerSubmission = {
     speakerBio: string;
     profilePhoto: string;
     sessionTitle: string;
-    targetAudience: string;
-    sessionAbstract: string;
-    keyTakeaways: string;
-    technicalPrerequisites: string;
-    sessionUniqueness: string;
-    passportCountry: string;
-    dietaryRestrictions: string;
-    accessibilityRequirements: string;
-    specialEquipmentNeeds: string;
-    coPresenterInfo: string;
-    additionalComments: string;
-    codeOfConductAgreement: string;
 };
   
   export interface Room {

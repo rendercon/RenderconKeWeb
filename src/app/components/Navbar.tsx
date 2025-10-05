@@ -58,14 +58,14 @@ function Navbar({ onLinkClick }: NavbarProps) {
       </li>
       <li onClick={onLinkClick}>
         <Link
-          href="/speakers-schedule"
+          href="/schedule"
           className={`${
             isActive("/speakers-schedule")
               ? "font-extrabold text-yellow-400"
               : "text-slate-200"
           }`}
         >
-          Speaker Schedule
+          Schedule
         </Link>
       </li>
       <li onClick={onLinkClick}>
