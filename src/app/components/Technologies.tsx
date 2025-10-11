@@ -18,9 +18,11 @@ const Technologies = (props: Props) => {
         <span className="text-[#3A69A8]">Remix</span>,&nbsp;
         <span className="text-[#E33332]">React Testing Library</span>,&nbsp;
         <span className="text-[#FF4785]">Storybook</span>,&nbsp;
-        <span className="text-[#319795]">ChakraUI</span>,&nbsp;
+        <span className="text-[#FFD700]">Vite</span>,&nbsp;
+        <span className="text-[#fff]">Shadcn/ui</span>,&nbsp;
         <span className="text-[#DB7093]">Styled-components</span>,&nbsp;
         <span className="text-[#764ABC]">Redux Toolkit</span>,&nbsp;
+        <span className="text-[#61DAFB]">Tanstack Start</span>,&nbsp;
         <span className="text-[#CB0000]">SWR</span>,&nbsp;
         <span className="text-[#0055FF]">Framer Motion</span>,&nbsp;
         <span className="text-[#38B2AC]">TailwindCSS</span>,&nbsp;
@@ -40,9 +42,11 @@ const Technologies = (props: Props) => {
         <span className="text-[#3A69A8]">Remix</span>,&nbsp;
         <span className="text-[#E33332]">React Testing Library</span>,&nbsp;
         <span className="text-[#FF4785]">Storybook</span>,&nbsp;
-        <span className="text-[#319795]">ChakraUI</span>,&nbsp;
+        <span className="text-[#FFD700]">Vite</span>,&nbsp;
+        <span className="text-[#fff]">Shadcn/ui</span>,&nbsp;
         <span className="text-[#DB7093]">Styled-components</span>,&nbsp;
         <span className="text-[#764ABC]">Redux Toolkit</span>,&nbsp;
+        <span className="text-[#61DAFB]">Tanstack Start</span>,&nbsp;
         <span className="text-[#CB0000]">SWR</span>,&nbsp;
         <span className="text-[#0055FF]">Framer Motion</span>,&nbsp;
         <span className="text-[#38B2AC]">TailwindCSS</span>,&nbsp;
