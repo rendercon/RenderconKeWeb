@@ -71,6 +71,8 @@ const Community = () => {
       <div className="flex justify-center pt-16 gap-5">
           <a
             href="https://bit.ly/rcke23pics"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
             >
             View Gallery(2023)
@@ -78,10 +80,21 @@ const Community = () => {
 
           <a
             href="https://bit.ly/rcke24pics"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
             >
             View Gallery(2024)
           </a>
+
+            <a
+            href="https://bit.ly/rcke25pics"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
+            >
+            View Gallery(2025)
+            </a>
         </div>
       <div className="mt-16">
         <Technologies />
