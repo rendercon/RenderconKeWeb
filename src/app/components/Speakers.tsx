@@ -8,12 +8,13 @@ import Technologies from "./Technologies";
 import Link from 'next/link';
 import Image from 'next/image';
 import { Speaker } from "../../utils/types";
+import { IconWrapper } from "../../components/IconWrapper";
 
 // Skeleton Loader for the speaker cards
 const SkeletonLoader = () => (
   <div className="animate-pulse">
     <div className="relative aspect-[14/13] w-[90%] bg-purple-700 rounded-xl">
-      <FiUser className="text-[#b19eaf] h-[100%] w-[100%] p-6" />
+      <IconWrapper icon={FiUser as any} className="text-[#b19eaf] h-[100%] w-[100%] p-6" />
     </div>
     <div className="mt-6 h-4 bg-purple-800 rounded w-3/4"></div>
     <div className="mt-4 h-3 bg-purple-900 rounded w-1/2"></div>
@@ -196,7 +197,7 @@ const SpeakerDetails: React.FC<SpeakerDetailsProps> = ({ speaker, onBack }) => (
   <div className="bg-violet-900 text-white p-6 rounded-lg mb-6 max-w-2xl mx-auto relative z-50 mt-10 h-[92%] flex flex-col justify-evenly">
     <Link href="#speakers">
       <button className="text-yellow-500 mb-4 flex items-center" onClick={onBack} >
-        <FiArrowLeft className="mr-2" /> Back to speakers
+        <IconWrapper icon={FiArrowLeft as any} className="mr-2" /> Back to speakers
       </button>
     </Link>
     <h1 className="text-2xl font-bold mb-4 ml-[30%]">{speaker.fullname}</h1>

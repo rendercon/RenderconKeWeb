@@ -1,11 +1,12 @@
 'use client';
 import React, { useState } from 'react';
-import { FaMapMarkerAlt } from 'react-icons/fa';
 import { useSchedule } from '../context/ScheduleContext';
 import { Session } from '../../utils/types';
 import { format } from 'date-fns';
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import { IconWrapper } from '../../components/IconWrapper';
 
 const SchedulePage = () => {
   const { schedule, isLoading } = useSchedule();
@@ -89,7 +90,7 @@ const DaySchedule: React.FC<DayScheduleProps> = ({ sessions, onSelectSession }) 
           ))}
         </div>
         <div className="text-yellow-500 mb-2 flex items-center pt-8">
-          <FaMapMarkerAlt className="mr-2" /> {session.room}
+          <IconWrapper icon={FaMapMarkerAlt as any} className="mr-2" /> {session.room}
         </div>
         <h3 className="text-lg font-bold mb-1">{session.title}</h3>
         <p className="text-sm">
@@ -127,7 +128,7 @@ const SessionDetails: React.FC<SessionDetailsProps> = ({ session, onBack }) => (
       ))}
     </div>
     <div className="text-yellow-500 mb-2 flex items-center">
-      <FaMapMarkerAlt className="mr-2" /> {session.room}
+      <IconWrapper icon={FaMapMarkerAlt as any} className="mr-2" /> {session.room}
     </div>
     <h3 className="text-lg font-bold mb-2">About</h3>
     <p className="text-sm mb-4">{session.description}</p>

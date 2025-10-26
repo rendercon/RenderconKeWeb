@@ -10,6 +10,7 @@ import LogoCloudinaryBlue from "../images/logos/cloudinary_stacked_logo_box.png"
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
 import Technologies from '../components/Technologies';
+import { IconWrapper } from '../../components/IconWrapper';
 
 type Sponsors = {
   name: string;
@@ -108,7 +109,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaTwitter className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaTwitter as any} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                     {sponsor.socials.linkedin && (
@@ -117,7 +118,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaLinkedin className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaLinkedin as any} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                     {sponsor.socials.facebook && (
@@ -126,7 +127,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaFacebook className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaFacebook as any} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                     {sponsor.socials.instagram && (
@@ -135,7 +136,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaInstagram className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaInstagram as any} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                     {sponsor.socials.youtube && (
@@ -144,7 +145,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaYoutube className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaYoutube as any} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                     {sponsor.socials.website && (
@@ -153,7 +154,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaGlobe className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaGlobe as any} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                   </div>

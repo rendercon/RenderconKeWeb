@@ -6,6 +6,7 @@ import { Header } from "../components/Header";
 import { SpeakerSubmission } from "../../utils/types";
 import { FiUser, FiCalendar, FiClock, FiMapPin, FiFilter, FiSearch, FiExternalLink, FiLinkedin, FiGithub, FiTwitter } from "react-icons/fi";
 import { sessions, speakerSubmissions } from "@/utils/sessionDetails";
+import { IconWrapper } from "../../components/IconWrapper";
 // import Image from "next/image";
 
 
@@ -87,10 +88,10 @@ export default function SpeakersSchedulePage() {
   }, [updatedSpeakerSubmissions, searchTerm, selectedSessionType]);
 
   const getSocialIcon = (url: string) => {
-    if (url.includes('linkedin')) return <FiLinkedin className="w-4 h-4" />;
-    if (url.includes('github')) return <FiGithub className="w-4 h-4" />;
-    if (url.includes('twitter') || url.includes('x.com')) return <FiTwitter className="w-4 h-4" />;
-    return <FiExternalLink className="w-4 h-4" />;
+    if (url.includes('linkedin')) return <IconWrapper icon={FiLinkedin as any} className="w-4 h-4" />;
+    if (url.includes('github')) return <IconWrapper icon={FiGithub as any} className="w-4 h-4" />;
+    if (url.includes('twitter') || url.includes('x.com')) return <IconWrapper icon={FiTwitter as any} className="w-4 h-4" />;
+    return <IconWrapper icon={FiExternalLink as any} className="w-4 h-4" />;
   };
 
   const getSessionTypeColor = (type: string) => {
@@ -113,7 +114,7 @@ export default function SpeakersSchedulePage() {
             <div className="mb-8 bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-grow relative">
-              <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <IconWrapper icon={FiSearch as any} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
               <input
                 type="text"
                 placeholder="Search speakers, sessions, or roles..."
@@ -207,7 +208,7 @@ export default function SpeakersSchedulePage() {
                       className="text-slate-400 hover:text-blue-400 transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <FiLinkedin className="w-4 h-4" />
+                      <IconWrapper icon={FiLinkedin as any} className="w-4 h-4" />
                     </a>
                   )}
                   {speaker.socialMediaLinks && (
@@ -226,7 +227,7 @@ export default function SpeakersSchedulePage() {
                 {/* Submission Date */}
                 <div className="mt-4 pt-4 border-t border-slate-700">
                   <div className="flex items-center text-xs text-slate-400">
-                    <FiCalendar className="w-3 h-3 mr-1" />
+                    <IconWrapper icon={FiCalendar as any} className="w-3 h-3 mr-1" />
                     <span>Session: {speaker.sessionTime} in {speaker.sessionRoom}</span>
                   </div>
                 </div>
@@ -236,7 +237,7 @@ export default function SpeakersSchedulePage() {
 
           {filteredSpeakers.length === 0 && (
             <div className="text-center py-12">
-              <FiUser className="w-16 h-16 text-slate-600 mx-auto mb-4" />
+              <IconWrapper icon={FiUser as any} className="w-16 h-16 text-slate-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-slate-400 mb-2">No speakers found</h3>
               <p className="text-slate-500">Try adjusting your search criteria or filters.</p>
             </div>
@@ -291,7 +292,7 @@ export default function SpeakersSchedulePage() {
                     
                     <div className="space-y-2 text-sm text-slate-400">
                       <div className="flex items-center justify-center">
-                        <FiCalendar className="w-4 h-4 mr-2" />
+                        <IconWrapper icon={FiCalendar as any} className="w-4 h-4 mr-2" />
                         <span>Session: {selectedSpeaker.sessionTime} in {selectedSpeaker.sessionRoom}</span>
                       </div>
                     </div>
@@ -338,7 +339,7 @@ export default function SpeakersSchedulePage() {
                           rel="noopener noreferrer"
                           className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
                         >
-                          <FiLinkedin className="w-4 h-4 mr-2" />
+                          <IconWrapper icon={FiLinkedin as any} className="w-4 h-4 mr-2" />
                           <span className="text-sm">LinkedIn</span>
                         </a>
                       )}

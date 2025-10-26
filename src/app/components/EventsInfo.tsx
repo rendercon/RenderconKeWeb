@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { FaRegCalendarAlt, FaMapMarkerAlt, FaRegBuilding } from 'react-icons/fa';
+import { IconWrapper } from '../../components/IconWrapper';
 
 const EventsInfo = () => {
   return (
@@ -10,19 +11,19 @@ const EventsInfo = () => {
         
         {/* Number of Days */}
         <div className="flex items-center gap-2">
-          <FaRegCalendarAlt className="text-[#eee712] text-sm" />
+          <IconWrapper icon={FaRegCalendarAlt as any} className="text-[#eee712] text-sm" />
           <p className="text-xs text-slate-300"> <span className="font-bold">1 Day</span></p>
         </div>
 
         {/* Venue */}
         <div className="flex items-center gap-2">
-          <FaRegBuilding className="text-[#eee712] text-sm" />
+          <IconWrapper icon={FaRegBuilding as any} className="text-[#eee712] text-sm" />
           <p className="text-xs text-slate-300"> <span className="font-bold">Pride Inn Azure, Westlands</span></p>
         </div>
 
         {/* Location */}
         <div className="flex items-center gap-2">
-          <FaMapMarkerAlt className="text-[#eee712] text-sm" />
+          <IconWrapper icon={FaMapMarkerAlt as any} className="text-[#eee712] text-sm" />
           <p className="text-xs text-slate-300"> <span className="font-bold">Nairobi, Kenya</span></p>
         </div>
       </div>

@@ -3,11 +3,13 @@ import { Container } from './Container';
 import { FaUserTie, FaUserMd,  FaUserSecret, FaUserAstronaut } from 'react-icons/fa';
 import { FiUserCheck, FiUser } from 'react-icons/fi';
 import { BsPersonBadge } from 'react-icons/bs';
+import { IconWrapper } from '../../components/IconWrapper';
 
 
 type Organisers = {
   name: string;
-  icon: React.ReactNode;
+  icon: any; // Store the icon component reference
+  iconColor: string;
   link: string;
   description: string;
 };
@@ -15,31 +17,36 @@ type Organisers = {
 const organisers: Organisers[] = [
   {
     name: "Cindy Kandie",
-    icon: <FaUserTie className="text-[#139599] h-[100px] w-[100px]" />, // Icon for professional persona
+    icon: FaUserTie, // Icon for professional persona
+    iconColor: "text-[#139599]",
     link: "https://www.linkedin.com/in/cindykandie/",
     description: 'Frontend Engineer | Developer Relations Specialist | Community Manager | React Native Expert | Tech Event Organizer | WTM Ambassador',
   },
   {
     name: "Rama Ochieng'",
-    icon: <FaUserSecret className="text-[#1b0233] h-[100px] w-[100px]" />, // Icon representing learning and expertise
+    icon: FaUserSecret, // Icon representing learning and expertise
+    iconColor: "text-[#1b0233]",
     link: "https://www.linkedin.com/in/ramaochieng/",
     description: 'Frontend Software Engineer & Designer (React.js/React Native, JavaScript/Typescript, Next.js) | Open Source Maintainer & Contributor',
   },
   {
     name: "Abel Masila",
-    icon: <FaUserMd className="text-[#0790b3] h-[100px] w-[100px]" />, // Icon showing authority and experience
+    icon: FaUserMd, // Icon showing authority and experience
+    iconColor: "text-[#0790b3]",
     link: "https://www.linkedin.com/in/abelmasila/",
     description: 'Senior Frontend Engineer (Reactjs/Vue/Svelte) | Speaker | Mentor',
   },
   {
     name: "Ben Wasonga",
-    icon: <FaUserAstronaut className="text-[#2e72f0] h-[100px] w-[100px]" />, // Icon for trustworthiness and involvement
+    icon: FaUserAstronaut, // Icon for trustworthiness and involvement
+    iconColor: "text-[#2e72f0]",
     link: "https://www.linkedin.com/in/benwasonga/",
     description: 'Innovative Technical Support Engineer | Web Development Enthusiast | Community Builder | B.Ed English and Literature',
   },
   {
     name: "Sisco Cherono",
-    icon: <FiUserCheck className="text-[#edeff0] h-[100px] w-[100px]" />, // Simple user icon for versatility
+    icon: FiUserCheck, // Simple user icon for versatility
+    iconColor: "text-[#edeff0]",
     link: "https://www.linkedin.com/company/renderconke/",
     description: 'Web Development Enthusiast | Community Builder | Frontend Developer',
   },
@@ -65,7 +72,7 @@ function Organisers() {
                 rel="noopener noreferrer"
                 className="flex flex-col items-center"
               >
-                {organiser.icon}
+                <IconWrapper icon={organiser.icon} className={`${organiser.iconColor} h-[100px] w-[100px]`} />
                 <h3 className="mt-4 text-xl font-semibold text-white hover:text-[#90e0ef] transition">
                   {organiser.name}
                 </h3>

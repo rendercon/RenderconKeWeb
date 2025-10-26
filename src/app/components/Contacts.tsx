@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { FaEnvelope, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { IconWrapper } from '../../components/IconWrapper';
 
 const Contacts = () => {
 
@@ -27,13 +28,13 @@ const Contacts = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <FaTwitter className="text-white text-3xl hover:fill-current hover:text-[#eee712]" />
+                <IconWrapper icon={FaTwitter as any} className="text-white text-3xl hover:fill-current hover:text-[#eee712]" />
               </a>
             </div>
             
             <div className="flex items-center">
               <button onClick={handleEmailClick} className="hover:text-[#eee712] bg-transparent border-none p-0">
-                <FaEnvelope className="text-white text-3xl hover:fill-current hover:text-[#eee712]" />
+                <IconWrapper icon={FaEnvelope as any} className="text-white text-3xl hover:fill-current hover:text-[#eee712]" />
               </button>
             </div>
           
@@ -44,7 +45,7 @@ const Contacts = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <FaLinkedin className="text-white text-3xl hover:fill-current hover:text-[#eee712]" />
+                <IconWrapper icon={FaLinkedin as any} className="text-white text-3xl hover:fill-current hover:text-[#eee712]" />
               </a>
             </div>
             <div className="flex items-center">
@@ -54,7 +55,7 @@ const Contacts = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <FaYoutube className="text-white text-3xl hover:fill-current hover:text-[#eee712]" />
+                <IconWrapper icon={FaYoutube as any} className="text-white text-3xl hover:fill-current hover:text-[#eee712]" />
               </a>
             </div>
           </div>
