@@ -11,7 +11,7 @@ import ImageFour from "../images/assets/conf_web_asset_4.webp";
 
 const Community = () => {
   return (
-    <section className="mt-10 overflow-hidden">
+    <section id="community" className="mt-10 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
           <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
@@ -68,34 +68,46 @@ const Community = () => {
       </div>
 
      
-      <div className="flex justify-center pt-16 gap-5">
-          <a
-            href="https://bit.ly/rcke23pics"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
-            >
-            View Gallery(2023)
-          </a>
-
-          <a
-            href="https://bit.ly/rcke24pics"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
-            >
-            View Gallery(2024)
-          </a>
+      <div className="pt-16 w-full">
+        {/* Swipe hint - only visible on mobile */}
+        <p className="text-center text-slate-400 text-sm mb-3 md:hidden font-mono">
+          ← Swipe to see all galleries →
+        </p>
+        
+        <div className="relative px-4 md:px-0">
+          {/* Gradient overlay on right - hints more content on mobile */}
+          <div className="absolute right-0 top-0 bottom-2 w-16 bg-gradient-to-l from-[#240046] to-transparent pointer-events-none z-10 md:hidden"></div>
+          
+          <div className="flex justify-start md:justify-center gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory md:flex-wrap pb-2">
+            <a
+              href="https://bit.ly/rcke23pics"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300 whitespace-nowrap snap-center flex-shrink-0"
+              >
+              View Gallery(2023)
+            </a>
 
             <a
-            href="https://bit.ly/rcke25pics"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
-            >
-            View Gallery(2025)
+              href="https://bit.ly/rcke24pics"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300 whitespace-nowrap snap-center flex-shrink-0"
+              >
+              View Gallery(2024)
             </a>
+
+              <a
+              href="https://bit.ly/rcke25pics"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm md:text-md bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300 whitespace-nowrap snap-center flex-shrink-0"
+              >
+              View Gallery(2025)
+              </a>
+          </div>
         </div>
+      </div>
       <div className="mt-16">
         <Technologies />
       </div>
