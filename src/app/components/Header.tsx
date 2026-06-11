@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "./Button";
 import { Container } from "./Container";
 import Navbar from "./Navbar";
-import renderconWB from "@/app/images/logos/Rendercon-wb.png";
+import renderconLogo from "@/app/images/logos/rendercon-logo.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
@@ -53,8 +53,8 @@ export function Header() {
       <Container className="flex justify-between items-center h-[80px]">
         <Link href="#home">
           <Image
-            src={renderconWB}
-            alt="Rendercon white background logo"
+            src={renderconLogo}
+            alt="RenderCon Kenya"
             unoptimized
             height={50}
           />
