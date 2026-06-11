@@ -13,11 +13,6 @@ const poppins = Poppins({
 
 export const metadata = {
   metadataBase: new URL('https://rendercon.org'),
-  icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
-    apple: '/icon.svg',
-  },
   title: 'RenderCon Kenya 2026 — East Africa\'s React Conference',
   description: 'RenderCon Kenya is East Africa\'s community-first React conference. React. Connect. Build. Join 200+ developers, designers, and engineers at Nairobi\'s premier frontend conference.',
   keywords: ['React', 'React Native', 'conference', 'Kenya', 'East Africa', 'frontend', 'JavaScript', 'TypeScript', 'developer conference'],
