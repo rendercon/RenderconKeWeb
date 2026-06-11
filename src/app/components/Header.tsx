@@ -9,6 +9,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
+import { IconWrapper } from "../../components/IconWrapper";
 
 type TNavbar = {
   scrolled: boolean;
@@ -63,9 +64,9 @@ export function Header() {
         {isMobileView ? (
           <button onClick={toggleMenu} className="-mr-6">
             {isMobileMenuOpened ? (
-              <RxCross2 className="text-white text-2xl hover:text-yellow-500" />
+              <IconWrapper icon={RxCross2 as any} className="text-white text-2xl hover:text-yellow-500" />
             ) : (
-              <RiMenu3Line className="text-white text-2xl hover:text-yellow-500" />
+              <IconWrapper icon={RiMenu3Line as any} className="text-white text-2xl hover:text-yellow-500" />
             )}
           </button>
         ) : (
