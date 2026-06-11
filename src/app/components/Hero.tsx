@@ -65,7 +65,7 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20 lg:pt-24 pb-16">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="relative grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left: Content */}
           <motion.div
             variants={containerVariants}
@@ -169,14 +169,14 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right: React Atom — hidden on mobile to keep hero tight */}
+          {/* React Atom — background on mobile, normal column on lg+ */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-            className="hidden lg:flex justify-end"
+            className="absolute inset-0 flex items-center justify-center pointer-events-none lg:relative lg:inset-auto lg:flex lg:justify-end lg:pointer-events-auto"
           >
-            <div className="relative">
+            <div className="relative opacity-10 lg:opacity-100">
               {/* Outer ambient glow */}
               <div
                 className="absolute inset-[-40px] rounded-full pointer-events-none"
@@ -185,7 +185,7 @@ export default function Hero() {
                   filter: 'blur(24px)',
                 }}
               />
-              <ReactAtomSVG className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96" />
+              <ReactAtomSVG className="w-72 h-72 sm:w-96 sm:h-96 lg:w-96 lg:h-96" />
             </div>
           </motion.div>
         </div>
