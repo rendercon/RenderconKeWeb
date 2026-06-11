@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "./Button";
 import { Container } from "./Container";
 import Navbar from "./Navbar";
-import renderconWB from "@/app/images/logos/Rendercon-wb.png";
+import renderconLogo from "@/app/images/logos/rendercon-logo.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
@@ -53,8 +53,8 @@ export function Header() {
       <Container className="flex justify-between items-center h-[80px]">
         <Link href="#home">
           <Image
-            src={renderconWB}
-            alt="Rendercon white background logo"
+            src={renderconLogo}
+            alt="RenderCon Kenya"
             unoptimized
             height={50}
           />
@@ -76,7 +76,7 @@ export function Header() {
                   href="https://bit.ly/rcke25adv" target="_blank" rel="noopener noreferrer"
                   className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
                 >
-                  Get Tickets Here
+                  Get Tickets Notification
                 </a>
           </div>
         )}
@@ -86,13 +86,13 @@ export function Header() {
       {isMobileMenuOpened && isMobileView && (
         <div className="flex flex-col items-end py-4 pl-2">
           <div className="font-mono text-gray-50 pb-4">
-            <Navbar onLinkClick={closeMenu} /> {/* Mobile Navbar links */}
+            <Navbar /> {/* Mobile Navbar links */}
           </div>
           <a
                   href="https://bit.ly/rcke25adv" target="_blank" rel="noopener noreferrer"
                   className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
                 >
-                  Get Tickets Here
+                  Get Tickets Notification
                 </a>
         </div>
       )}

@@ -1,40 +1,40 @@
-import { Source_Code_Pro } from 'next/font/google'
+import type { Metadata } from 'next';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import WhyRenderCon from './components/WhyRenderCon';
+import CommunityStats from './components/CommunityStats';
+import WhyEastAfrica from './components/WhyEastAfrica';
+import ConferenceTracks from './components/ConferenceTracks';
+import { Speakers } from './components/Speakers';
+import Highlights from './components/Highlights';
+import Partners from './components/Partners';
+import TicketsCTA from './components/TicketsCTA';
+import FAQ from './components/FAQ';
+import Footer from './components/Footer';
 
-import Head from 'next/head'
-import { Header } from './components/Header'
-import Hero from './components/Hero'
-import Footer from './components/Footer'
-import Sponsors from './components/Sponsors'
-import { Speakers } from './components/Speakers'
-import Partners from './components/Partners'
-import Contacts from './components/Contacts'
-import Technologies from './components/Technologies'
-import Community from './components/Community'
-
-const sourceCodePro = Source_Code_Pro({
-  weight: ['400'],
-  subsets: ['latin'],
-})
+export const metadata: Metadata = {
+  title: "RenderCon Kenya 2026 — East Africa's React Conference",
+  description:
+    "React. Connect. Build. RenderCon Kenya is East Africa's community-first React conference by ReactDevsKe. Join 200+ developers in Nairobi.",
+};
 
 export default function Home() {
   return (
     <>
-    <Head>
-      <title>RenderconKe 2025 — The premier conference experience for Web and Mobile</title>
-      <meta name="description" content="RenderconKe 2025 is a conference for Web and Mobile developers. We bring together a diverse group of people from all across the world to share their knowledge and experience." />
-    </Head>
-    
-    <Header />
-    <main>
-      <div id="home"></div>
-      <Hero />
-      <Technologies />
-      <Speakers />
-      <Community />
-      <Sponsors />
-      <Partners />
-    </main>
-    <Footer />
+      <Navbar />
+      <main>
+        <Hero />
+        <WhyRenderCon />
+        <CommunityStats />
+        <WhyEastAfrica />
+        <ConferenceTracks />
+        <Speakers />
+        <Highlights />
+        <Partners />
+        <TicketsCTA />
+        <FAQ />
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
