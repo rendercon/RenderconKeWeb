@@ -27,7 +27,7 @@ const partners: Partner[] = [
   { name: 'Cloudinary', logo: LogoCloudinary, link: 'https://cloudinary.com/', tier: 'sponsor', height: 32, width: 130 },
   { name: 'Supabase', logo: LogoSupaBase, link: 'https://supabase.com/', tier: 'sponsor', height: 32, width: 120 },
   { name: 'Lemonade', logo: LogoLemonade, link: 'https://mylemonade.io/', tier: 'sponsor', height: 36, width: 100 },
-  { name: 'Dev Kenya', logo: LogoDevKenya, link: 'https://devkenya.com', tier: 'sponsor', height: 36, width: 100 },
+  { name: 'Dev Kenya', logo: LogoDevKenya, link: 'https://smeresponse.clinic/2023/10/24/nurturing-mental-wellness-insights-from-entrepreneur-constanza/', tier: 'sponsor', height: 36, width: 100 },
   { name: 'ReactDevsKe', logo: LogoReactDevsKe, link: 'https://reactdevske.org', tier: 'organiser', height: 36, width: 100 },
   { name: 'Payd', logo: LogoPayd, link: 'https://paydexp.com/', tier: 'community', height: 36, width: 100 },
   { name: 'OSCA Nairobi', logo: LogoOscaNairobi, link: 'https://github.com/OSCA-Nairobi', tier: 'community', height: 36, width: 100 },

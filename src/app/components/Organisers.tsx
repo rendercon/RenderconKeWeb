@@ -30,14 +30,14 @@ const organisers: Organiser[] = [
     linkedin: 'https://www.linkedin.com/in/ramaochieng/',
     avatarGradient: 'from-brand-purple to-indigo-500',
   },
-  {
-    name: 'Abel Masila',
-    initials: 'AM',
-    role: 'Senior Frontend Engineer · Speaker',
-    bio: 'Engineering leader, conference speaker, and mentor dedicated to raising the bar for frontend development across the continent.',
-    linkedin: 'https://www.linkedin.com/in/abelmasila/',
-    avatarGradient: 'from-violet-600 to-purple-400',
-  },
+  // {
+  //   name: 'Abel Masila',
+  //   initials: 'AM',
+  //   role: 'Senior Frontend Engineer · Speaker',
+  //   bio: 'Engineering leader, conference speaker, and mentor dedicated to raising the bar for frontend development across the continent.',
+  //   linkedin: 'https://www.linkedin.com/in/abelmasila/',
+  //   avatarGradient: 'from-violet-600 to-purple-400',
+  // },
   {
     name: 'Ben Wasonga',
     initials: 'BW',
@@ -46,14 +46,14 @@ const organisers: Organiser[] = [
     linkedin: 'https://www.linkedin.com/in/benwasonga/',
     avatarGradient: 'from-purple-500 to-blue-500',
   },
-  {
-    name: 'Sisco Cherono',
-    initials: 'SC',
-    role: 'Frontend Developer · Community Builder',
-    bio: 'Passionate about web development and creating spaces where developers can grow, collaborate, and thrive together.',
-    linkedin: 'https://www.linkedin.com/company/renderconke/',
-    avatarGradient: 'from-fuchsia-600 to-purple-500',
-  },
+  // {
+  //   name: 'Sisco Cherono',
+  //   initials: 'SC',
+  //   role: 'Frontend Developer · Community Builder',
+  //   bio: 'Passionate about web development and creating spaces where developers can grow, collaborate, and thrive together.',
+  //   linkedin: 'https://www.linkedin.com/company/renderconke/',
+  //   avatarGradient: 'from-fuchsia-600 to-purple-500',
+  // },
 ];
 
 const LinkedInIcon = () => (

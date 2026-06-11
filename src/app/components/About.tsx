@@ -109,12 +109,12 @@ function AboutHero() {
               variants={itemVariants}
               className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Link href="/tickets" className="btn-primary text-base px-8 py-4">
-                Get Tickets
+              <a href="https://forms.gle/zyc8anLMKMxo42ED7" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
+                Get Tickets Notification
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </Link>
+              </a>
               <Link href="/community" className="btn-secondary text-base px-8 py-4">
                 Join the Community
               </Link>
@@ -376,12 +376,12 @@ function AboutCTA() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/tickets" className="btn-primary text-base px-8 py-4">
-              Get Tickets
+            <a href="https://forms.gle/zyc8anLMKMxo42ED7" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
+              Get Tickets Notification
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
+            </a>
             <Link href="/partners" className="btn-secondary text-base px-8 py-4">
               Become a Partner
             </Link>

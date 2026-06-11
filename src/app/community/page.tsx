@@ -113,15 +113,15 @@ export default function CommunityPage() {
                 rel="noopener noreferrer"
                 className="btn-primary px-8 py-3.5"
               >
-                Join ReactDevsKe
+                Follow @ReactDevsKe
               </a>
               <a
-                href="https://youtube.com/@ReactDevsKe"
+                href="https://kommunity.com/reactjs-developer-community-kenya-reactdevske"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary px-8 py-3.5"
               >
-                Watch Our Talks
+                Join on Kommunity
               </a>
             </div>
           </div>
@@ -239,7 +239,7 @@ export default function CommunityPage() {
                 >
                   Follow @ReactDevsKe
                 </a>
-                <a href="/tickets" className="btn-secondary px-8 py-3.5">
+                <a href="https://forms.gle/zyc8anLMKMxo42ED7" className="btn-secondary px-8 py-3.5">
                   Get RenderCon Tickets
                 </a>
               </div>

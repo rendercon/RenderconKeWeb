@@ -2,7 +2,19 @@ import {NextRequest, NextResponse} from 'next/server';
 
 
 const speakerData = [
-    {
+  {
+    "id" : "8337",
+    "fullname": "Roseland Andisi Ambuku",
+    "title_role": "Software Engineer",
+    "linkedin_url": "https://www.linkedin.com/in/roseland-ambuku/",
+    "other_social": "https://github.com/andisiambuku",
+    "speaker_bio": "I am Roseland Ambuku, a Software Developer with experience in React. ",
+    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/roseland_ambuku-DC0etjjfsFqnVx2Jv1vnCCc4pw3Ogf.jpg",
+    "session_title": "GraphQL with Apollo: Data fetching with precision",
+    "session_abstract": "In this session we shall discuss the pain points of working with REST and how GraphQL addresses those pain points. We shall see precise data fetching in action and how it culminates in shorter and efficient development of frontends.",
+    "co_presenter_info": null
+  },
+  {
     "id" : "1337",
     "fullname": "Michael Maina",
     "title_role": "Mobile developer",
@@ -51,6 +63,18 @@ const speakerData = [
     "co_presenter_info": null
   },
   {
+    "id" : "10337",
+    "fullname": "Albina Nyawira Muturi",
+    "title_role": "Senior Software Engineer",
+    "linkedin_url": "https://www.linkedin.com/in/nyawira-muturi/",
+    "other_social": "https://dame-techie.hashnode.dev/",
+    "speaker_bio": null,
+    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/albina_muturi-mwIi3SuVs08YWYqYjQERJUfCJcRfxR.jpg",
+    "session_title": "Component and E2E Testing with cypress",
+    "session_abstract": "Quick Crash Course: A live demo session on how to use Cypress for e2e and component testing.",
+    "co_presenter_info": null
+  },
+  {
     "id" : "5337",
     "fullname": "Alvin Otuya",
     "title_role": "Senior Mobile Engineer ",
@@ -71,7 +95,7 @@ const speakerData = [
     "speaker_bio": null,
     "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/maina_wycliffe-tAOiiP2rohzZMv02NdewRpS6FQhzXz.jpg",
     "session_title": "Full-Stack AI: Building Production-Ready Applications with Next.js and Genkit",
-    "session_abstract": "Join us for a deep dive into building modern, AI-powered web applications using the powerful combination of Next.js and Genkit. In this session, we'll bridge the gap between frontend user experiences and complex backend AI logic.\n\nYou will learn how to leverage Genkit's open-source framework to reliably build, test, and monitor AI flows, including those using Retrieval-Augmented Generation (RAG). We'll then demonstrate how to seamlessly integrate these Genkit flows into a Next.js application, exposing them through API routes and consuming them with React Server Components.",
+    "session_abstract": "Join us for a deep dive into building modern, AI-powered web applications using the powerful combination of Next.js and Genkit. In this session, we’ll bridge the gap between frontend user experiences and complex backend AI logic.\n\nYou will learn how to leverage Genkit’s open-source framework to reliably build, test, and monitor AI flows, including those using Retrieval-Augmented Generation (RAG). We’ll then demonstrate how to seamlessly integrate these Genkit flows into a Next.js application, exposing them through API routes and consuming them with React Server Components.",
     "co_presenter_info": null
   },
   {
@@ -82,56 +106,20 @@ const speakerData = [
     "other_social": "https://www.victormwenda.com",
     "speaker_bio": "Victor is a seasoned Software Engineer with over 7 years of experience in crafting innovative applications.\nPassionate about advancing technology, Victor is dedicated to exploring and advocating for cutting-edge tools and practices in Software development.",
     "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/victor_mwenda-nbe7ldcBEz788acUpZE3KkR1ej2OHt.jpeg",
-    "session_title": "The Vibe Coder's Playbook: How Rules and MCPs Made My AI Development Actually Work",
-    "session_abstract": "After months of wrestling with inconsistent AI coding results, half-finished functions, conflicting architectural patterns, and code that looked smart but broke in production, I developed a systematic approach that actually works. This isn't another \"AI will replace developers\" talk. It's about making AI pair programming reliable, consistent, and genuinely productive.\nI'll share the exact rule-based framework I use daily with Cursor and Claude Code that transformed my development process rom chaotic AI interactions to systematic, high-quality code generation. ",
-    "co_presenter_info": null
-  },
-  {
-    "id" : "8337",
-    "fullname": "Roseland Andisi Ambuku",
-    "title_role": "Software Engineer",
-    "linkedin_url": "https://www.linkedin.com/in/roseland-ambuku/",
-    "other_social": "https://github.com/andisiambuku",
-    "speaker_bio": "I am Roseland Ambuku, a Software Developer with experience in React. ",
-    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/roseland_ambuku-DC0etjjfsFqnVx2Jv1vnCCc4pw3Ogf.jpg",
-    "session_title": "GraphQL with Apollo: Data fetching with precision",
-    "session_abstract": "In this session we shall discuss the pain points of working with REST and how GraphQL addresses those pain points. We shall see precise data fetching in action and how it culminates in shorter and efficient development of frontends.",
+    "session_title": "The Vibe Coder’s Playbook: How Rules and MCPs Made My AI Development Actually Work",
+    "session_abstract": "After months of wrestling with inconsistent AI coding results, half-finished functions, conflicting architectural patterns, and code that looked smart but broke in production, I developed a systematic approach that actually works. This isn’t another \"AI will replace developers\" talk. It’s about making AI pair programming reliable, consistent, and genuinely productive.\nI’ll share the exact rule-based framework I use daily with Cursor and Claude Code that transformed my development process rom chaotic AI interactions to systematic, high-quality code generation. ",
     "co_presenter_info": null
   },
   {
     "id" : "9337",
     "fullname": "Titus",
-    "title_role": "“Breaking Down the Frontend, Holding It Together: Microfrontends in a Monorepo”",
+    "title_role": "Senior Frontend Engineer",
     "linkedin_url": "https://www.linkedin.com/in/titus-thumbi-103882190/",
     "other_social": "https://www.linkedin.com/in/titus-thumbi-103882190/",
     "speaker_bio": "https://www.linkedin.com/in/titus-thumbi-103882190/",
     "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/titus_gikandi-KBc4JltPkgUfvcdFacfttTulV5h16Z.jpg",
-    "session_title": "“Breaking Down the Frontend, Holding It Together: Microfrontends in a Monorepo”",
+    "session_title": "Breaking Down the Frontend, Holding It Together: Microfrontends in a Monorepo",
     "session_abstract": "Microfrontends are a powerful way to scale frontend development across teams, but they often introduce challenges like duplicated tooling, inconsistent dependencies, and siloed workflows. A monorepo can help solve these problems by providing a single source of truth, unified build and test pipelines, and a structure that supports both autonomy and alignment. In this session, we’ll break down practical strategies, common pitfalls, and real-world lessons on combining microfrontends with a monorepo. You’ll leave with patterns and best practices to keep your frontend architecture both modular and maintainable, while empowering teams to deliver faster with confidence.",
-    "co_presenter_info": null
-  },
-  {
-    "id" : "10337",
-    "fullname": "Albina Nyawira Muturi",
-    "title_role": "Senior Software Engineer",
-    "linkedin_url": "https://www.linkedin.com/in/nyawira-muturi/",
-    "other_social": "https://dame-techie.hashnode.dev/",
-    "speaker_bio": null,
-    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/albina_muturi-mwIi3SuVs08YWYqYjQERJUfCJcRfxR.jpg",
-    "session_title": "Component and E2E Testing with cypress",
-    "session_abstract": "Quick Crash Course: A live demo session on how to use Cypress for e2e and component testing.",
-    "co_presenter_info": null
-  },
-  {
-    "id" : "11337",
-    "fullname": "Samson Ateya",
-    "title_role": "Cloud Engineer ",
-    "linkedin_url": "https://www.linkedin.com/in/sam-ateya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "other_social": "https://github.com/ateyasam85",
-    "speaker_bio": "I am a Cloud Engineer specializing in building and managing scalable, secure, and cost-efficient cloud environments. My expertise spans cloud infrastructure, DevOps practices, automation, and containerization, enabling me to deliver solutions that streamline operations and drive digital transformation. I am committed to leveraging cloud-native technologies to optimize performance, enhance reliability, and support innovation in dynamic business environments.",
-    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/samson_ateya-g4Q7k7sJpWGPWqZFRdIMzn1UTIQc1J.jpg",
-    "session_title": "Cloud computing AWS",
-    "session_abstract": "In today’s fast-evolving digital landscape, organizations are under pressure to build systems that are not only scalable but also secure, reliable, and cost-efficient. In this session, I will share practical insights on designing and deploying modern cloud architectures that leverage automation, containerization, and DevOps practices. Attendees will learn how to streamline cloud operations, optimize resource utilization, and adopt cloud-native solutions that accelerate digital transformation. The session will also highlight real-world challenges and best practices for ensuring performance, resilience, and sustainability in dynamic business environments.",
     "co_presenter_info": null
   },
   {
@@ -144,6 +132,18 @@ const speakerData = [
     "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/zawadi_wanjala-1C7BdcmY1ZdutMQ7PHVkX5sBCpZU13.png",
     "session_title": "Design Thinking: From Pull Request to Persona",
     "session_abstract": "As engineers, we excel at turning complex requirements into beautiful, functional components. But what happens when those requirements miss the mark? As an SE turned PM, I have designed the session to provide engineers ( and non-engineers ) with practical Design Thinking skills that can be immediately applied to their work.",
+    "co_presenter_info": null
+  },
+  {
+    "id" : "11337",
+    "fullname": "Samson Ateya",
+    "title_role": "Cloud Engineer ",
+    "linkedin_url": "https://www.linkedin.com/in/sam-ateya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "other_social": "https://github.com/ateyasam85",
+    "speaker_bio": "I am a Cloud Engineer specializing in building and managing scalable, secure, and cost-efficient cloud environments. My expertise spans cloud infrastructure, DevOps practices, automation, and containerization, enabling me to deliver solutions that streamline operations and drive digital transformation. I am committed to leveraging cloud-native technologies to optimize performance, enhance reliability, and support innovation in dynamic business environments.",
+    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/samson_ateya-g4Q7k7sJpWGPWqZFRdIMzn1UTIQc1J.jpg",
+    "session_title": "Cloud computing AWS",
+    "session_abstract": "In today’s fast-evolving digital landscape, organizations are under pressure to build systems that are not only scalable but also secure, reliable, and cost-efficient. In this session, I will share practical insights on designing and deploying modern cloud architectures that leverage automation, containerization, and DevOps practices. Attendees will learn how to streamline cloud operations, optimize resource utilization, and adopt cloud-native solutions that accelerate digital transformation. The session will also highlight real-world challenges and best practices for ensuring performance, resilience, and sustainability in dynamic business environments.",
     "co_presenter_info": null
   },
   {
@@ -166,7 +166,7 @@ const speakerData = [
     "other_social": "https://github.com/timothygachengo",
     "speaker_bio": "Passionate about developing software solutions that will help people solve their problems.",
     "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/timothy_mugo-R97flJuJCsbeyTufkwtNic1vZAlWGF.jpg",
-    "session_title": "Expo and Better Auth: Auth that doesn't suck",
+    "session_title": "Expo and Better Auth: Auth that doesn’t suck",
     "session_abstract": "Authentication is a key components in modern applications. If you get it wrong, you either frustrate users or invite intruders.\nWith Expo (React Native) powering the next generation of cross-platform apps, developers need solutions that are both hardcore and frictionless. This session looks at better auth as one of the solutions to build auth (sessions, auth and authorization) for your app and your work is to focus on the business logic.",
     "co_presenter_info": null
   },

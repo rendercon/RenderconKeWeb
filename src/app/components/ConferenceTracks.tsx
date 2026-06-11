@@ -165,7 +165,7 @@ export default function ConferenceTracks() {
           className="mt-12 text-center"
         >
           <a
-            href="https://sessionize.com/rendercon-ke"
+            href="/speakers-schedule"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary text-sm px-6 py-3"

@@ -7,7 +7,7 @@ const faqs = [
   {
     question: 'When and where is RenderCon Kenya 2026?',
     answer:
-      'RenderCon Kenya 2026 takes place on 3rd October 2026 at Pride Inn Azure Hotel, Westlands, Nairobi, Kenya.',
+      'RenderCon Kenya 2026 takes place on 3rd October 2026 in Nairobi, Kenya. Exact venue will be announced soon.',
   },
   {
     question: 'Who is RenderCon for?',

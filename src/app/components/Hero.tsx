@@ -19,7 +19,7 @@ const itemVariants: Variants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative mt-16 flex items-center overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Purple gradient top */}
@@ -109,7 +109,7 @@ export default function Hero() {
                   <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                   </svg>
-                  <span>Pride Inn Azure — Westlands, Nairobi</span>
+                  <span>Nairobi, Kenya</span>
                 </div>
               </div>
             </motion.div>
@@ -128,15 +128,17 @@ export default function Hero() {
               variants={itemVariants}
               className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Link
-                href="/tickets"
+              <a
+                href="https://forms.gle/zyc8anLMKMxo42ED7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary text-base px-8 py-4"
               >
-                Get Tickets
+                Get Notified When Tickets Drop
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </Link>
+              </a>
               <Link
                 href="/partners"
                 className="btn-secondary text-base px-8 py-4"
@@ -161,7 +163,7 @@ export default function Hero() {
               </div>
               <div className="w-px h-8 bg-brand-dark-border" />
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-white">3rd</span>
+                <span className="text-2xl font-bold text-white">4th</span>
                 <span>Edition</span>
               </div>
             </motion.div>
@@ -195,7 +197,7 @@ export default function Hero() {
           transition={{ delay: 1.5, duration: 0.6 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600"
         >
-          <span className="text-xs tracking-widest uppercase">Scroll</span>
+          <span className="text-xs tracking-widest uppercase"></span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}

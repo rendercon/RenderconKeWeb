@@ -17,7 +17,7 @@ const EventsInfo = () => {
         {/* Venue */}
         <div className="flex items-center gap-2">
           <FaRegBuilding className="text-[#eee712] text-sm" />
-          <p className="text-xs text-slate-300"> <span className="font-bold">Pride Inn Azure, Westlands</span></p>
+          <p className="text-xs text-slate-300"> <span className="font-bold">Nairobi, Kenya</span></p>
         </div>
 
         {/* Location */}

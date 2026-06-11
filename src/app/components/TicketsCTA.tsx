@@ -67,8 +67,8 @@ export default function TicketsCTA() {
               Tickets dropping soon
             </h3>
             <p className="text-slate-400 mb-8 max-w-md mx-auto leading-relaxed">
-              RenderCon Kenya 2026 tickets will be available shortly.
-              Follow us on social media to be first to know when they go live.
+              Tickets aren&apos;t live yet — but you can register your interest now
+              and we&apos;ll notify you the moment they drop.
             </p>
 
             {/* What's included */}
@@ -98,21 +98,21 @@ export default function TicketsCTA() {
                 <svg className="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                Pride Inn Azure, Nairobi
+                Nairobi, Kenya
               </span>
             </div>
 
-            {/* Follow CTA */}
+            {/* Notify CTA */}
             <a
-              href="https://twitter.com/ReactDevsKe"
+              href="https://forms.gle/zyc8anLMKMxo42ED7"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary px-8 py-3.5 inline-flex"
             >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
               </svg>
-              Follow @ReactDevsKe for updates
+              Notify Me When Tickets Drop
             </a>
           </div>
         </motion.div>

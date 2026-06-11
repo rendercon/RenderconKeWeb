@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Logo from '../images/logos/Rendercon-wb.png';
+import Logo from '../images/logos/rendercon-logo.svg';
 
 const navLinks = [
   { label: 'About', href: '/about' },
@@ -35,16 +35,19 @@ export default function Navbar() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-32 h-8 transition-opacity duration-200 group-hover:opacity-80">
-              <Image
-                src={Logo}
-                alt="RenderCon Kenya"
-                fill
-                className="object-contain object-left"
-                priority
-              />
-            </div>
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <Image
+              src={Logo}
+              alt="RenderCon Kenya"
+              width={36}
+              height={36}
+              className="transition-opacity duration-200 group-hover:opacity-80 rounded-xl"
+              priority
+              unoptimized
+            />
+            <span className="text-white font-bold text-lg tracking-tight transition-opacity duration-200 group-hover:opacity-80">
+              RenderCon <span className="text-brand-gold text-xs font-normal">Kenya</span>
+            </span>
           </Link>
 
           {/* Desktop nav */}
@@ -61,17 +64,19 @@ export default function Navbar() {
           </div>
 
           {/* CTA */}
-          <div className="hidden md:flex items-center gap-3">
-            <Link
-              href="/tickets"
+          {/* <div className="hidden md:flex items-center gap-3">
+            <a
+              href="https://forms.gle/zyc8anLMKMxo42ED7"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary text-sm px-5 py-2.5"
             >
-              Get Tickets
+              Get Notified
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
-          </div>
+            </a>
+          </div> */}
 
           {/* Mobile menu button */}
           <button
@@ -114,18 +119,20 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-3 pb-1">
-                <Link
-                  href="/tickets"
+              {/* <div className="pt-3 pb-1">
+                <a
+                  href="https://forms.gle/zyc8anLMKMxo42ED7"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary w-full justify-center"
                   onClick={() => setIsOpen(false)}
                 >
-                  Get Tickets
+                  Get Notified
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </Link>
-              </div>
+                </a>
+              </div> */}
             </div>
           </motion.div>
         )}

@@ -75,7 +75,7 @@ export function Header() {
                   href="https://bit.ly/rcke25adv" target="_blank" rel="noopener noreferrer"
                   className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
                 >
-                  Get Tickets Here
+                  Get Tickets Notification
                 </a>
           </div>
         )}
@@ -91,7 +91,7 @@ export function Header() {
                   href="https://bit.ly/rcke25adv" target="_blank" rel="noopener noreferrer"
                   className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
                 >
-                  Get Tickets Here
+                  Get Tickets Notification
                 </a>
         </div>
       )}

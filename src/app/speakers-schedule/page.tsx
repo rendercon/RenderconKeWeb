@@ -131,7 +131,7 @@ export default function SchedulePage() {
                 >
                   We&apos;re finalising the lineup for{' '}
                   <span className="text-white font-semibold">3rd October 2026</span> — a full
-                  day of talks, workshops, and conversations at Pride Inn Azure, Westlands, Nairobi.
+                  day of talks, workshops, and conversations at Nairobi, Kenya.
                 </motion.p>
 
                 <motion.p
@@ -150,7 +150,7 @@ export default function SchedulePage() {
                   className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                 >
                   <a
-                    href="https://twitter.com/ReactDevsKe"
+                    href="https://x.com/renderconke"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary text-sm px-6 py-3 gap-2"
@@ -158,14 +158,14 @@ export default function SchedulePage() {
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                     </svg>
-                    Follow @ReactDevsKe
+                    Follow @RenderConKe
                   </a>
-                  <Link href="/tickets" className="btn-primary text-sm px-6 py-3">
+                  <a href="https://forms.gle/zyc8anLMKMxo42ED7" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm px-6 py-3">
                     Secure Your Spot Now
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
-                  </Link>
+                  </a>
                 </motion.div>
               </div>
 
@@ -298,7 +298,7 @@ export default function SchedulePage() {
                   <span className="gradient-text">Hundreds of moments.</span>
                 </h2>
                 <p className="text-slate-400 leading-relaxed max-w-xl mx-auto mb-8">
-                  Pride Inn Azure, Westlands, Nairobi — doors open at 8:00 AM. Expect keynotes,
+                  Nairobi, Kenya — doors open at 8:00 AM. Expect keynotes,
                   full-length talks, lightning sessions, workshops, and a whole lot of community.
                 </p>
 
@@ -314,17 +314,17 @@ export default function SchedulePage() {
                     <svg className="w-4 h-4 text-brand-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                     </svg>
-                    Pride Inn Azure, Westlands — Nairobi
+                    Nairobi, Kenya
                   </div>
                 </div>
 
                 <div className="mt-8">
-                  <Link href="/tickets" className="btn-primary px-8 py-3.5">
+                  <a href="https://forms.gle/zyc8anLMKMxo42ED7" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-3.5">
                     Get Your Ticket Before the Schedule Drops
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
-                  </Link>
+                  </a>
                 </div>
                 <p className="mt-4 text-xs text-slate-600">
                   Early bird tickets available now. Price goes up when the schedule drops.

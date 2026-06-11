@@ -104,7 +104,7 @@ export function Speakers() {
       .finally(() => setLoading(false));
   }, []);
 
-  const visible = showAll ? speakerList : speakerList.slice(0, 8);
+  const visible = speakerList;
 
   return (
     <section id="speakers" aria-labelledby="speakers-title" className="py-24 sm:py-32 relative overflow-hidden">
@@ -161,7 +161,7 @@ export function Speakers() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.5, delay: (i % 4) * 0.07 }}
-                  className="group cursor-pointer"
+                  className={`group cursor-pointer ${i >= 8 && !showAll ? 'hidden md:block' : ''}`}
                   onClick={() => setSelected(speaker)}
                 >
                   {/* Photo */}
@@ -207,7 +207,7 @@ export function Speakers() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="mt-12 text-center"
+                className="mt-12 text-center md:hidden"
               >
                 <button onClick={() => setShowAll(true)} className="btn-secondary text-sm px-6 py-3">
                   View All {speakerList.length} Speakers

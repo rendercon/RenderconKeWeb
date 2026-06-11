@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '../images/logos/Rendercon-wb.png';
+import Logo from '../images/logos/rendercon-logo.svg';
 import ReactDevsKeLogo from '../images/logos/ReactdevskeLogo.png';
 
 const footerLinks = {
@@ -12,12 +12,12 @@ const footerLinks = {
   ],
   Community: [
     { label: 'ReactDevsKe', href: '/community' },
-    { label: 'Slack Community', href: '#' },
+    { label: 'Kommunity', href: 'https://kommunity.com/reactjs-developer-community-kenya-reactdevske',target: '_blank', rel: 'noopener noreferrer' },
   ],
   Partners: [
     { label: 'Sponsorship', href: '/partners' },
     { label: 'Prospectus', href: '/partners#prospectus' },
-    { label: 'Contact', href: 'mailto:sponsors@rendercon.org' },
+    { label: 'Contact', href: 'mailto:info@rendercon.org' },
   ],
   Legal: [
     { label: 'Code of Conduct', href: '/code-of-conduct' },
@@ -29,7 +29,7 @@ const footerLinks = {
 const socials = [
   {
     label: 'Twitter / X',
-    href: 'https://twitter.com/ReactDevsKe',
+    href: 'https://x.com/renderconke',
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -81,8 +81,9 @@ export default function Footer() {
         <div className="pt-16 pb-12 grid grid-cols-2 md:grid-cols-6 gap-10">
           {/* Brand */}
           <div className="col-span-2 md:col-span-2">
-            <Link href="/" className="inline-block">
-              <Image src={Logo} alt="RenderCon Kenya" height={32} width={128} className="opacity-90" />
+            <Link href="/" className="inline-flex items-center gap-2.5 group">
+              <Image src={Logo} alt="RenderCon Kenya" height={36} width={36} className="rounded-xl opacity-90 group-hover:opacity-100 transition-opacity" unoptimized />
+              <span className="text-white font-bold text-lg tracking-tight opacity-90 group-hover:opacity-100 transition-opacity">RenderCon</span>
             </Link>
             <p className="mt-4 text-sm text-slate-500 leading-relaxed max-w-xs">
               East Africa&apos;s community-first React conference.
@@ -91,6 +92,7 @@ export default function Footer() {
             {/* ReactDevsKe */}
             <div className="mt-6 flex items-center gap-3">
               <span className="text-xs text-slate-600">By</span>
+              <a href="https://reactdevske.org" target="_blank" rel="noopener noreferrer">
               <Image
                 src={ReactDevsKeLogo}
                 alt="ReactDevsKe"
@@ -99,6 +101,7 @@ export default function Footer() {
                 className="opacity-50 filter brightness-200"
                 unoptimized
               />
+              </a>
             </div>
             {/* Socials */}
             <div className="mt-6 flex items-center gap-3">

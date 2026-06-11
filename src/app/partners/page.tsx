@@ -43,7 +43,7 @@ const partners = [
   { name: 'Supabase',            logo: LogoSupabase,    link: 'https://supabase.com/',               tier: 'Sponsor'   },
   { name: 'Lemonade',            logo: LogoLemonade,    link: 'https://mylemonade.io/',              tier: 'Sponsor'   },
   { name: 'ReactDevsKe',         logo: LogoReactDevsKe, link: 'https://reactdevske.org',             tier: 'Organiser' },
-  { name: 'Dev Kenya',           logo: LogoDevKenya,    link: 'https://devkenya.com',                tier: 'Sponsor'   },
+  { name: 'Dev Kenya',           logo: LogoDevKenya,    link: 'https://smeresponse.clinic/2023/10/24/nurturing-mental-wellness-insights-from-entrepreneur-constanza/',                tier: 'Sponsor'   },
   { name: 'Payd',                logo: LogoPayd,        link: 'https://paydexp.com/',                tier: 'Community' },
   { name: 'OSCA Nairobi',        logo: LogoOscaNairobi, link: 'https://github.com/OSCA-Nairobi',     tier: 'Community' },
   { name: 'Space Ya Tech',       logo: LogoSpaceYaTech, link: 'https://spaceyatech.com/',            tier: 'Community' },
@@ -84,7 +84,7 @@ const spotlights = [
     tagline: 'Growing Kenya\'s developer ecosystem.',
     description:
       'Dev Kenya amplified RenderCon\'s reach by rallying their wide community of Kenyan developers — helping grow awareness, bring more builders into the room, and strengthen the East African React ecosystem.',
-    link: 'https://devkenya.com',
+    link: 'https://smeresponse.clinic/2023/10/24/nurturing-mental-wellness-insights-from-entrepreneur-constanza/',
     color: 'gold',
   },
   {
@@ -147,7 +147,7 @@ const ecosystemItems = [
   { title: 'RenderCon Conference', icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z" /></svg>, color: 'gold' },
   { title: 'Workshops',           icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>, color: 'purple' },
   { title: 'Mentorship',          icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" /></svg>, color: 'gold' },
-  { title: 'Scholarships',        icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" /></svg>, color: 'purple' },
+ 
   { title: 'Open Source',         icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>, color: 'gold' },
   { title: 'Ecosystem Growth',    icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg>, color: 'purple' },
   { title: 'Newsletter & Content', icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>, color: 'gold' },
@@ -478,7 +478,7 @@ export default function PartnersPage() {
         </section>
 
         {/* ── SECTION 7 — Sponsorship Tiers ────────────────── */}
-        <section id="prospectus" className="py-24 sm:py-32 relative overflow-hidden">
+        <section id="prospectus" className="py-20 sm:py-32 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(109,58,168,0.08) 0%, transparent 60%)' }} />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-16">
@@ -493,12 +493,12 @@ export default function PartnersPage() {
             </motion.div>
 
             {/* Tier cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16 pt-5">
               {tiers.map((tier, i) => {
                 const isPurple = tier.color === 'purple';
                 const isGold   = tier.color === 'gold';
                 return (
-                  <motion.div key={tier.key} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.08 }} className={`bento-card relative flex flex-col ${isPurple ? 'gradient-border' : ''}`}>
+                  <motion.div key={tier.key} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.08 }} className={`bento-card relative flex flex-col ${isPurple ? 'gradient-border !overflow-visible pt-8' : ''}`}>
                     {tier.badge && (
                       <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10">
                         <span className="inline-flex rounded-full bg-purple-600 px-3 py-0.5 text-xs font-bold text-white shadow-glow-purple">{tier.badge}</span>
@@ -525,6 +525,24 @@ export default function PartnersPage() {
                   </motion.div>
                 );
               })}
+            </div>
+
+            {/* Sponsorship deck CTA */}
+            <div className="flex justify-center mb-12">
+              <a
+                href="https://drive.google.com/file/d/1_SxovPhaFgQ7vZZQquzMJfXMp937tuN2/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 rounded-xl border border-brand-dark-border bg-brand-dark-card/60 px-6 py-3 text-sm font-medium text-slate-300 hover:text-white hover:border-purple-500/50 transition-all duration-200"
+              >
+                <svg className="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View Full Sponsorship Deck
+                <svg className="w-3.5 h-3.5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </div>
 
             {/* Perks comparison table */}
@@ -567,47 +585,10 @@ export default function PartnersPage() {
           </div>
         </section>
 
-        {/* ── SECTION 8 — Scholarship Fund ─────────────────── */}
-        <section className="py-24 sm:py-32 relative overflow-hidden">
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="bento-card gradient-border relative overflow-hidden">
-              <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ background: 'radial-gradient(ellipse at 80% 20%, rgba(244,185,66,0.08) 0%, transparent 60%)' }} />
-              <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center p-2 sm:p-4">
-                <div>
-                  <SectionLabel>Scholarship Fund</SectionLabel>
-                  <h2 className="text-3xl sm:text-4xl font-bold text-white mt-4 leading-tight">
-                    Help Developers Get To<br />
-                    <span className="gradient-text">RenderCon</span>
-                  </h2>
-                  <p className="mt-5 text-base text-slate-400 leading-relaxed">
-                    Support talented developers from across East Africa by funding travel, accommodation, and conference access. Many of the region&apos;s brightest engineers can&apos;t attend without support.
-                  </p>
-                  <p className="mt-3 text-sm text-slate-500 leading-relaxed">
-                    Scholarship sponsors receive dedicated recognition throughout the event, a co-branded story in our newsletter, and direct credit from the developers they help.
-                  </p>
-                  <div className="mt-8">
-                    <a href="mailto:sponsors@rendercon.org?subject=Scholarship Sponsorship" className="btn-gold px-7 py-3.5">
-                      Sponsor A Scholarship
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
-                    </a>
-                  </div>
-                </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {['Kenya', 'Uganda', 'Tanzania', 'Rwanda', 'Ethiopia', 'More regions'].map((region, i) => (
-                    <div key={region} className="rounded-xl border border-brand-dark-border bg-brand-dark/60 px-4 py-3 flex items-center gap-2.5">
-                      <span className="w-2 h-2 rounded-full bg-brand-gold flex-shrink-0" />
-                      <span className="text-sm text-slate-300 font-medium">{region}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
-        {/* ── SECTION 9 — Event Highlights ─────────────────── */}
-        <section className="py-24 sm:py-32 relative overflow-hidden">
+        {/* ── SECTION 8 — Event Highlights ─────────────────── */}
+        <section className="py-10 sm:py-32 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(109,58,168,0.05) 0%, transparent 70%)' }} />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-14">
@@ -659,7 +640,7 @@ export default function PartnersPage() {
           </div>
         </section>
 
-        {/* ── SECTION 10 — Final CTA ────────────────────────── */}
+        {/* ── SECTION 9 — Final CTA ────────────────────────── */}
         <section className="py-24 sm:py-32 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 100%, rgba(109,58,168,0.15) 0%, transparent 60%)' }} />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24" style={{ background: 'linear-gradient(to bottom, transparent, rgba(109,58,168,0.4), transparent)' }} />
