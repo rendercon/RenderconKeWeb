@@ -176,7 +176,7 @@ export default function Hero() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
             className="absolute inset-0 flex items-center justify-center pointer-events-none lg:relative lg:inset-auto lg:flex lg:justify-end lg:pointer-events-auto"
           >
-            <div className="relative opacity-10 lg:opacity-100">
+            <div className="relative opacity-20 lg:opacity-100">
               {/* Outer ambient glow */}
               <div
                 className="absolute inset-[-40px] rounded-full pointer-events-none"
