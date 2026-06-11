@@ -11,7 +11,9 @@ export const metadata: Metadata = {
 
 const speakerPerks = [
   { icon: '🎤', title: 'Main Stage Access', desc: 'Present to 200+ React developers from across East Africa' },
+  { icon: '✈️', title: 'Speaker Support', desc: 'Travel and accommodation support for selected speakers' },
   { icon: '🌍', title: 'Community Reach', desc: 'Talk recordings shared with our 7K+ community online' },
+  { icon: '🤝', title: 'Speaker Dinner', desc: 'Exclusive networking dinner with fellow speakers and organisers' },
 ];
 
 const whySpeakReasons = [
