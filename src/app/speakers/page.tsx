@@ -16,6 +16,15 @@ const speakerPerks = [
   { icon: '🤝', title: 'Speaker Dinner', desc: 'Exclusive networking dinner with fellow speakers and organisers' },
 ];
 
+const whySpeakReasons = [
+  { icon: '⚛️', title: 'Share Your Expertise', desc: 'Present your ideas, lessons, and experiences to one of East Africa\'s most engaged React communities.' },
+  { icon: '🌍', title: 'Grow Your Profile', desc: 'Build visibility within the React ecosystem and establish yourself as a trusted voice among developers and engineering leaders.' },
+  { icon: '🤝', title: 'Connect with Builders', desc: 'Meet fellow maintainers, founders, and community leaders from across Kenya and East Africa.' },
+  { icon: '🚀', title: 'Showcase Your Work', desc: 'Building products, contributing to open source, or solving interesting challenges — RenderCon is your platform.' },
+  { icon: '💡', title: 'Inspire Others', desc: 'Your story and lessons could help another developer take the next step in their career.' },
+  { icon: '🌱', title: 'Strengthen the Ecosystem', desc: 'Help grow the React and React Native community across East Africa by contributing your experience and perspective.' },
+];
+
 const talkTypes = [
   { label: 'Deep Dive', desc: '40 min technical deep-dive on a React topic' },
   { label: 'Lightning Talk', desc: '10 min focused insight or lesson learned' },
@@ -118,13 +127,39 @@ export default function SpeakersPage() {
           </div>
         </section>
 
-        {/* Speaker perks */}
+        {/* Why Speak */}
         <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="section-label mb-4 inline-flex">Why Speak?</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3">
-                What you get as a speaker
+                Why Speak at RenderCon?
+              </h2>
+              <p className="mt-4 text-slate-400 max-w-xl mx-auto text-sm leading-relaxed">
+                Beyond the stage, speaking at RenderCon opens doors — professionally, socially, and within the East African tech ecosystem.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {whySpeakReasons.map((reason) => (
+                <div key={reason.title} className="bento-card p-6 flex gap-4">
+                  <span className="text-2xl flex-shrink-0 mt-0.5">{reason.icon}</span>
+                  <div>
+                    <h3 className="font-semibold text-white mb-1">{reason.title}</h3>
+                    <p className="text-sm text-slate-400 leading-relaxed">{reason.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Speaker perks */}
+        <section className="pb-16 sm:pb-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="section-label mb-4 inline-flex">Speaker Benefits</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3">
+                What you get
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
