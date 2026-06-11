@@ -17,7 +17,7 @@ const faqs = [
   {
     question: 'How do I submit a talk proposal (CFP)?',
     answer:
-      'The Call for Papers (CFP) opens annually. When open, you can submit your proposal via Sessionize. Follow @ReactDevsKe on social media to be notified when the CFP opens.',
+      'The Call for Papers (CFP) opens annually. When open, you can submit your proposal. Follow @ReactDevsKe and @RenderconKeon social media to be notified when the CFP opens.',
   },
   {
     question: 'How can my company become a sponsor?',
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: 'Will there be recordings of the talks?',
     answer:
-      'Yes, selected talks from past editions are available on the ReactDevsKe YouTube channel. We aim to record and publish all talks from RenderCon 2026.',
+      'Yes, talks from past editions are available on the RenderconKe YouTube channel. We aim to record and publish all talks from RenderCon 2026.',
   },
   {
     question: 'Can I volunteer at RenderCon?',

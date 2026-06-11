@@ -75,8 +75,8 @@ export default function MediaPolicyPage() {
             <div className="border-t border-brand-dark-border mt-12 pt-8">
               <p className="text-xs text-slate-600 leading-relaxed">
                 By choosing to attend RenderCon and being present at the venue, you are providing your consent to this media policy. Questions or concerns? Reach us at{' '}
-                <a href="mailto:media@rendercon.org" className="text-slate-500 hover:text-white underline underline-offset-2 transition-colors">
-                  media@rendercon.org
+                <a href="mailto:info@rendercon.org" className="text-slate-500 hover:text-white underline underline-offset-2 transition-colors">
+                  info@rendercon.org
                 </a>
                 .
               </p>

@@ -15,15 +15,15 @@ const speakerData = [
     "co_presenter_info": null
   },
   {
-    "id" : "1337",
-    "fullname": "Michael Maina",
-    "title_role": "Mobile developer",
-    "linkedin_url": "https://www.linkedin.com/in/michael-maina-087227235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "other_social": "github.com/Muchael123",
-    "speaker_bio": "Michael Maina is a Frontend and Mobile Developer with 4.5 years of programming experience and 3 years specializing in React and React Native. He is the Founder & CEO of Wabunifu Labs, Director at 25Cargo, and an External Contractor at Brainverse. Michael also leads innovative projects like Fololimo, focusing on agritech solutions powered by AI and IoT. Passionate about community building and technology, he creates impactful solutions that empower people and businesses.",
-    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/Michael_maina-nBy0MXYwYYvB8cflF2AvjfUHW34MQ4.jpg",
-    "session_title": "Shrink It, Ship It: Optimizing React Native Bundles with R8",
-    "session_abstract": "React Native apps often suffer from large bundle sizes and performance issues. In this session, Michael Maina explores how R8, Android’s built-in code shrinker and optimizer, can help developers ship smaller, faster, and more secure React Native apps. Learn practical steps to enable R8, configure it effectively, and optimize your builds for better performance.",
+    "id" : "9337",
+    "fullname": "Titus",
+    "title_role": "Senior Frontend Engineer",
+    "linkedin_url": "https://www.linkedin.com/in/titus-thumbi-103882190/",
+    "other_social": "https://www.linkedin.com/in/titus-thumbi-103882190/",
+    "speaker_bio": "https://www.linkedin.com/in/titus-thumbi-103882190/",
+    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/titus_gikandi-KBc4JltPkgUfvcdFacfttTulV5h16Z.jpg",
+    "session_title": "Breaking Down the Frontend, Holding It Together: Microfrontends in a Monorepo",
+    "session_abstract": "Microfrontends are a powerful way to scale frontend development across teams, but they often introduce challenges like duplicated tooling, inconsistent dependencies, and siloed workflows. A monorepo can help solve these problems by providing a single source of truth, unified build and test pipelines, and a structure that supports both autonomy and alignment. In this session, we’ll break down practical strategies, common pitfalls, and real-world lessons on combining microfrontends with a monorepo. You’ll leave with patterns and best practices to keep your frontend architecture both modular and maintainable, while empowering teams to deliver faster with confidence.",
     "co_presenter_info": null
   },
   {
@@ -110,18 +110,7 @@ const speakerData = [
     "session_abstract": "After months of wrestling with inconsistent AI coding results, half-finished functions, conflicting architectural patterns, and code that looked smart but broke in production, I developed a systematic approach that actually works. This isn’t another \"AI will replace developers\" talk. It’s about making AI pair programming reliable, consistent, and genuinely productive.\nI’ll share the exact rule-based framework I use daily with Cursor and Claude Code that transformed my development process rom chaotic AI interactions to systematic, high-quality code generation. ",
     "co_presenter_info": null
   },
-  {
-    "id" : "9337",
-    "fullname": "Titus",
-    "title_role": "Senior Frontend Engineer",
-    "linkedin_url": "https://www.linkedin.com/in/titus-thumbi-103882190/",
-    "other_social": "https://www.linkedin.com/in/titus-thumbi-103882190/",
-    "speaker_bio": "https://www.linkedin.com/in/titus-thumbi-103882190/",
-    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/titus_gikandi-KBc4JltPkgUfvcdFacfttTulV5h16Z.jpg",
-    "session_title": "Breaking Down the Frontend, Holding It Together: Microfrontends in a Monorepo",
-    "session_abstract": "Microfrontends are a powerful way to scale frontend development across teams, but they often introduce challenges like duplicated tooling, inconsistent dependencies, and siloed workflows. A monorepo can help solve these problems by providing a single source of truth, unified build and test pipelines, and a structure that supports both autonomy and alignment. In this session, we’ll break down practical strategies, common pitfalls, and real-world lessons on combining microfrontends with a monorepo. You’ll leave with patterns and best practices to keep your frontend architecture both modular and maintainable, while empowering teams to deliver faster with confidence.",
-    "co_presenter_info": null
-  },
+  
   {
     "id" : "12337",
     "fullname": "Zawadi Wanjala",
@@ -168,6 +157,18 @@ const speakerData = [
     "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/timothy_mugo-R97flJuJCsbeyTufkwtNic1vZAlWGF.jpg",
     "session_title": "Expo and Better Auth: Auth that doesn’t suck",
     "session_abstract": "Authentication is a key components in modern applications. If you get it wrong, you either frustrate users or invite intruders.\nWith Expo (React Native) powering the next generation of cross-platform apps, developers need solutions that are both hardcore and frictionless. This session looks at better auth as one of the solutions to build auth (sessions, auth and authorization) for your app and your work is to focus on the business logic.",
+    "co_presenter_info": null
+  },
+  {
+    "id" : "1337",
+    "fullname": "Michael Maina",
+    "title_role": "Mobile developer",
+    "linkedin_url": "https://www.linkedin.com/in/michael-maina-087227235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "other_social": "github.com/Muchael123",
+    "speaker_bio": "Michael Maina is a Frontend and Mobile Developer with 4.5 years of programming experience and 3 years specializing in React and React Native. He is the Founder & CEO of Wabunifu Labs, Director at 25Cargo, and an External Contractor at Brainverse. Michael also leads innovative projects like Fololimo, focusing on agritech solutions powered by AI and IoT. Passionate about community building and technology, he creates impactful solutions that empower people and businesses.",
+    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/Michael_maina-nBy0MXYwYYvB8cflF2AvjfUHW34MQ4.jpg",
+    "session_title": "Shrink It, Ship It: Optimizing React Native Bundles with R8",
+    "session_abstract": "React Native apps often suffer from large bundle sizes and performance issues. In this session, Michael Maina explores how R8, Android’s built-in code shrinker and optimizer, can help developers ship smaller, faster, and more secure React Native apps. Learn practical steps to enable R8, configure it effectively, and optimize your builds for better performance.",
     "co_presenter_info": null
   },
   {
