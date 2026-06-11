@@ -3,6 +3,7 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { FaTwitter, FaLinkedin, FaGlobe, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { IconWrapper } from '../../components/IconWrapper';
 import LogoLemonade from '../images/logos/lemonage_logo.jpg';
 import LogoPayd from '../images/logos/payd.png';
 import LogoReactDevsKe from '../images/logos/reactdevske.png';
@@ -108,7 +109,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaTwitter className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaTwitter} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                     {sponsor.socials.linkedin && (
@@ -117,7 +118,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaLinkedin className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaLinkedin} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                     {sponsor.socials.facebook && (
@@ -126,7 +127,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaFacebook className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaFacebook} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                     {sponsor.socials.instagram && (
@@ -135,7 +136,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaInstagram className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaInstagram} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                     {sponsor.socials.youtube && (
@@ -144,7 +145,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaYoutube className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaYoutube} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                     {sponsor.socials.website && (
@@ -153,7 +154,7 @@ function Sponsorship() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaGlobe className="text-purple-500 text-2xl hover:text-yellow-500" />
+                        <IconWrapper icon={FaGlobe} className="text-purple-500 text-2xl hover:text-yellow-500" />
                       </a>
                     )}
                   </div>
