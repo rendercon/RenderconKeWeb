@@ -2,6 +2,7 @@ import './globals.css';
 import { Poppins } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { ScheduleProvider } from './context/ScheduleContext';
+import { ScrollToTop } from './components/ScrollToTop';
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -52,6 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} !scroll-smooth`}>
       <body className={poppins.className}>
+        <ScrollToTop />
         <ScheduleProvider>
           {children}
         </ScheduleProvider>
