@@ -19,7 +19,7 @@ const itemVariants: Variants = {
 
 export default function Hero() {
   return (
-    <section className="relative mt-16 flex items-center overflow-hidden">
+    <section className="relative mt-16 flex items-center overflow-hidden min-h-[calc(100svh-4rem)]">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Purple gradient top */}
@@ -64,8 +64,8 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20 lg:pt-24 pb-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left: Content */}
           <motion.div
             variants={containerVariants}
@@ -84,7 +84,7 @@ export default function Hero() {
             {/* Headline */}
             <motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight"
+              className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight"
             >
               <span className="text-white">React.</span>
               <br />
@@ -94,7 +94,7 @@ export default function Hero() {
             </motion.h1>
 
             {/* Conference name */}
-            <motion.div variants={itemVariants} className="mt-6">
+            <motion.div variants={itemVariants} className="mt-4 sm:mt-6">
               <p className="text-xl sm:text-2xl font-semibold text-slate-300">
                 RenderCon Kenya 2026
               </p>
@@ -117,7 +117,7 @@ export default function Hero() {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="mt-6 text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0"
+              className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0"
             >
               The home of the East African React ecosystem. Join 200+ developers,
               engineers, and designers for a day of deep talks, community, and connection.
@@ -126,13 +126,13 @@ export default function Hero() {
             {/* CTAs */}
             <motion.div
               variants={itemVariants}
-              className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <a
                 href="https://forms.gle/zyc8anLMKMxo42ED7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary text-base px-8 py-4"
+                className="btn-primary text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4"
               >
                 Get Notified When Tickets Drop
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -141,7 +141,7 @@ export default function Hero() {
               </a>
               <Link
                 href="/partners"
-                className="btn-secondary text-base px-8 py-4"
+                className="btn-secondary text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4"
               >
                 Become a Partner
               </Link>
@@ -150,31 +150,31 @@ export default function Hero() {
             {/* Social proof badges */}
             <motion.div
               variants={itemVariants}
-              className="mt-10 flex items-center gap-6 justify-center lg:justify-start text-sm text-slate-500"
+              className="mt-8 flex items-center gap-4 sm:gap-6 justify-center lg:justify-start text-xs sm:text-sm text-slate-500 flex-wrap"
             >
-              <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-white">200+</span>
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="text-xl sm:text-2xl font-bold text-white">200+</span>
                 <span>Attendees</span>
               </div>
-              <div className="w-px h-8 bg-brand-dark-border" />
-              <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-white">7K+</span>
+              <div className="w-px h-7 bg-brand-dark-border" />
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="text-xl sm:text-2xl font-bold text-white">7K+</span>
                 <span>Community</span>
               </div>
-              <div className="w-px h-8 bg-brand-dark-border" />
-              <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-white">4th</span>
+              <div className="w-px h-7 bg-brand-dark-border" />
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="text-xl sm:text-2xl font-bold text-white">4th</span>
                 <span>Edition</span>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Right: React Atom */}
+          {/* Right: React Atom — hidden on mobile to keep hero tight */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-            className="flex justify-center lg:justify-end"
+            className="hidden lg:flex justify-end"
           >
             <div className="relative">
               {/* Outer ambient glow */}
