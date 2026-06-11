@@ -11,9 +11,7 @@ export const metadata: Metadata = {
 
 const speakerPerks = [
   { icon: '🎤', title: 'Main Stage Access', desc: 'Present to 200+ React developers from across East Africa' },
-  { icon: '✈️', title: 'Speaker Support', desc: 'Travel and accommodation support for selected speakers' },
   { icon: '🌍', title: 'Community Reach', desc: 'Talk recordings shared with our 7K+ community online' },
-  { icon: '🤝', title: 'Speaker Dinner', desc: 'Exclusive networking dinner with fellow speakers and organisers' },
 ];
 
 const whySpeakReasons = [
@@ -149,20 +147,6 @@ export default function SpeakersPage() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Speaker perks */}
-        <section className="pb-16 sm:pb-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <span className="section-label mb-4 inline-flex">Speaker Benefits</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mt-3">
-                What you get
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {speakerPerks.map((perk) => (
                 <div key={perk.title} className="bento-card p-6 flex flex-col gap-3">
                   <span className="text-3xl">{perk.icon}</span>
