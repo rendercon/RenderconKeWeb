@@ -85,7 +85,7 @@ export function Header() {
       {isMobileMenuOpened && isMobileView && (
         <div className="flex flex-col items-end py-4 pl-2">
           <div className="font-mono text-gray-50 pb-4">
-            <Navbar onLinkClick={closeMenu} /> {/* Mobile Navbar links */}
+            <Navbar /> {/* Mobile Navbar links */}
           </div>
           <a
                   href="https://bit.ly/rcke25adv" target="_blank" rel="noopener noreferrer"

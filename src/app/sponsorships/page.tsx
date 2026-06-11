@@ -7,7 +7,7 @@ import LogoLemonade from '../images/logos/lemonage_logo.jpg';
 import LogoPayd from '../images/logos/payd.png';
 import LogoReactDevsKe from '../images/logos/reactdevske.png';
 import LogoCloudinaryBlue from "../images/logos/cloudinary_stacked_logo_box.png";
-import { Header } from '../components/Header';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Technologies from '../components/Technologies';
 
@@ -63,7 +63,7 @@ function Sponsorship() {
 
   return (
     <>
-      <Header />
+      <Navbar />
       <section id="sponsors" aria-label="Sponsors" className="pt-10 sm:pt-32 sm:pb-20 bg-[#240046] font-mono">
         <div className="container mx-auto px-6">
           {/* Title */}

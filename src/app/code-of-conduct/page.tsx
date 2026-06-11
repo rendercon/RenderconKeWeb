@@ -1,11 +1,11 @@
 import { Container } from "../components/Container";
 import Footer from "../components/Footer";
-import { Header } from "../components/Header";
+import Navbar from "../components/Navbar";
 
 export default function CodeOfConductPage() {
   return (
     <>
-      <Header />
+      <Navbar />
       <Container className="text-center lg:text-left">
         <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div>

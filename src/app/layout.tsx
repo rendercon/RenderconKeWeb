@@ -1,21 +1,42 @@
 import './globals.css';
-import { Krona_One } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { ScheduleProvider } from './context/ScheduleContext';
 
-const kronaOne = Krona_One({
-  weight: ['400'],
+const poppins = Poppins({
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
+  variable: '--font-poppins',
+  display: 'swap',
 });
 
 export const metadata = {
-  type: 'website',
-  locale: 'en_US',
-  url: 'https://renderconke.org',
-  site_name: 'Rendercon Kenya',
-  title: 'RenderconKe 2025 — The premier conference experience for Web and Mobile',
-  description: 'RenderconKe 2025 is a conference for Web and Mobile developers. We bring together a diverse group of people from all across the world to share their knowledge and experience.',
-  image: 'https://res.cloudinary.com/djgfcdjgn/image/upload/v1711373281/rendercon_24_sessionize_banner_s00r58.png',
+  metadataBase: new URL('https://rendercon.org'),
+  title: 'RenderCon Kenya 2026 — East Africa\'s React Conference',
+  description: 'RenderCon Kenya is East Africa\'s community-first React conference. React. Connect. Build. Join 200+ developers, designers, and engineers at Nairobi\'s premier frontend conference.',
+  keywords: ['React', 'React Native', 'conference', 'Kenya', 'East Africa', 'frontend', 'JavaScript', 'TypeScript', 'developer conference'],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://rendercon.org',
+    siteName: 'RenderCon Kenya',
+    title: 'RenderCon Kenya 2026 — East Africa\'s React Conference',
+    description: 'React. Connect. Build. East Africa\'s community-first React conference by ReactDevsKe.',
+    images: [
+      {
+        url: 'https://res.cloudinary.com/djgfcdjgn/image/upload/v1711373281/rendercon_24_sessionize_banner_s00r58.png',
+        width: 1200,
+        height: 630,
+        alt: 'RenderCon Kenya 2026',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'RenderCon Kenya 2026',
+    description: 'East Africa\'s community-first React conference. React. Connect. Build.',
+    site: '@ReactDevsKe',
+  },
 };
 
 export default function RootLayout({
@@ -24,9 +45,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={'!scroll-smooth'}>
-      <body className={kronaOne.className}>
-        <ScheduleProvider> {/* Wrap the children with ScheduleProvider */}
+    <html lang="en" className={`${poppins.variable} !scroll-smooth`}>
+      <body className={poppins.className}>
+        <ScheduleProvider>
           {children}
         </ScheduleProvider>
         <Analytics />
