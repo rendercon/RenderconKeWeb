@@ -6,18 +6,19 @@ import Link from 'next/link';
 
 import LogoDevKenya from '../images/logos/devkenya_logo.png';
 import LogoReactDevsKe from '../images/logos/ReactdevskeLogo.png';
-import LogoOscaNairobi from '../images/logos/osca_nairobi_logo.jpg';
-import LogoSpaceYaTech from '../images/logos/SPACEYATECH_LOGO.jpg';
+import LogoOscaNairobi from '../images/logos/oscarnrb.png';
+import LogoSpaceYaTech from '../images/logos/SPACEYATECH_LOGO.png';
 import LogoSupaBase from '../images/logos/supabase_logo_wordmark.png';
 import LogoLemonade from '../images/logos/lemonade.png';
 import LogoPayd from '../images/logos/payd.png';
 import LogoCloudinary from '../images/logos/cloudinary_logo_white.png';
+import LogoMentorlist from '../images/logos/mentorlst.png';
 
 type Partner = {
   name: string;
-  logo: StaticImageData;
+  logo: StaticImageData | null;
   link: string;
-  tier: 'sponsor' | 'community';
+  tier: 'sponsor' | 'organiser' | 'community';
   height: number;
   width: number;
 };
@@ -25,47 +26,50 @@ type Partner = {
 const partners: Partner[] = [
   { name: 'Cloudinary', logo: LogoCloudinary, link: 'https://cloudinary.com/', tier: 'sponsor', height: 32, width: 130 },
   { name: 'Supabase', logo: LogoSupaBase, link: 'https://supabase.com/', tier: 'sponsor', height: 32, width: 120 },
-  { name: 'Lemonade', logo: LogoLemonade, link: 'https://mylemonade.io/', tier: 'community', height: 36, width: 100 },
+  { name: 'Lemonade', logo: LogoLemonade, link: 'https://mylemonade.io/', tier: 'sponsor', height: 36, width: 100 },
+  { name: 'Dev Kenya', logo: LogoDevKenya, link: 'https://devkenya.com', tier: 'sponsor', height: 36, width: 100 },
+  { name: 'ReactDevsKe', logo: LogoReactDevsKe, link: 'https://reactdevske.org', tier: 'organiser', height: 36, width: 100 },
   { name: 'Payd', logo: LogoPayd, link: 'https://paydexp.com/', tier: 'community', height: 36, width: 100 },
-  { name: 'Dev Kenya', logo: LogoDevKenya, link: 'https://devkenya.com', tier: 'community', height: 36, width: 100 },
-  { name: 'ReactDevsKe', logo: LogoReactDevsKe, link: 'https://reactdevske.org', tier: 'community', height: 36, width: 100 },
   { name: 'OSCA Nairobi', logo: LogoOscaNairobi, link: 'https://github.com/OSCA-Nairobi', tier: 'community', height: 36, width: 100 },
   { name: 'Space Ya Tech', logo: LogoSpaceYaTech, link: 'https://spaceyatech.com/', tier: 'community', height: 36, width: 100 },
+  { name: 'Mentorlist', logo: LogoMentorlist, link: 'https://mentorlist.io/', tier: 'community', height: 36, width: 100 },
 ];
 
 const sponsorshipTiers = [
   {
-    tier: 'Title Sponsor',
-    price: '$20,000',
+    tier: 'Ecosystem Partner',
+    price: '$20K',
     color: 'purple',
     perks: [
-      'Headline logo placement on all materials',
-      'Keynote speaking slot',
-      'Exhibition booth',
-      'Dedicated social media spotlight campaign',
-      'Logo on event backdrop and signage',
+      'Headline logo + exclusive naming rights',
+      'Main stage keynote slot',
+      'Premium exhibition booth',
+      'Dedicated social media campaign',
+      'Speaker dinner & after party branding',
       '10 complimentary tickets',
     ],
   },
   {
-    tier: 'Gold Sponsor',
-    price: '$10,000',
+    tier: 'Platinum Partner',
+    price: '$10K',
     color: 'gold',
     perks: [
-      'Logo on conference materials & website',
-      'Exhibition booth',
-      'Social media mentions',
-      '5 complimentary tickets',
+      'Large logo on all materials & website',
+      'Branded workshop or session slot',
+      'Large exhibition booth',
+      'Social media campaign',
+      '6 complimentary tickets',
     ],
   },
   {
-    tier: 'Community Partner',
-    price: '$5,000',
+    tier: 'Gold Partner',
+    price: '$5K',
     color: 'slate',
     perks: [
-      'Logo on website',
-      'Social media mention',
-      '2 complimentary tickets',
+      'Medium logo on website & materials',
+      'Standard exhibition booth',
+      'Social media mentions',
+      '3 complimentary tickets',
     ],
   },
 ];
@@ -102,33 +106,85 @@ export default function Partners() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8">
-            {partners.map((partner, i) => (
-              <motion.a
-                key={partner.name}
-                href={partner.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="group relative flex items-center justify-center px-6 py-4 rounded-2xl border border-brand-dark-border hover:border-purple-500/40 transition-all duration-300 bg-brand-dark-card/50"
-              >
-                <div
-                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{ background: 'radial-gradient(ellipse at center, rgba(109,58,168,0.12) 0%, transparent 70%)' }}
-                />
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  height={partner.height}
-                  width={partner.width}
-                  className="relative z-10 opacity-60 group-hover:opacity-100 transition-opacity duration-300 filter brightness-200"
-                  unoptimized
-                />
-              </motion.a>
-            ))}
+          {/* Organiser */}
+          <div className="mb-8">
+            <p className="text-center text-xs font-semibold uppercase tracking-widest text-brand-gold mb-5">Organiser</p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {partners.filter(p => p.tier === 'organiser').map((partner, i) => (
+                <motion.a
+                  key={partner.name}
+                  href={partner.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.06 }}
+                  className="partner-logo-card relative w-[160px] h-[80px] flex items-center justify-center rounded-2xl border border-brand-gold/30 bg-brand-dark-card/50"
+                >
+                  {partner.logo && (
+                    <div className="relative w-full h-full p-3">
+                      <Image src={partner.logo} alt={partner.name} fill className="object-contain filter brightness-200" unoptimized />
+                    </div>
+                  )}
+                </motion.a>
+              ))}
+            </div>
+          </div>
+
+          {/* Sponsors */}
+          <div className="mb-8">
+            <p className="text-center text-xs font-semibold uppercase tracking-widest text-purple-400 mb-5">Sponsors</p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {partners.filter(p => p.tier === 'sponsor').map((partner, i) => (
+                <motion.a
+                  key={partner.name}
+                  href={partner.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.06 }}
+                  className="partner-logo-card relative w-[160px] h-[80px] flex items-center justify-center rounded-2xl border border-brand-dark-border bg-brand-dark-card/50"
+                >
+                  {partner.logo && (
+                    <div className="relative w-full h-full p-3">
+                      <Image src={partner.logo} alt={partner.name} fill className="object-contain filter brightness-200" unoptimized />
+                    </div>
+                  )}
+                </motion.a>
+              ))}
+            </div>
+          </div>
+
+          {/* Community Partners */}
+          <div>
+            <p className="text-center text-xs font-semibold uppercase tracking-widest text-slate-500 mb-5">Community Partners</p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {partners.filter(p => p.tier === 'community').map((partner, i) => (
+                <motion.a
+                  key={partner.name}
+                  href={partner.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.06 }}
+                  className="partner-logo-card relative w-[160px] h-[80px] flex items-center justify-center rounded-2xl border border-brand-dark-border bg-brand-dark-card/50"
+                >
+                  {partner.logo
+                    ? (
+                      <div className="relative w-full h-full p-3">
+                        <Image src={partner.logo} alt={partner.name} fill className="object-contain filter brightness-200" unoptimized />
+                      </div>
+                    )
+                    : <span className="text-sm font-bold text-slate-300 px-4 text-center leading-tight">{partner.name}</span>
+                  }
+                </motion.a>
+              ))}
+            </div>
           </div>
         </motion.div>
 
@@ -211,7 +267,7 @@ export default function Partners() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <Link href="/partners" className="btn-primary px-8 py-3.5">
+          <Link href="/partners#prospectus" className="btn-primary px-8 py-3.5">
             View Full Prospectus
           </Link>
           <a href="mailto:sponsors@rendercon.org" className="btn-secondary px-8 py-3.5">
