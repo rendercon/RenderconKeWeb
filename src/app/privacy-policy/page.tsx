@@ -25,7 +25,7 @@ const sections = [
   },
   {
     title: 'Your Rights',
-    body: 'You have the right to access, correct, or delete the personal information we hold about you. If you wish to exercise any of these rights or have questions about our privacy policy, please contact us at privacy@rendercon.org.',
+    body: 'You have the right to access, correct, or delete the personal information we hold about you. If you wish to exercise any of these rights or have questions about our privacy policy, please contact us at info@rendercon.org.',
   },
 ];
 
@@ -61,8 +61,8 @@ export default function PrivacyPolicyPage() {
                   {s.title === 'Your Rights'
                     ? <>
                         You have the right to access, correct, or delete the personal information we hold about you. If you wish to exercise any of these rights or have questions about our privacy policy, please contact us at{' '}
-                        <a href="mailto:privacy@rendercon.org" className="text-purple-400 hover:text-purple-300 transition-colors">
-                          privacy@rendercon.org
+                        <a href="mailto:info@rendercon.org" className="text-purple-400 hover:text-purple-300 transition-colors">
+                          info@rendercon.org
                         </a>
                         .
                       </>

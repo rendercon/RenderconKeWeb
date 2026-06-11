@@ -38,8 +38,8 @@ export default function CodeOfConductPage() {
             </p>
             <p className="mt-4 text-sm text-slate-500">
               Breach of CoC? Contact our enforcement team at{' '}
-              <a href="mailto:coc@rendercon.org" className="text-purple-400 hover:text-purple-300 transition-colors font-medium">
-                coc@rendercon.org
+              <a href="mailto:info@rendercon.org" className="text-purple-400 hover:text-purple-300 transition-colors font-medium">
+                info@rendercon.org
               </a>
               {' '}or approach any crew member (look for SUDO / CREW tags or purple jackets labelled &ldquo;CREW&rdquo;).
             </p>

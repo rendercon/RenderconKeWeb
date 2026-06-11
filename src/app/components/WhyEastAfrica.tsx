@@ -115,7 +115,7 @@ export default function WhyEastAfrica() {
       />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-1 gap-16 items-center">
           {/* Left: Content */}
           <div>
             <motion.div
@@ -136,7 +136,7 @@ export default function WhyEastAfrica() {
               </p>
             </motion.div>
 
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="mt-10 grid grid-cols-2 sm:grid-cols-2 gap-4">
               {pillars.map((pillar, i) => (
                 <motion.div
                   key={pillar.title}
@@ -162,33 +162,6 @@ export default function WhyEastAfrica() {
             </div>
           </div>
 
-          {/* Right: Map */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
-          >
-            <div className="bento-card p-8 flex flex-col items-center">
-              <div className="text-center mb-6">
-                <h3 className="text-lg font-semibold text-white">The East African React Hub</h3>
-                <p className="text-sm text-slate-500 mt-1">Where developers meet, learn, and build</p>
-              </div>
-              <MapVisualization />
-              <div className="mt-6 flex flex-wrap gap-3 justify-center text-xs text-slate-500">
-                <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-purple-400" />Nairobi (Host)
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-brand-gold" />Kampala
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-purple-300" />Kigali
-                </span>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
