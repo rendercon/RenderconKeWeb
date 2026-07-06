@@ -1,5 +1,6 @@
 "use client";
 
+import { EVENT_CONFIG } from "@/config/event";
 import Link from "next/link";
 import { Button } from "./Button";
 import { Container } from "./Container";
@@ -73,10 +74,10 @@ export function Header() {
           <div className="flex items-center justify-between w-full">
             <Navbar /> {/* Full Navbar links */}
             <a
-                  href="https://bit.ly/rcke25adv" target="_blank" rel="noopener noreferrer"
+                  href={EVENT_CONFIG.links.tickets} target="_blank" rel="noopener noreferrer"
                   className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
                 >
-                  Get Tickets Notification
+                  Book Tickets Now
                 </a>
           </div>
         )}
@@ -89,10 +90,10 @@ export function Header() {
             <Navbar /> {/* Mobile Navbar links */}
           </div>
           <a
-                  href="https://bit.ly/rcke25adv" target="_blank" rel="noopener noreferrer"
+                  href={EVENT_CONFIG.links.tickets} target="_blank" rel="noopener noreferrer"
                   className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
                 >
-                  Get Tickets Notification
+                  Book Tickets Now
                 </a>
         </div>
       )}

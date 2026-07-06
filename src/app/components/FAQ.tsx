@@ -92,7 +92,7 @@ function FAQItem({ faq, index }: { faq: (typeof faqs)[number]; index: number }) 
 
 export default function FAQ() {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-20">
           {/* Left: header */}

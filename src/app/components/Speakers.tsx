@@ -107,7 +107,7 @@ export function Speakers() {
   const visible = speakerList;
 
   return (
-    <section id="speakers" aria-labelledby="speakers-title" className="py-24 sm:py-32 relative overflow-hidden">
+    <section id="speakers" aria-labelledby="speakers-title" className="py-12 sm:py-16 relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -142,7 +142,7 @@ export function Speakers() {
             {[...Array(8)].map((_, i) => <SkeletonCard key={i} />)}
           </div>
         ) : error ? (
-          <div className="text-center py-16">
+          <div className="text-center py-8">
             <p className="text-slate-400 mb-4">Unable to load speakers right now.</p>
             <button
               onClick={() => { setError(false); setLoading(true); fetch('/api/speakers').then(r => r.json()).then(setSpeakerList).catch(() => setError(true)).finally(() => setLoading(false)); }}

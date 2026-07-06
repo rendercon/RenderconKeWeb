@@ -236,7 +236,7 @@ export default function SpeakersSchedulePage() {
           </div>
 
           {filteredSpeakers.length === 0 && (
-            <div className="text-center py-12">
+            <div className="text-center py-6">
               <IconWrapper icon={FiUser as any} className="w-16 h-16 text-slate-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-slate-400 mb-2">No speakers found</h3>
               <p className="text-slate-500">Try adjusting your search criteria or filters.</p>

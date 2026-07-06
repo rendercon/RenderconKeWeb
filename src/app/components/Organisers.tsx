@@ -138,7 +138,7 @@ function OrganizerCard({ organiser, index }: { organiser: Organiser; index: numb
 
 export default function Organisers() {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -154,7 +154,7 @@ export default function Organisers() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-16"
+          className="max-w-3xl mb-10"
         >
           <span className="section-label mb-4 inline-flex">The Team</span>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mt-4">
@@ -162,7 +162,7 @@ export default function Organisers() {
             <br className="hidden sm:block" />
             <span className="gradient-text">For Developers.</span>
           </h2>
-          <p className="mt-6 text-lg text-slate-400 leading-relaxed">
+          <p className="mt-4 text-lg text-slate-400 leading-relaxed">
             RenderCon is organized by a passionate team of engineers and community builders
             who believe that East African developers deserve a world-class stage.
           </p>
@@ -181,7 +181,7 @@ export default function Organisers() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 flex items-center gap-4 flex-wrap"
+          className="mt-8 flex items-center gap-4 flex-wrap"
         >
           <a
             href="https://www.linkedin.com/company/renderconke/"

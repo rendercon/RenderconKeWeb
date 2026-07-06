@@ -90,7 +90,7 @@ const cardVariants: Variants = {
 
 export default function WhyRenderCon() {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       {/* Section background glow */}
       <div
         className="absolute inset-0 pointer-events-none"

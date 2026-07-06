@@ -78,7 +78,7 @@ const accentMap = {
 
 export default function ConferenceTracks() {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -165,12 +165,10 @@ export default function ConferenceTracks() {
           className="mt-12 text-center"
         >
           <a
-            href="/speakers-schedule"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/attend#schedule"
             className="btn-secondary text-sm px-6 py-3"
           >
-            View the Full Schedule →
+            Plan Your Visit →
           </a>
         </motion.div>
       </div>

@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from 'framer-motion';
 import Link from 'next/link';
+import { EVENT_CONFIG } from '@/config/event';
 import ReactAtomSVG from './ReactAtom';
 
 const containerVariants: Variants = {
@@ -129,12 +130,12 @@ export default function Hero() {
               className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <a
-                href="https://forms.gle/zyc8anLMKMxo42ED7"
+                href={EVENT_CONFIG.links.tickets}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4"
               >
-                Get Notified When Tickets Drop
+                Book Tickets Now
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>

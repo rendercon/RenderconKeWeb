@@ -40,7 +40,7 @@ const Sponsors = () => {
     <section
       id="sponsors"
       aria-label="Sponsors"
-      className="py-8 sm:py-24 text-sm md:text-xl"
+      className="py-6 sm:py-12 text-sm md:text-xl"
     >
       <Container>
         <h2 className="mx-auto max-w-2xl text-center font-display text-3xl font-medium tracking-tighter text-slate-200 lg:text-4xl">

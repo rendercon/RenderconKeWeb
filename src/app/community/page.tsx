@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { EVENT_CONFIG } from '@/config/event';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CommunityStats from '../components/CommunityStats';
@@ -89,7 +90,7 @@ export default function CommunityPage() {
       <Navbar />
       <main className="pt-16">
         {/* Hero */}
-        <section className="relative py-20 sm:py-28 overflow-hidden">
+        <section className="relative py-10 sm:py-14 overflow-hidden">
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -128,7 +129,7 @@ export default function CommunityPage() {
         </section>
 
         {/* About */}
-        <section className="py-16 sm:py-24">
+        <section className="py-8 sm:py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -172,7 +173,7 @@ export default function CommunityPage() {
         <CommunityStats />
 
         {/* Platforms */}
-        <section className="py-16 sm:py-24">
+        <section className="py-8 sm:py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="section-label mb-4 inline-flex">Find Us</span>
@@ -222,9 +223,9 @@ export default function CommunityPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-20">
+        <section className="py-10">
           <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
-            <div className="bento-card py-12">
+            <div className="bento-card py-6">
               <h2 className="text-2xl font-bold text-white mb-3">Ready to join?</h2>
               <p className="text-slate-400 mb-8 text-sm leading-relaxed max-w-md mx-auto">
                 Connect with hundreds of React developers across East Africa.
@@ -239,7 +240,7 @@ export default function CommunityPage() {
                 >
                   Follow @ReactDevsKe
                 </a>
-                <a href="https://forms.gle/zyc8anLMKMxo42ED7" className="btn-secondary px-8 py-3.5">
+                <a href={EVENT_CONFIG.links.tickets} target="_blank" rel="noopener noreferrer" className="btn-secondary px-8 py-3.5">
                   Get RenderCon Tickets
                 </a>
               </div>
