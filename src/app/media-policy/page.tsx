@@ -35,7 +35,7 @@ export default function MediaPolicyPage() {
       <Navbar />
       <main className="pt-16 min-h-screen">
         {/* Hero */}
-        <section className="relative py-16 sm:py-20 overflow-hidden border-b border-brand-dark-border">
+        <section className="relative py-8 sm:py-10 overflow-hidden border-b border-brand-dark-border">
           <div
             className="absolute inset-0 pointer-events-none"
             style={{ background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(109,58,168,0.15) 0%, transparent 60%)' }}
@@ -55,7 +55,7 @@ export default function MediaPolicyPage() {
         </section>
 
         {/* Content */}
-        <section className="py-16">
+        <section className="py-8">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
             <ol className="space-y-8">
               {items.map((item, i) => (

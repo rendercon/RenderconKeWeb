@@ -170,7 +170,7 @@ const tablePerks: { label: string; ecosystem: Check; platinum: Check; gold: Chec
 ];
 
 const tiers = [
-  { key: 'ecosystem', label: 'Ecosystem Partner', price: '$20K', color: 'purple', badge: 'Premier'  },
+  { key: 'ecosystem', label: 'Ecosystem Title Partner', price: '$20K', color: 'purple', badge: 'Premier'  },
   { key: 'platinum',  label: 'Platinum Partner',  price: '$10K', color: 'slate',  badge: null       },
   { key: 'gold',      label: 'Gold Partner',       price: '$5K',  color: 'gold',   badge: null       },
   { key: 'silver',    label: 'Silver Partner',     price: '$2.5K',color: 'slate',  badge: null       },
@@ -208,7 +208,7 @@ export default function PartnersPage() {
       <main className="pt-16 min-h-screen">
 
         {/* ── SECTION 1 — Hero ──────────────────────────────── */}
-        <section className="relative py-24 sm:py-36 overflow-hidden">
+        <section className="relative py-12 sm:py-20 overflow-hidden">
           <div className="absolute inset-0 pointer-events-none">
             <div style={{ background: 'radial-gradient(ellipse 100% 80% at 50% -10%, rgba(109,58,168,0.28) 0%, transparent 65%)' }} className="absolute inset-0" />
             <div style={{ background: 'linear-gradient(to top, #0F0B1E, transparent)' }} className="absolute bottom-0 left-0 right-0 h-48" />
@@ -250,7 +250,7 @@ export default function PartnersPage() {
         </section>
 
         {/* ── SECTION 2 — Impact Delivered ─────────────────── */}
-        <section className="py-24 sm:py-32 relative overflow-hidden">
+        <section className="py-12 sm:py-16 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 70% 50% at 30% 50%, rgba(109,58,168,0.07) 0%, transparent 70%)' }} />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-3xl mb-16">
@@ -283,7 +283,7 @@ export default function PartnersPage() {
         </section>
 
         {/* ── SECTION 3 — Trusted By ───────────────────────── */}
-        <section className="py-24 sm:py-32 relative overflow-hidden">
+        <section className="py-12 sm:py-16 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(109,58,168,0.07) 0%, transparent 70%)' }} />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-14">
@@ -362,7 +362,7 @@ export default function PartnersPage() {
         </section>
 
         {/* ── SECTION 4 — Partner Spotlights ───────────────── */}
-        <section className="py-24 sm:py-32 relative overflow-hidden">
+        <section className="py-12 sm:py-16 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 70% 50% at 70% 50%, rgba(109,58,168,0.06) 0%, transparent 70%)' }} />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-3xl mb-14">
@@ -408,7 +408,7 @@ export default function PartnersPage() {
         </section>
 
         {/* ── SECTION 5 — Why Companies Partner ────────────── */}
-        <section className="py-24 sm:py-32 relative overflow-hidden">
+        <section className="py-12 sm:py-16 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 50% at 40% 50%, rgba(109,58,168,0.07) 0%, transparent 70%)' }} />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-14">
@@ -438,7 +438,7 @@ export default function PartnersPage() {
         </section>
 
         {/* ── SECTION 6 — Building the Ecosystem ───────────── */}
-        <section className="py-24 sm:py-32 relative overflow-hidden">
+        <section className="py-12 sm:py-16 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(109,58,168,0.06) 0%, transparent 70%)' }} />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -478,7 +478,7 @@ export default function PartnersPage() {
         </section>
 
         {/* ── SECTION 7 — Sponsorship Tiers ────────────────── */}
-        <section id="prospectus" className="py-20 sm:py-32 relative overflow-hidden">
+        <section id="prospectus" className="py-10 sm:py-16 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(109,58,168,0.08) 0%, transparent 60%)' }} />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-16">
@@ -588,7 +588,7 @@ export default function PartnersPage() {
 
 
         {/* ── SECTION 8 — Event Highlights ─────────────────── */}
-        <section className="py-10 sm:py-32 relative overflow-hidden">
+        <section className="py-6 sm:py-16 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 50%, rgba(109,58,168,0.05) 0%, transparent 70%)' }} />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-14">
@@ -641,7 +641,7 @@ export default function PartnersPage() {
         </section>
 
         {/* ── SECTION 9 — Final CTA ────────────────────────── */}
-        <section className="py-24 sm:py-32 relative overflow-hidden">
+        <section className="py-12 sm:py-16 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 100%, rgba(109,58,168,0.15) 0%, transparent 60%)' }} />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24" style={{ background: 'linear-gradient(to bottom, transparent, rgba(109,58,168,0.4), transparent)' }} />
 

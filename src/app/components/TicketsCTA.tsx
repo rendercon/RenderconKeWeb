@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { EVENT_CONFIG } from '@/config/event';
 
 const perks = [
   'Full day conference access',
@@ -12,7 +13,7 @@ const perks = [
 
 export default function TicketsCTA() {
   return (
-    <section id="tickets" className="py-24 sm:py-32 relative overflow-hidden">
+    <section id="tickets" className="py-12 sm:py-16 relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -40,7 +41,6 @@ export default function TicketsCTA() {
           </p>
         </motion.div>
 
-        {/* Coming soon card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,15 +60,15 @@ export default function TicketsCTA() {
 
             <div className="inline-flex items-center gap-2 rounded-full border border-yellow-500/30 bg-yellow-500/10 px-4 py-1.5 text-xs font-semibold text-brand-gold uppercase tracking-widest mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
-              Coming Soon
+              Tickets Live
             </div>
 
             <h3 className="text-3xl font-bold text-white mb-3">
-              Tickets dropping soon
+              Book your RenderCon ticket
             </h3>
             <p className="text-slate-400 mb-8 max-w-md mx-auto leading-relaxed">
-              Tickets aren&apos;t live yet — but you can register your interest now
-              and we&apos;ll notify you the moment they drop.
+              Early bird access is live now. Reserve your spot for East Africa&apos;s
+              React conference before prices move.
             </p>
 
             {/* What's included */}
@@ -102,17 +102,16 @@ export default function TicketsCTA() {
               </span>
             </div>
 
-            {/* Notify CTA */}
             <a
-              href="https://forms.gle/zyc8anLMKMxo42ED7"
+              href={EVENT_CONFIG.links.tickets}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary px-8 py-3.5 inline-flex"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-              Notify Me When Tickets Drop
+              Book Tickets Now
             </a>
           </div>
         </motion.div>

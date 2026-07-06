@@ -105,7 +105,7 @@ const MapVisualization = () => (
 
 export default function WhyEastAfrica() {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -115,7 +115,7 @@ export default function WhyEastAfrica() {
       />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-1 gap-16 items-center">
+        <div className="grid lg:grid-cols-1 gap-10 items-center">
           {/* Left: Content */}
           <div>
             <motion.div
@@ -129,14 +129,14 @@ export default function WhyEastAfrica() {
                 The ecosystem is<br />
                 <span className="gradient-text">right here.</span>
               </h2>
-              <p className="mt-6 text-lg text-slate-400 leading-relaxed">
+              <p className="mt-4 text-lg text-slate-400 leading-relaxed">
                 East Africa is not waiting to catch up. It&apos;s building — in React,
                 in the cloud, and on mobile. RenderCon is the annual moment where
                 that building becomes visible.
               </p>
             </motion.div>
 
-            <div className="mt-10 grid grid-cols-2 sm:grid-cols-2 gap-4">
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-2 gap-4">
               {pillars.map((pillar, i) => (
                 <motion.div
                   key={pillar.title}

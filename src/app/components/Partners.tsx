@@ -37,7 +37,7 @@ const partners: Partner[] = [
 
 const sponsorshipTiers = [
   {
-    tier: 'Ecosystem Partner',
+    tier: 'Ecosystem Title Partner',
     price: '$20K',
     color: 'purple',
     perks: [
@@ -76,7 +76,7 @@ const sponsorshipTiers = [
 
 export default function Partners() {
   return (
-    <section id="partners" aria-label="Partners and Sponsors" className="py-24 sm:py-32 relative overflow-hidden">
+    <section id="partners" aria-label="Partners and Sponsors" className="py-12 sm:py-16 relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{

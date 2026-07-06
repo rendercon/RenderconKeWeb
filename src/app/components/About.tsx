@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from 'framer-motion';
 import Link from 'next/link';
+import { EVENT_CONFIG } from '@/config/event';
 import ReactAtomSVG from './ReactAtom';
 
 /* ─────────────────────────────────────────────
@@ -22,7 +23,7 @@ const itemVariants: Variants = {
 ───────────────────────────────────────────── */
 function AboutHero() {
   return (
-    <section className="relative min-h-[80vh] flex items-center overflow-hidden pt-24 pb-16">
+    <section className="relative min-h-[62vh] sm:min-h-[68vh] flex items-center overflow-hidden pt-2 pb-8">
       {/* Background layers */}
       <div className="absolute inset-0 pointer-events-none">
         <div
@@ -63,7 +64,7 @@ function AboutHero() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left: Copy */}
           <motion.div
             variants={containerVariants}
@@ -71,7 +72,7 @@ function AboutHero() {
             animate="visible"
             className="text-center lg:text-left"
           >
-            <motion.div variants={itemVariants} className="flex justify-center lg:justify-start mb-6">
+            <motion.div variants={itemVariants} className="flex justify-center lg:justify-start mb-4">
               <span className="section-label">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
                 East Africa&apos;s React Conference
@@ -89,7 +90,7 @@ function AboutHero() {
 
             <motion.p
               variants={itemVariants}
-              className="mt-6 text-xl sm:text-2xl font-medium text-slate-300 leading-snug max-w-lg mx-auto lg:mx-0"
+              className="mt-4 text-xl sm:text-2xl font-medium text-slate-300 leading-snug max-w-lg mx-auto lg:mx-0"
             >
               More than a conference.{' '}
               <span className="text-white font-semibold">
@@ -99,7 +100,7 @@ function AboutHero() {
 
             <motion.p
               variants={itemVariants}
-              className="mt-5 text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0"
+              className="mt-3 text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0"
             >
               RenderCon is East Africa&apos;s community-first React conference, bringing together
               developers, creators, founders, and technology leaders to learn, connect, and build.
@@ -107,10 +108,10 @@ function AboutHero() {
 
             <motion.div
               variants={itemVariants}
-              className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <a href="https://forms.gle/zyc8anLMKMxo42ED7" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
-                Get Tickets Notification
+              <a href={EVENT_CONFIG.links.tickets} target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
+                Book Tickets Now
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -136,7 +137,7 @@ function AboutHero() {
                   filter: 'blur(24px)',
                 }}
               />
-              <ReactAtomSVG className="w-56 h-56 sm:w-72 sm:h-72" />
+              <ReactAtomSVG className="w-48 h-48 sm:w-64 sm:h-64" />
             </div>
           </motion.div>
         </div>
@@ -193,7 +194,7 @@ const pillars = [
 
 function WhyWeExist() {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -208,14 +209,14 @@ function WhyWeExist() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-16"
+          className="max-w-3xl mb-10"
         >
           <span className="section-label mb-4 inline-flex">Why We Exist</span>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mt-4 leading-tight">
             Building the Future of{' '}
             <span className="gradient-text">African Tech</span>
           </h2>
-          <p className="mt-6 text-lg text-slate-400 leading-relaxed">
+          <p className="mt-4 text-lg text-slate-400 leading-relaxed">
             RenderCon exists because African developers deserve a world-class platform — not
             just to attend, but to lead, speak, connect, and shape what comes next.
           </p>
@@ -276,7 +277,7 @@ function WhyWeExist() {
 ───────────────────────────────────────────── */
 function OurVision() {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       {/* Subtle background */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -298,21 +299,21 @@ function OurVision() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="section-label mb-6 inline-flex mx-auto">Our Vision</span>
+          <span className="section-label mb-4 inline-flex mx-auto">Our Vision</span>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-6 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-4 leading-tight">
             Where We&apos;re{' '}
             <span className="gradient-text">Going</span>
           </h2>
 
-          <p className="mt-8 text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
+          <p className="mt-5 text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
             RenderCon aims to become the flagship React conference in East Africa — a platform
             that connects local talent with global opportunities, amplifies African voices in
             the global React ecosystem, and inspires the next wave of builders.
           </p>
 
           {/* Statement cards */}
-          <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               {
                 headline: 'Global Stage',
@@ -351,7 +352,7 @@ function OurVision() {
 ───────────────────────────────────────────── */
 function AboutCTA() {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -371,13 +372,13 @@ function AboutCTA() {
             <span className="text-white">Connect.</span>{' '}
             <span className="gradient-text">Build.</span>
           </h2>
-          <p className="mt-6 text-lg text-slate-400 max-w-xl mx-auto">
+          <p className="mt-4 text-lg text-slate-400 max-w-xl mx-auto">
             Be part of the movement shaping the future of tech in East Africa.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://forms.gle/zyc8anLMKMxo42ED7" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
-              Get Tickets Notification
+          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={EVENT_CONFIG.links.tickets} target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-4">
+              Book Tickets Now
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>

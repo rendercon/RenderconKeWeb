@@ -25,7 +25,7 @@ export const EVENT_CONFIG = {
   
   // External links
   links: {
-    tickets: "https://bit.ly/rcke25adv",
+    tickets: "https://zenlipa.co.ke/events/k6NMNf",
     cfp: "https://bit.ly/rcke25cfp", // Call for Papers
     gallery2023: "https://bit.ly/rcke23pics",
     gallery2024: "https://bit.ly/rcke24pics",
@@ -119,4 +119,3 @@ export const getCurrentSponsors = () => {
     currentYear,
   };
 };
-

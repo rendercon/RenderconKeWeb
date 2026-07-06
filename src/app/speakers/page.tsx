@@ -37,7 +37,7 @@ export default function SpeakersPage() {
       <Navbar />
       <main className="pt-16">
         {/* Hero — Speaker CTA */}
-        <section className="relative py-20 sm:py-32 overflow-hidden">
+        <section className="relative py-10 sm:py-16 overflow-hidden">
           {/* Background */}
           <div className="absolute inset-0 pointer-events-none">
             <div
@@ -128,7 +128,7 @@ export default function SpeakersPage() {
         </section>
 
         {/* Why Speak */}
-        <section className="py-16 sm:py-20">
+        <section className="py-8 sm:py-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="section-label mb-4 inline-flex">Why Speak?</span>

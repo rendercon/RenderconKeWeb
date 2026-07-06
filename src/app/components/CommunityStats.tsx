@@ -139,7 +139,7 @@ function StatCard({ stat, index }: { stat: (typeof stats)[number]; index: number
 
 export default function CommunityStats() {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section className="py-12 sm:py-16 relative overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -147,14 +147,14 @@ export default function CommunityStats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-16"
+          className="max-w-3xl mb-10"
         >
           <span className="section-label mb-4 inline-flex">The ReactDevsKe Community</span>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mt-4">
             A community that shows up —<br />
             <span className="gradient-text">in real life</span>
           </h2>
-          <p className="mt-6 text-lg text-slate-400 leading-relaxed">
+          <p className="mt-4 text-lg text-slate-400 leading-relaxed">
             ReactDevsKe is East Africa&apos;s home for React developers. We meet online,
             we learn together, and once a year we meet at RenderCon.
           </p>
@@ -173,7 +173,7 @@ export default function CommunityStats() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 flex flex-wrap gap-4 justify-center sm:justify-start"
+          className="mt-8 flex flex-wrap gap-4 justify-center sm:justify-start"
         >
           <a
             href="https://twitter.com/ReactDevsKe"

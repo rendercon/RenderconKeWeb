@@ -7,8 +7,8 @@ const footerLinks = {
   Conference: [
     { label: 'About RenderCon', href: '/about' },
     { label: 'Speakers', href: '/speakers' },
-    { label: 'Schedule', href: '/speakers-schedule' },
-    { label: 'Tickets', href: '/tickets' },
+    { label: 'Attend', href: '/attend' },
+    { label: 'Tickets', href: '/attend#tickets' },
   ],
   Community: [
     { label: 'ReactDevsKe', href: '/community' },
