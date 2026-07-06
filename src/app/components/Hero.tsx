@@ -20,7 +20,7 @@ const itemVariants: Variants = {
 
 export default function Hero() {
   return (
-    <section className="relative mt-16 flex items-center overflow-hidden min-h-[calc(100svh-4rem)]">
+    <section className="relative mt-16 flex items-center overflow-hidden min-h-[72svh] sm:min-h-[78svh] lg:min-h-[calc(84svh-4rem)]">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Purple gradient top */}
@@ -65,8 +65,8 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20 lg:pt-24 pb-16">
-        <div className="relative grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-14 pb-10 sm:pb-12">
+        <div className="relative grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left: Content */}
           <motion.div
             variants={containerVariants}
@@ -75,7 +75,7 @@ export default function Hero() {
             className="text-center lg:text-left"
           >
             {/* Label */}
-            <motion.div variants={itemVariants} className="flex justify-center lg:justify-start mb-6">
+            <motion.div variants={itemVariants} className="flex justify-center lg:justify-start mb-4">
               <span className="section-label">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
                 East Africa&apos;s React Conference
@@ -95,7 +95,7 @@ export default function Hero() {
             </motion.h1>
 
             {/* Conference name */}
-            <motion.div variants={itemVariants} className="mt-4 sm:mt-6">
+            <motion.div variants={itemVariants} className="mt-3 sm:mt-4">
               <p className="text-xl sm:text-2xl font-semibold text-slate-300">
                 RenderCon Kenya 2026
               </p>
@@ -118,7 +118,7 @@ export default function Hero() {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0"
+              className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0"
             >
               The home of the East African React ecosystem. Join 200+ developers,
               engineers, and designers for a day of deep talks, community, and connection.
@@ -127,7 +127,7 @@ export default function Hero() {
             {/* CTAs */}
             <motion.div
               variants={itemVariants}
-              className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <a
                 href={EVENT_CONFIG.links.tickets}
@@ -151,7 +151,7 @@ export default function Hero() {
             {/* Social proof badges */}
             <motion.div
               variants={itemVariants}
-              className="mt-8 flex items-center gap-4 sm:gap-6 justify-center lg:justify-start text-xs sm:text-sm text-slate-500 flex-wrap"
+              className="mt-6 flex items-center gap-4 sm:gap-6 justify-center lg:justify-start text-xs sm:text-sm text-slate-500 flex-wrap"
             >
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <span className="text-xl sm:text-2xl font-bold text-white">200+</span>
@@ -186,7 +186,7 @@ export default function Hero() {
                   filter: 'blur(24px)',
                 }}
               />
-              <ReactAtomSVG className="w-72 h-72 sm:w-96 sm:h-96 lg:w-96 lg:h-96" />
+              <ReactAtomSVG className="w-64 h-64 sm:w-80 sm:h-80 lg:w-88 lg:h-88" />
             </div>
           </motion.div>
         </div>
@@ -196,7 +196,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.6 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600"
         >
           <span className="text-xs tracking-widest uppercase"></span>
           <motion.div

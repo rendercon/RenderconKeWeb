@@ -54,8 +54,8 @@ export const EVENT_CONFIG = {
   
   // Page metadata
   metadata: {
-    title: "RenderconKe 2025 — The premier conference experience for Web and Mobile",
-    description: "RenderconKe 2025 is a conference for Web and Mobile developers. We bring together a diverse group of people from all across the world to share their knowledge and experience.",
+    title: "RenderconKe 2026 — The premier conference experience for Web and Mobile",
+    description: "RenderconKe 2026 is a conference for Web and Mobile developers. We bring together a diverse group of people from all across the world to share their knowledge and experience.",
   },
 };
 
@@ -94,10 +94,10 @@ export const getScheduleLink = () => {
 
 // Sponsors configuration by year
 export const SPONSORS_BY_YEAR: Record<number, Array<{name: string; logo: string; link: string; height: number; width: number}>> = {
-  2025: [
+  2026: [
     // Add 2025 sponsors here when available
   ],
-  2024: [
+  2025: [
     {
       name: "Cloudinary",
       logo: "/images/logos/cloudinary_logo_white.png",
