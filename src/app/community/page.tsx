@@ -27,7 +27,7 @@ const platforms = [
   {
     name: 'WhatsApp Community',
     handle: 'ReactDevsKe',
-    href: 'https://chat.whatsapp.com/reactdevske',
+    href: 'https://bit.ly/joinreactdevske',
     description: 'Real-time discussions, job postings, and peer support.',
     stat: '1.8K+',
     statLabel: 'Members',
@@ -41,7 +41,7 @@ const platforms = [
   {
     name: 'Telegram',
     handle: 'ReactDevsKe',
-    href: 'https://t.me/reactdevske',
+    href: 'https://bit.ly/joinreactdevske',
     description: 'Tech news, event announcements, and open-source drops.',
     stat: '1.6K+',
     statLabel: 'Members',
