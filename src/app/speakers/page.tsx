@@ -86,7 +86,7 @@ export default function SpeakersPage() {
             {/* CTAs */}
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://forms.gle/Hes3NQUtcMe1ro3q7"
+                href="https://bit.ly/rcke26cfp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-base px-8 py-4"
@@ -177,7 +177,7 @@ export default function SpeakersPage() {
                     audience will find it valuable.
                   </p>
                   <a
-                    href="https://forms.gle/Hes3NQUtcMe1ro3q7"
+                    href="https://bit.ly/rcke26cfp"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary inline-flex text-sm px-6 py-3"
