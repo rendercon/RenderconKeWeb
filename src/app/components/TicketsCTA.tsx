@@ -60,15 +60,15 @@ export default function TicketsCTA() {
 
             <div className="inline-flex items-center gap-2 rounded-full border border-yellow-500/30 bg-yellow-500/10 px-4 py-1.5 text-xs font-semibold text-brand-gold uppercase tracking-widest mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
-              Tickets Live
+              Early Bird Live
             </div>
 
             <h3 className="text-3xl font-bold text-white mb-3">
-              Book your RenderCon ticket
+              Die Hard is sold out
             </h3>
             <p className="text-slate-400 mb-8 max-w-md mx-auto leading-relaxed">
-              Early bird access is live now. Reserve your spot for East Africa&apos;s
-              React conference before prices move.
+              Early Bird access is live now. Reserve your spot for East Africa&apos;s
+              React conference before the next price change.
             </p>
 
             {/* What's included */}
@@ -111,7 +111,7 @@ export default function TicketsCTA() {
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-              Book Tickets Now
+              Get Early Bird Tickets
             </a>
           </div>
         </motion.div>
