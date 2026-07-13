@@ -1,11 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { EVENT_CONFIG } from '@/config/event';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import ReactAtomSVG from './ReactAtom';
 
-const ticketLink = 'https://zenlipa.co.ke/events/k6NMNf';
+const ticketLink = EVENT_CONFIG.links.tickets;
 
 const ticketTiers = [
   {
@@ -14,7 +15,8 @@ const ticketTiers = [
     description:
       'The very first tickets released for RenderCon Kenya 2026. Designed for the community members who believe in the vision and want to be part of the journey from day one. Once these are gone, they\'re gone.',
     badge: '🔥 Most Limited',
-    status: 'Only 6 remaining',
+    status: 'Sold out',
+    soldOut: true,
     includes: [
       'Full-day access to RenderCon Kenya 2026',
       'All keynote and technical sessions',
@@ -23,8 +25,8 @@ const ticketTiers = [
       'Conference updates before the event',
       'Be among the very first attendees confirmed for 2026',
     ],
-    footerNote: 'Only a handful available.',
-    cta: 'Get Die Hard Ticket',
+    footerNote: 'Die Hard release fully claimed.',
+    cta: 'Sold Out',
     accent: 'gold',
   },
   {
@@ -190,11 +192,11 @@ export default function AttendExperience() {
                 >
                   <span className="section-label">
                     <span aria-hidden="true">🎟️</span>
-                    Tickets are now live
+                    Early Bird tickets are now live
                   </span>
                   <span className="inline-flex items-center gap-2 rounded-full border border-yellow-500/20 bg-yellow-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold">
                     <span className="h-2 w-2 rounded-full bg-brand-gold animate-pulse" />
-                    Tickets moving fast!
+                    Die Hard sold out
                   </span>
                 </motion.div>
 
@@ -229,7 +231,7 @@ export default function AttendExperience() {
                     rel="noopener noreferrer"
                     className="btn-primary px-7 py-3.5 text-sm sm:text-base"
                   >
-                    Get Tickets
+                    Get Early Bird Tickets
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
@@ -256,13 +258,14 @@ export default function AttendExperience() {
               <span className="section-label">Tickets</span>
               <h2 className="mt-5 text-4xl font-bold text-white sm:text-5xl">Choose Your Ticket</h2>
               <p className="mt-5 text-lg leading-relaxed text-slate-400">
-                Secure your seat early. Ticket prices increase as each release sells out.
+                Die Hard is sold out. Secure your seat on the current release before prices move again.
               </p>
             </motion.div>
 
             <div className="mt-14 grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
               {ticketTiers.map((tier, index) => {
                 const isGold = tier.accent === 'gold';
+                const isSoldOut = Boolean(tier.soldOut);
 
                 return (
                   <motion.div
@@ -282,13 +285,15 @@ export default function AttendExperience() {
                       }}
                     />
                     <div className="glass-card relative flex h-full flex-col rounded-[1.75rem] p-6 transition-transform duration-300 group-hover:-translate-y-1 group-focus-within:ring-2 group-focus-within:ring-purple-400/70 group-focus-within:ring-offset-2 group-focus-within:ring-offset-[#0F0B1E]">
-                      <a
-                        href={ticketLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${tier.cta} - ${tier.name}`}
-                        className="absolute inset-0 z-20 rounded-[1.75rem] cursor-pointer"
-                      />
+                      {!isSoldOut ? (
+                        <a
+                          href={ticketLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${tier.cta} - ${tier.name}`}
+                          className="absolute inset-0 z-20 rounded-[1.75rem] cursor-pointer"
+                        />
+                      ) : null}
                       <div
                         className="pointer-events-none absolute inset-0 rounded-[1.75rem] opacity-80"
                         style={{
@@ -321,8 +326,12 @@ export default function AttendExperience() {
                         <p className="mt-5 text-sm leading-relaxed text-slate-400">{tier.description}</p>
 
                         {tier.status ? (
-                          <div className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-300">
-                            <span className="h-2 w-2 rounded-full bg-brand-gold animate-pulse" />
+                          <div className={`mt-5 inline-flex w-fit items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium ${
+                            isSoldOut
+                              ? 'border-rose-500/20 bg-rose-500/10 text-rose-200'
+                              : 'border-white/10 bg-white/5 text-slate-300'
+                          }`}>
+                            <span className={`h-2 w-2 rounded-full ${isSoldOut ? 'bg-rose-300' : 'bg-brand-gold animate-pulse'}`} />
                             {tier.status}
                           </div>
                         ) : (
@@ -354,7 +363,13 @@ export default function AttendExperience() {
                         <div className="mt-6" />
 
                         <span
-                          className={isGold ? 'btn-gold pointer-events-none mt-auto w-full justify-center' : 'btn-primary pointer-events-none mt-auto w-full justify-center'}
+                          className={
+                            isSoldOut
+                              ? 'mt-auto flex w-full justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-500'
+                              : isGold
+                                ? 'btn-gold pointer-events-none mt-auto w-full justify-center'
+                                : 'btn-primary pointer-events-none mt-auto w-full justify-center'
+                          }
                         >
                           {tier.cta}
                         </span>
