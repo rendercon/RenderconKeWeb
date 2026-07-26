@@ -152,9 +152,3 @@ yarn start
 ```
 
 Before deploying, verify all external URLs, ticket links, mailto addresses, the prospectus, and remote image hosts. Use the production domain in `metadataBase` and Open Graph metadata when it changes.
-
-## Current content notes
-
-This repository is in a transition state between editions. The public 2026 pages contain several values that are intentionally hard-coded rather than derived from `EVENT_CONFIG`, while the configuration currently declares a 2025 date and venue. The speaker endpoint, the static schedule/submission dataset, and the Sessionize date filters are 2025-oriented; `/schedule_24` retains a 2024 Sessionize embed.
-
-Treat `EVENT_CONFIG` as a useful starting point, not a single source of truth, until those duplicated values are consolidated. This distinction is important before publishing a new event cycle.
