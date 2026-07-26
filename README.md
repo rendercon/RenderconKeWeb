@@ -11,9 +11,6 @@ The public website for RenderCon Kenya, the ReactDevsKe community conference for
 - [Routes](#routes)
 - [Data and integrations](#data-and-integrations)
 - [Updating event content](#updating-event-content)
-- [Styling and assets](#styling-and-assets)
-- [Deployment](#deployment)
-- [Current content notes](#current-content-notes)
 
 ## Technology
 
