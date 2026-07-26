@@ -129,26 +129,4 @@ Start each conference cycle with `src/config/event.ts`:
 
 The partnership prospectus is an imported PDF at `src/app/images/assets/RenderCon-Kenya-2026_Q2.pdf`. Keep its filename or update the import/link when replacing it.
 
-## Styling and assets
 
-Tailwind scans `src/app`, `src/components`, and `src/pages` as configured in `tailwind.config.js`. The shared brand palette uses purple, gold, and dark backgrounds. `globals.css` provides reusable classes such as:
-
-- `bento-card` for bordered content panels
-- `btn-primary`, `btn-secondary`, and `btn-gold` for CTAs
-- `section-label` for section badges
-- `gradient-text` and `gradient-text-purple` for branded headings
-- `glass-card`, `noise-bg`, and animation helpers for decorative treatments
-
-Static images are imported from `src/app/images`, while `public/` is available for URL-addressable assets. Remote image optimization currently allows `sessionize.com` and Vercel Blob’s speaker-image host in `next.config.js`.
-
-## Deployment
-
-The application is configured for a standard Next.js deployment. Vercel is the natural target because the project already includes `@vercel/analytics`, but any Node.js host that can run `next build` and `next start` will work.
-
-```bash
-yarn install --frozen-lockfile
-yarn build
-yarn start
-```
-
-Before deploying, verify all external URLs, ticket links, mailto addresses, the prospectus, and remote image hosts. Use the production domain in `metadataBase` and Open Graph metadata when it changes.
