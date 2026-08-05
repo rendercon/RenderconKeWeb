@@ -45,7 +45,7 @@ export default function TeamSection() {
     <section className="relative w-full overflow-hidden py-16 text-black dark:bg-purple text-white">
       <div className="mx-auto max-w-full px-5 md:px-10">
         <Badge className="mb-4 rounded-none bg-[#e1fcad] px-3 py-0.5 font-medium text-[#122023] text-black text-sm dark:bg-[#e1fcad]">
-          Our Team
+          The Team
         </Badge>
         <p className="max-w-5xl font-display font-medium text-3xl tracking-tight md:text-4xl">
           RenderCon is organized by a passionate team of engineers and community builders who believe that East African developers deserve a world-class stage.
