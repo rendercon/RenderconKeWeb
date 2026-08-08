@@ -22,7 +22,7 @@ const teamMembers = [
   {
     img: BenImg,
 
-    name: "Ben Wesonga",
+    name: "Ben Wasonga",
     role: "Technical Support Engineer · Community",
   },
   {
