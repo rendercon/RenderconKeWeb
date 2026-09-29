@@ -77,7 +77,7 @@ The recommended way to run the application. Docker ensures a consistent environm
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-org>/RenderconKeWeb.git
+git clone https://github.com/rendercon/RenderconKeWeb.git
 cd RenderconKeWeb
 
 # Build and start the container
