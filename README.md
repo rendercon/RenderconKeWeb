@@ -5,7 +5,7 @@
 <h1 align="center">RenderCon Kenya</h1>
 
 <p align="center">
-  The official website for <strong>RenderCon Kenya</strong> — East Africa's premier React, React Native, and modern web development conference.
+  The official website for <strong>RenderCon Kenya</strong> — East Africa's premier React, React Native, web and mobile experience.
 </p>
 
 <p align="center">
@@ -328,7 +328,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-- **Website:** [renderconke.com](https://renderconke.com)
+- **Website:** [renderconke.com](https://www.rendercon.org/)
 - **Twitter:** [@RenderConKe](https://twitter.com/RenderConKe)
 - **Community:** [ReactDevsKe](https://reactdevske.com)
 
