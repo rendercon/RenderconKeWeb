@@ -147,7 +147,7 @@ For developers who prefer running the application directly on their machine.
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-org>/RenderconKeWeb.git
+git clone https://github.com/rendercon/RenderconKeWeb.git
 cd RenderconKeWeb
 
 # Enable Corepack (Yarn 4)
