@@ -64,6 +64,24 @@ const ticketTiers = [
     accent: 'purple',
   },
   {
+    name: 'Duo Pass',
+    price: 'KES 5,000',
+    description:
+      'Coming with someone? Bring a friend or teammate and lock in both seats at a better shared rate.',
+    badge: 'For 2',
+    includes: [
+      'Entry for two attendees',
+      'Full-day conference access for both attendees',
+      'All talks and sessions',
+      'Networking opportunities',
+      'Sponsor showcase',
+      'Community experiences',
+    ],
+    footerNote: 'Best for friends, co-founders, and teammates attending together.',
+    cta: 'Buy Duo Pass',
+    accent: 'purple',
+  },
+  {
     name: 'Squad Pass',
     price: 'KES 15,000',
     description:
@@ -262,7 +280,7 @@ export default function AttendExperience() {
               </p>
             </motion.div>
 
-            <div className="mt-14 grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-14 grid gap-6 lg:grid-cols-2 xl:grid-cols-5">
               {ticketTiers.map((tier, index) => {
                 const isGold = tier.accent === 'gold';
                 const isSoldOut = Boolean(tier.soldOut);
@@ -274,17 +292,23 @@ export default function AttendExperience() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: '-80px' }}
                     transition={{ duration: 0.55, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                    className="group relative"
+                    className={`relative ${isSoldOut ? 'opacity-80' : 'group'}`}
                   >
-                    <div
-                      className="pointer-events-none absolute inset-0 rounded-[1.75rem] opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
-                      style={{
-                        background: isGold
-                          ? 'radial-gradient(circle, rgba(244,185,66,0.18) 0%, transparent 70%)'
-                          : 'radial-gradient(circle, rgba(109,58,168,0.25) 0%, transparent 70%)',
-                      }}
-                    />
-                    <div className="glass-card relative flex h-full flex-col rounded-[1.75rem] p-6 transition-transform duration-300 group-hover:-translate-y-1 group-focus-within:ring-2 group-focus-within:ring-purple-400/70 group-focus-within:ring-offset-2 group-focus-within:ring-offset-[#0F0B1E]">
+                    {!isSoldOut ? (
+                      <div
+                        className="pointer-events-none absolute inset-0 rounded-[1.75rem] opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
+                        style={{
+                          background: isGold
+                            ? 'radial-gradient(circle, rgba(244,185,66,0.18) 0%, transparent 70%)'
+                            : 'radial-gradient(circle, rgba(109,58,168,0.25) 0%, transparent 70%)',
+                        }}
+                      />
+                    ) : null}
+                    <div className={`glass-card relative flex h-full flex-col rounded-[1.75rem] p-6 transition-transform duration-300 ${
+                      isSoldOut
+                        ? 'border-white/5 bg-white/[0.03] saturate-50'
+                        : 'group-hover:-translate-y-1 group-focus-within:ring-2 group-focus-within:ring-purple-400/70 group-focus-within:ring-offset-2 group-focus-within:ring-offset-[#0F0B1E]'
+                    }`}>
                       {!isSoldOut ? (
                         <a
                           href={ticketLink}
@@ -297,23 +321,29 @@ export default function AttendExperience() {
                       <div
                         className="pointer-events-none absolute inset-0 rounded-[1.75rem] opacity-80"
                         style={{
-                          background: isGold
-                            ? 'linear-gradient(180deg, rgba(244,185,66,0.08), transparent 35%)'
-                            : 'linear-gradient(180deg, rgba(109,58,168,0.12), transparent 35%)',
+                          background: isSoldOut
+                            ? 'linear-gradient(180deg, rgba(148,163,184,0.06), transparent 35%)'
+                            : isGold
+                              ? 'linear-gradient(180deg, rgba(244,185,66,0.08), transparent 35%)'
+                              : 'linear-gradient(180deg, rgba(109,58,168,0.12), transparent 35%)',
                         }}
                       />
                       <div className="relative z-10 flex h-full flex-col">
                         <div className="flex items-start justify-between gap-4">
                           <div>
-                            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
+                            <p className={`text-sm font-semibold uppercase tracking-[0.18em] ${
+                              isSoldOut ? 'text-slate-600' : 'text-slate-500'
+                            }`}>
                               {tier.name}
                             </p>
-                            <p className="mt-4 text-3xl font-bold text-white">{tier.price}</p>
+                            <p className={`mt-4 text-3xl font-bold ${isSoldOut ? 'text-slate-400' : 'text-white'}`}>{tier.price}</p>
                           </div>
                           {tier.badge ? (
                             <span
                               className={`rounded-full px-3 py-1 text-[11px] font-semibold ${
-                                isGold
+                                isSoldOut
+                                  ? 'border border-white/10 bg-white/5 text-slate-500'
+                                  : isGold
                                   ? 'border border-yellow-500/20 bg-yellow-500/10 text-brand-gold'
                                   : 'border border-purple-500/20 bg-purple-500/10 text-purple-300'
                               }`}
@@ -323,15 +353,15 @@ export default function AttendExperience() {
                           ) : null}
                         </div>
 
-                        <p className="mt-5 text-sm leading-relaxed text-slate-400">{tier.description}</p>
+                        <p className={`mt-5 text-sm leading-relaxed ${isSoldOut ? 'text-slate-500' : 'text-slate-400'}`}>{tier.description}</p>
 
                         {tier.status ? (
                           <div className={`mt-5 inline-flex w-fit items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium ${
                             isSoldOut
-                              ? 'border-rose-500/20 bg-rose-500/10 text-rose-200'
+                              ? 'border-white/10 bg-white/5 text-slate-400'
                               : 'border-white/10 bg-white/5 text-slate-300'
                           }`}>
-                            <span className={`h-2 w-2 rounded-full ${isSoldOut ? 'bg-rose-300' : 'bg-brand-gold animate-pulse'}`} />
+                            <span className={`h-2 w-2 rounded-full ${isSoldOut ? 'bg-slate-500' : 'bg-brand-gold animate-pulse'}`} />
                             {tier.status}
                           </div>
                         ) : (
@@ -346,8 +376,10 @@ export default function AttendExperience() {
                           </p>
                           <ul className="mt-4 space-y-2.5">
                             {tier.includes.map((item) => (
-                              <li key={item} className="flex items-start gap-2.5 text-sm text-slate-300">
-                                <span className={`mt-0.5 text-base leading-none ${isGold ? 'text-brand-gold' : 'text-purple-300'}`}>
+                              <li key={item} className={`flex items-start gap-2.5 text-sm ${isSoldOut ? 'text-slate-500' : 'text-slate-300'}`}>
+                                <span className={`mt-0.5 text-base leading-none ${
+                                  isSoldOut ? 'text-slate-600' : isGold ? 'text-brand-gold' : 'text-purple-300'
+                                }`}>
                                   ✓
                                 </span>
                                 <span>{item}</span>

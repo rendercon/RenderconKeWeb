@@ -530,7 +530,7 @@ export default function PartnersPage() {
             {/* Sponsorship deck CTA */}
             <div className="flex justify-center mb-12">
               <a
-                href="https://drive.google.com/file/d/1_SxovPhaFgQ7vZZQquzMJfXMp937tuN2/view?usp=drive_link"
+                href="https://bit.ly/rcke26deck"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 rounded-xl border border-brand-dark-border bg-brand-dark-card/60 px-6 py-3 text-sm font-medium text-slate-300 hover:text-white hover:border-purple-500/50 transition-all duration-200"

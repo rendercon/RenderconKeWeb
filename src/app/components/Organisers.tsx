@@ -54,6 +54,15 @@ const organisers: Organiser[] = [
   //   linkedin: 'https://www.linkedin.com/company/renderconke/',
   //   avatarGradient: 'from-fuchsia-600 to-purple-500',
   // },
+
+  {
+    name: "Festus Sulumeti",
+    initials: 'FS',
+    role: 'Full Stack Developer · Open Source',
+    bio: 'Full stack developer and open source enthusiast, dedicated to building tools and resources that empower developers across East Africa.',
+    linkedin: 'https://www.linkedin.com/in/festus-sulumeti-50aa0826a/',
+    avatarGradient: 'from-brand-purple to-indigo-500',
+  },
 ];
 
 const LinkedInIcon = () => (

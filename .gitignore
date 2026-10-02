@@ -33,3 +33,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Yarn PnP generated files
+.yarn/install-state.gz
+.yarn/unplugged
+
+
+.pnp.cjs
+.pnp.loader.mjs

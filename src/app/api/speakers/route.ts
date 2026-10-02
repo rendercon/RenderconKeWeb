@@ -124,18 +124,6 @@ const speakerData = [
     "co_presenter_info": null
   },
   {
-    "id" : "11337",
-    "fullname": "Samson Ateya",
-    "title_role": "Cloud Engineer ",
-    "linkedin_url": "https://www.linkedin.com/in/sam-ateya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "other_social": "https://github.com/ateyasam85",
-    "speaker_bio": "I am a Cloud Engineer specializing in building and managing scalable, secure, and cost-efficient cloud environments. My expertise spans cloud infrastructure, DevOps practices, automation, and containerization, enabling me to deliver solutions that streamline operations and drive digital transformation. I am committed to leveraging cloud-native technologies to optimize performance, enhance reliability, and support innovation in dynamic business environments.",
-    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/samson_ateya-g4Q7k7sJpWGPWqZFRdIMzn1UTIQc1J.jpg",
-    "session_title": "Cloud computing AWS",
-    "session_abstract": "In today’s fast-evolving digital landscape, organizations are under pressure to build systems that are not only scalable but also secure, reliable, and cost-efficient. In this session, I will share practical insights on designing and deploying modern cloud architectures that leverage automation, containerization, and DevOps practices. Attendees will learn how to streamline cloud operations, optimize resource utilization, and adopt cloud-native solutions that accelerate digital transformation. The session will also highlight real-world challenges and best practices for ensuring performance, resilience, and sustainability in dynamic business environments.",
-    "co_presenter_info": null
-  },
-  {
     "id" : "13337",
     "fullname": "Mark Aloo",
     "title_role": "Software Engineer - Safaricom PLC",
@@ -157,18 +145,6 @@ const speakerData = [
     "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/timothy_mugo-R97flJuJCsbeyTufkwtNic1vZAlWGF.jpg",
     "session_title": "Expo and Better Auth: Auth that doesn’t suck",
     "session_abstract": "Authentication is a key components in modern applications. If you get it wrong, you either frustrate users or invite intruders.\nWith Expo (React Native) powering the next generation of cross-platform apps, developers need solutions that are both hardcore and frictionless. This session looks at better auth as one of the solutions to build auth (sessions, auth and authorization) for your app and your work is to focus on the business logic.",
-    "co_presenter_info": null
-  },
-  {
-    "id" : "1337",
-    "fullname": "Michael Maina",
-    "title_role": "Mobile developer",
-    "linkedin_url": "https://www.linkedin.com/in/michael-maina-087227235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "other_social": "github.com/Muchael123",
-    "speaker_bio": "Michael Maina is a Frontend and Mobile Developer with 4.5 years of programming experience and 3 years specializing in React and React Native. He is the Founder & CEO of Wabunifu Labs, Director at 25Cargo, and an External Contractor at Brainverse. Michael also leads innovative projects like Fololimo, focusing on agritech solutions powered by AI and IoT. Passionate about community building and technology, he creates impactful solutions that empower people and businesses.",
-    "speaker_image": "https://vo3gv2h0n9olcv4f.public.blob.vercel-storage.com/spkr-25/Michael_maina-nBy0MXYwYYvB8cflF2AvjfUHW34MQ4.jpg",
-    "session_title": "Shrink It, Ship It: Optimizing React Native Bundles with R8",
-    "session_abstract": "React Native apps often suffer from large bundle sizes and performance issues. In this session, Michael Maina explores how R8, Android’s built-in code shrinker and optimizer, can help developers ship smaller, faster, and more secure React Native apps. Learn practical steps to enable R8, configure it effectively, and optimize your builds for better performance.",
     "co_presenter_info": null
   },
   {

@@ -167,7 +167,7 @@ export default function Highlights() {
                 Gallery 2024
               </a>
               <a
-                href="https://photos.app.goo.gl/ytfMzEckYDw92Mnx6"
+                href="https://bit.ly/rcke25pics"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold flex-1 justify-center text-sm py-2.5"
