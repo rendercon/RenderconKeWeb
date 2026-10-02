@@ -116,7 +116,7 @@ export default function Highlights() {
                   { year: '2023', edition: '1st Edition', note: 'Where it all started' },
                   { year: '2024', edition: '2nd Edition', note: 'Bigger. Better. Bolder.' },
                   { year: '2025', edition: '3rd Edition', note: 'The ecosystem grows' },
-                  { year: '2026', edition: '4th Edition', note: '3rd Oct · Coming soon', upcoming: true },
+                  { year: '2026', edition: '4th Edition', note: '17th Oct · Coming soon', upcoming: true },
                 ].map((e) => (
                   <div key={e.year} className="flex items-center gap-4">
                     <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold flex-shrink-0 ${
