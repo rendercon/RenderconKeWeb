@@ -28,7 +28,7 @@ export default function Home() {
         <CommunityStats />
         <WhyEastAfrica />
         <ConferenceTracks />
-        <Speakers />
+        <Speakers variant="preview" />
         <Highlights />
         <Partners />
         <TicketsCTA />

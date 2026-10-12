@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { EVENT_CONFIG } from '@/config/event';
 
 const faqs = [
   {
     question: 'When and where is RenderCon Kenya 2026?',
     answer:
-      'RenderCon Kenya 2026 takes place on 17th October 2026 in Nairobi, Kenya. Exact venue will be announced soon.',
+      `RenderCon Kenya 2026 takes place on ${EVENT_CONFIG.dates.displayDate} at ${EVENT_CONFIG.venue.fullAddress}.`,
   },
   {
     question: 'Who is RenderCon for?',
@@ -15,9 +16,9 @@ const faqs = [
       'RenderCon is for anyone working with React, React Native, or modern JavaScript — from junior developers to senior engineers. Whether you\'re building web apps, mobile apps, or exploring full-stack JavaScript, there\'s a track for you.',
   },
   {
-    question: 'How do I submit a talk proposal (CFP)?',
+    question: 'Is the 2026 call for proposals (CFP) open?',
     answer:
-      'The Call for Papers (CFP) opens annually. When open, you can submit your proposal. Follow @ReactDevsKe and @RenderconKeon social media to be notified when the CFP opens.',
+      'The call for proposals for RenderCon Kenya 2026 is closed. Explore the speaker profiles on the Speakers page and the published programme on the Schedule page.',
   },
   {
     question: 'How can my company become a sponsor?',

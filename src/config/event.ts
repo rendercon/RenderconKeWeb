@@ -5,6 +5,8 @@
  * This makes it easy to maintain the site year after year.
  */
 
+const SESSIONIZE_BASE_URL = "https://sessionize.com/api/v2/c1nslc55/view";
+
 export const EVENT_CONFIG = {
   // Current event year
   year: 2026,
@@ -18,25 +20,39 @@ export const EVENT_CONFIG = {
   
   // Venue information
   venue: {
-    name: "Pride Inn Azure",
+    name: "ALX The Piano",
     location: "Westlands, Nairobi",
-    fullAddress: "Pride Inn Azure — Westlands, Nairobi",
+    fullAddress: "ALX The Piano — Westlands, Nairobi",
   },
   
   // External links
   links: {
     tickets: "https://zenlipa.co.ke/events/k6NMNf",
-    cfp: "https://bit.ly/rcke25cfp", // Call for Papers
     gallery2023: "https://bit.ly/rcke23pics",
     gallery2024: "https://bit.ly/rcke24pics",
     gallery2025: "https://bit.ly/rcke25pics",
     schedule2024: "/schedule_24",
-    schedule2025: "/schedule",
+    schedule2026: "/schedule",
   },
   
   // API endpoints
   api: {
-    sessionize: "https://sessionize.com/api/v2/d899srzm/view/All",
+    sessionize: {
+      all: `${SESSIONIZE_BASE_URL}/All`,
+      gridSmart: `${SESSIONIZE_BASE_URL}/GridSmart`,
+      sessions: `${SESSIONIZE_BASE_URL}/Sessions`,
+      speakers: `${SESSIONIZE_BASE_URL}/Speakers`,
+      speakerWall: `${SESSIONIZE_BASE_URL}/SpeakerWall`,
+    },
+  },
+
+  programme: {
+    timeZone: "Africa/Nairobi",
+    // Confirmed by the project owner: offset-free exports are Nairobi wall
+    // time, never UTC or the visitor/server timezone.
+    offsetForLocalTimestamps: "+03:00",
+    revalidateSeconds: 300,
+    timeoutMilliseconds: 10000,
   },
   
   // Email addresses
