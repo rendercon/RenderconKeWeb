@@ -19,8 +19,8 @@ const organisers: Organiser[] = [
     role: 'Frontend Engineer · Community Builder',
     bio: 'Passionate about growing developer communities and creating opportunities for learning and connection across East Africa.',
     linkedin: 'https://www.linkedin.com/in/cindykandie/',
-    twitter: 'https://twitter.com/cindykandie',
-    avatarGradient: 'from-purple-600 to-violet-500',
+    twitter: 'https://twitter.com/cindy_kandie',
+    avatarGradient: 'from-pink-400 to-pink-700',
   },
   {
     name: "Rama Ochieng'",
@@ -28,41 +28,16 @@ const organisers: Organiser[] = [
     role: 'Frontend Engineer · Open Source',
     bio: 'Building beautiful, accessible interfaces with React. Open source maintainer and contributor to the African developer ecosystem.',
     linkedin: 'https://www.linkedin.com/in/ramaochieng/',
-    avatarGradient: 'from-brand-purple to-indigo-500',
+    avatarGradient: 'from-brand-purple to-indigo-400',
   },
-  // {
-  //   name: 'Abel Masila',
-  //   initials: 'AM',
-  //   role: 'Senior Frontend Engineer · Speaker',
-  //   bio: 'Engineering leader, conference speaker, and mentor dedicated to raising the bar for frontend development across the continent.',
-  //   linkedin: 'https://www.linkedin.com/in/abelmasila/',
-  //   avatarGradient: 'from-violet-600 to-purple-400',
-  // },
-  {
-    name: 'Ben Wasonga',
-    initials: 'BW',
-    role: 'Technical Support Engineer · Community',
-    bio: 'Bridging the gap between technology and community — making sure every developer feels welcome and supported in their journey.',
-    linkedin: 'https://www.linkedin.com/in/benwasonga/',
-    avatarGradient: 'from-purple-500 to-blue-500',
-  },
-  // {
-  //   name: 'Sisco Cherono',
-  //   initials: 'SC',
-  //   role: 'Frontend Developer · Community Builder',
-  //   bio: 'Passionate about web development and creating spaces where developers can grow, collaborate, and thrive together.',
-  //   linkedin: 'https://www.linkedin.com/company/renderconke/',
-  //   avatarGradient: 'from-fuchsia-600 to-purple-500',
-  // },
+   {name: 'Joy Kiragu',
+    initials: 'JK',
+    role: 'Fullstack developer',
+    bio: 'Passionate and results-driven Full Stack Developer based in Nairobi, Kenya, with a strong track record of building impactful digital solutions that solve real-world problems across multiple industries.',
+    linkedin: 'https://www.linkedin.com/in/joy-kiragu/',
+    avatarGradient: 'from-blue-600 to-red-400',
+  }
 
-  {
-    name: "Festus Sulumeti",
-    initials: 'FS',
-    role: 'Full Stack Developer · Open Source',
-    bio: 'Full stack developer and open source enthusiast, dedicated to building tools and resources that empower developers across East Africa.',
-    linkedin: 'https://www.linkedin.com/in/festus-sulumeti-50aa0826a/',
-    avatarGradient: 'from-brand-purple to-indigo-500',
-  },
 ];
 
 const LinkedInIcon = () => (

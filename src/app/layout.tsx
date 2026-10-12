@@ -1,7 +1,6 @@
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import { ScheduleProvider } from './context/ScheduleContext';
 import { ScrollToTop } from './components/ScrollToTop';
 import { cn } from "@/lib/utils";
 
@@ -50,9 +49,7 @@ export default function RootLayout({
     <html lang="en" className={cn("!scroll-smooth", poppins.variable, "font-sans")}> 
       <body className={poppins.className}>
         <ScrollToTop />
-        <ScheduleProvider>
-          {children}
-        </ScheduleProvider>
+        {children}
         <Analytics />
       </body>
     </html>
