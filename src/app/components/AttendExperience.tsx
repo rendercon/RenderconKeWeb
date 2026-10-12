@@ -142,7 +142,7 @@ const scheduleMoments = [
 const faqs = [
   {
     question: 'When is RenderCon?',
-    answer: 'RenderCon Kenya 2026 takes place on 3 October 2026 in Nairobi, Kenya.',
+    answer: 'RenderCon Kenya 2026 takes place on 17 October 2026 in Nairobi, Kenya.',
   },
   {
     question: 'Where is it?',
@@ -234,7 +234,7 @@ export default function AttendExperience() {
                   className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl"
                 >
                   Join East Africa&apos;s community-first React conference on{' '}
-                  <span className="font-semibold text-white">3 October 2026</span> in Nairobi, Kenya.
+                  <span className="font-semibold text-white">17 October 2026</span> in Nairobi, Kenya.
                 </motion.p>
 
                 <motion.div

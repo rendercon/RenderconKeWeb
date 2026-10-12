@@ -7,13 +7,13 @@
 
 export const EVENT_CONFIG = {
   // Current event year
-  year: 2025,
+  year: 2026,
   
   // Event dates
   dates: {
-    startDate: "2025-10-04",
-    endDate: "2025-10-04",
-    displayDate: "4th October 2025",
+    startDate: "2026-10-17",
+    endDate: "2026-10-17",
+    displayDate: "17th October 2026",
   },
   
   // Venue information
