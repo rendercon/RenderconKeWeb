@@ -184,6 +184,7 @@ yarn start
 | `yarn build` | Create optimized production build |
 | `yarn start` | Serve production build (requires `yarn build` first) |
 | `yarn lint` | Run ESLint code analysis |
+| `yarn verify:sessionize` | Run focused programme regression checks |
 
 ---
 
@@ -194,7 +195,8 @@ yarn start
 │   ├── app/
 │   │   ├── api/                    # API route handlers
 │   │   │   ├── speakers/           # GET /api/speakers
-│   │   │   └── submissions/        # POST /api/submissions
+│   │   │   ├── schedule/           # GET /api/schedule
+│   │   │   └── submissions/        # Unimplemented route stub
 │   │   ├── components/             # Page-specific components
 │   │   │   ├── Navbar.tsx
 │   │   │   ├── Footer.tsx
@@ -202,8 +204,6 @@ yarn start
 │   │   │   ├── Speakers.tsx
 │   │   │   ├── Sponsors.tsx
 │   │   │   └── ...
-│   │   ├── context/                # React context providers
-│   │   │   └── ScheduleContext.tsx
 │   │   ├── images/                 # Static images & assets
 │   │   │   ├── logos/              # Sponsor & partner logos
 │   │   │   ├── Organisers/         # Organizer photos
@@ -220,13 +220,16 @@ yarn start
 │   │   └── page.tsx                # Home page
 │   ├── components/                 # Shared components
 │   │   └── IconWrapper.tsx
+│   ├── content/archive/2025.ts     # Previous public records, never a 2026 fallback
+│   ├── lib/
+│   │   ├── sessionize.ts           # Server fetch and validated Data Cache
+│   │   ├── sessionize-normalize.ts # Runtime validation and public mapping
+│   │   └── sessionize-types.ts     # Verified upstream field contracts
 │   ├── config/
 │   │   └── event.ts                # Event configuration
 │   └── utils/                      # Utility functions
 │       ├── types.ts                # TypeScript types
-│       ├── formatSessions.ts       # Session formatting
-│       ├── formatDate.ts           # Date utilities
-│       └── sessionDetails.ts       # Static session data
+│       └── formatDate.ts           # Explicit timestamp parsing and Nairobi display
 ├── public/                         # Public static assets
 ├── .dockerignore                   # Docker build exclusions
 ├── .yarnrc.yml                     # Yarn configuration
@@ -251,8 +254,9 @@ yarn start
 | `/community` | ReactDevsKe community information |
 | `/partners` | Partnership opportunities and tiers |
 | `/sponsorships` | Sponsor listings |
-| `/schedule` | Speaker submission browser |
-| `/schedule_24` | Embedded Sessionize schedule |
+| `/schedule` | 2026 sessions, search, room/date filters, and session details |
+| `/schedule_24` | Unchanged 2024 Sessionize schedule archive |
+| `/speakers-schedule` | Redirects to `/attend` |
 | `/tickets` | Ticket information |
 | `/privacy-policy` | Privacy policy |
 | `/media-policy` | Media policy |
@@ -262,21 +266,127 @@ yarn start
 
 ## Data & Integrations
 
-### Speaker API
+### RenderCon 2026 programme
 
+`src/config/event.ts` centralizes the five public exports for event API ID
+`c1nslc55`: `All`, `GridSmart`, `Sessions`, `Speakers`, and `SpeakerWall`.
+Only `All` is fetched by the application; it supplies all currently available
+public speaker, session, and room fields without duplicate endpoint requests.
+The organizer schedule-builder URL is not used.
+
+- `GET /api/speakers` returns normalized 2026 speaker profiles and their sessions.
+- `GET /api/schedule` returns the normalized 2026 programme and session records.
+- `/` previews the first four speakers in the server's deterministic ordering,
+  with links to the full lineup and programme. `/speakers` is the dedicated
+  speaker showcase, with biographies and associated sessions in profile modals.
+- `/schedule` displays the full chronological programme with search and room/date
+  filters. `/attend` groups tickets, venue, a six-session schedule preview, and FAQs.
+  The existing `/speakers-schedule` redirect remains intact.
+- Main navigation is Home, About, Speakers, Partners, and Attend. Attend groups tickets, venue,
+  schedule, and FAQs in a desktop disclosure and the mobile menu. Other routes
+  remain accessible through the existing footer and direct links.
+
+The server adapter validates identifiers, collections, required names/titles,
+optional fields, and relationships before constructing an explicit public
+field allowlist. Session IDs are strings; speaker references are joined by ID.
+Speakers can have several sessions, and sessions can have several speakers.
+Speaker ordering is highlighted speakers first, then English full name and ID.
+Sessions are ordered by complete start instant, then room and ID; unscheduled
+sessions appear last. Biographies and abstracts render as text. Missing or
+broken photos use a neutral local icon, without an external avatar request.
+
+Submission contacts, custom question answers, administrative acceptance flags,
+and unused upstream properties are never returned or cached by the adapter.
+The old public speaker and session content is retained in
+`src/content/archive/2025.ts`, with contact fields and fabricated current dates
+omitted. It is not imported by any 2026 consumer. The 2024 iframe is unchanged.
+
+### Observed export structures (12 October 2026)
+
+All five exports returned HTTP 200 and `application/json; charset=utf-8`:
+
+| Export | Observed structure |
+|---|---|
+| `All` | Object: 20 `speakers`, 17 `sessions`, two `rooms`; empty `categories` and `questions`. Session IDs are strings, speaker IDs are strings, and room IDs are numbers. Sessions reference speaker IDs; speaker session references are numbers. |
+| `GridSmart` | Array of one date, with two rooms, room sessions, and nine `timeSlots`; slots contain room/session entries. |
+| `Sessions` | Array of one group containing 17 sessions; presenters are nested `{id, name}` records and room names are included. |
+| `Speakers` | Array of 20 detailed profiles; sessions are nested `{id, name}` records with numeric IDs. |
+| `SpeakerWall` | Array of 20 compact profiles; no biographies, links, or session relationships. |
+
+All 17 exported sessions were accepted, informed, confirmed, and scheduled on
+17 October 2026. Two sessions have multiple presenters. The adapter uses the
+public export selection rather than inventing an additional publication rule.
+
+The profiles supply `fullName`, `bio`, `tagLine`, `profilePicture`,
+`isTopSpeaker`, and social `links` (LinkedIn and Twitter). `tagLine` is displayed
+verbatim as the role/company line: no separate role/company split is inferred.
+Photos currently use `cdn.sessionize.com`. Abstracts use session `description`.
+No separate formats or tracks were exported; category fields are empty, so the
+UI filters by verified rooms rather than inventing those classifications.
+`GridSmart` adds grid layout, but no additional content needed by the cards.
+
+### Timezone policy
+
+The verified start/end strings have no offset or timezone field, for example
+`2026-10-17T10:05:00`. The event configuration explicitly interprets these as
+Nairobi wall time (`+03:00`) and displays/groups all instants in `Africa/Nairobi`.
+Explicit `Z` or numeric offsets are honored when supplied. Parsing never uses
+the visitor or host timezone. Missing/invalid start times remain unscheduled;
+missing or earlier end times do not produce invented durations.
+
+The project owner has confirmed that offset-free Sessionize timestamps are
+Nairobi local time. Keep `programme.offsetForLocalTimestamps` at `+03:00` for
+this event; do not reinterpret those values as UTC or visitor-local time.
+
+The 2026 CFP is closed. Speaker discovery contains no CFP block or submission
+CTA. Homepage and attendee FAQs retain a concise closure notice. Historical
+speaker benefits and CFP formats are preserved in `src/content/archive/2026-cfp.ts`
+for reference; they are not API session classifications or open invitations.
+There is no active submission link or promise of a future reopening.
+
+### Cache and failure behavior
+
+`src/lib/sessionize.ts` uses the installed Next.js 13.4 `next/cache`
+`unstable_cache` API, constructed inside the request context required by this
+version. The cache key includes the event URL and a public-schema version.
+Only successfully validated, normalized public data is cached. Upstream
+fetches inside the callback are uncached; HTTP, content-type, JSON, and schema
+failures throw before a cache write. Requests have a ten-second timeout.
+
+The centralized revalidation interval is five minutes. Stale cached data is
+served while Next retries in the background; failed retries preserve the last
+valid programme. Concurrent refreshes share an in-process promise, which is
+only request deduplication, not persistent storage. Valid empty exports are
+cached as empty; upstream failures are never converted into empty success.
+Cold failures return HTTP 503 with a retryable UI state. Client refresh errors
+also retain any programme already displayed.
+
+Public route responses use `Cache-Control: no-store`, leaving freshness to the
+shared server Data Cache. Both routes are dynamic, avoiding build-time
+Sessionize requests. Next stores the Data Cache under `.next/cache`; the Docker
+runtime user is given write access. Disk recovery is tested with a separate
+Node process using Next's actual cache. It requires the same filesystem;
+container replacement/redeployment without retained storage is a cold start.
+No persistence across container replacement or separate instances is assumed.
+
+### Integration verification
+
+```bash
+yarn exec tsc --noEmit --incremental false
+yarn lint --no-cache
+yarn verify:sessionize
+yarn verify:sessionize --live  # Needs access to Sessionize
+yarn build
 ```
-GET /api/speakers
-```
 
-Returns the speaker payload defined in `src/app/api/speakers/route.ts`. The endpoint includes permissive CORS headers for `GET` and `OPTIONS` requests.
-
-### Sessionize Integration
-
-The `ScheduleProvider` fetches data from the Sessionize API and formats it for display. Configure the endpoint in `src/config/event.ts`.
-
-### Static Data
-
-Speaker details and submission records are maintained in `src/utils/sessionDetails.ts`.
+The focused verifier uses installed TypeScript in memory and Node assertions;
+no test framework or dependency is added. It covers multi-presenter and
+multi-session relationships, privacy, missing fields, parallel sessions,
+complete dates, offsets, malformed/empty responses, timeout, actual Next cache
+fallback, cold failure, and disk recovery across processes. `--live` validates
+the current All export without saving a raw snapshot. Browser checks should
+also cover mobile expansion, search/room filters, modal close/Escape, broken
+images, API retry, and the unchanged 2024 archive and redirect.
 
 ---
 
@@ -286,9 +396,9 @@ To update the site for a new conference edition:
 
 1. **Update Configuration** — Modify `EVENT_CONFIG` in `src/config/event.ts` with new dates, venue, URLs, and social links
 2. **Update Sponsors** — Add new sponsors to `SPONSORS_BY_YEAR`
-3. **Update Schedule** — Modify the Sessionize URL and date filters
+3. **Update Programme** — Update the centralized Sessionize base URL, event year, and explicit timezone policy; verify the real exports
 4. **Update Content** — Update date/year-specific copy in components
-5. **Update Speakers** — Replace speaker data in `src/app/api/speakers/route.ts`
+5. **Update Speakers and Sessions** — Manage public programme data in Sessionize; keep prior-edition records separate
 6. **Update Assets** — Replace images and logos in `src/app/images/`
 7. **Update Metadata** — Update root and route metadata, especially social preview images
 
