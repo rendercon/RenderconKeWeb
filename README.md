@@ -254,7 +254,7 @@ yarn start
 | `/community` | ReactDevsKe community information |
 | `/partners` | Partnership opportunities and tiers |
 | `/sponsorships` | Sponsor listings |
-| `/schedule` | 2026 sessions, search, room/date filters, and session details |
+| `/schedule` | Live 2026 Sessionize GridSmart agenda and session details |
 | `/schedule_24` | Unchanged 2024 Sessionize schedule archive |
 | `/speakers-schedule` | Redirects to `/attend` |
 | `/tickets` | Ticket information |
@@ -270,8 +270,15 @@ yarn start
 
 `src/config/event.ts` centralizes the five public exports for event API ID
 `c1nslc55`: `All`, `GridSmart`, `Sessions`, `Speakers`, and `SpeakerWall`.
-Only `All` is fetched by the application; it supplies all currently available
-public speaker, session, and room fields without duplicate endpoint requests.
+`All` supplies the normalized speaker and programme API routes. The visible
+agenda uses the separate published JavaScript embed at
+`https://sessionize.com/api/v2/b7swgk5n/view/GridSmart`, configured as
+`api.sessionize.agendaEmbed`. Its fresh iframe document supports Sessionize's
+`document.write` loader on initial loads and client-side navigation, resizes to
+the agenda content, and keeps session dialogs in the visible viewport. It has
+a loading state and retry button if the embed cannot load within 20 seconds.
+`public/sessionize-theme.css` themes the live embed and its session dialogs to
+match the site. The iframe reuses the site's palette and self-hosted font faces.
 The organizer schedule-builder URL is not used.
 
 - `GET /api/speakers` returns normalized 2026 speaker profiles and their sessions.
@@ -279,8 +286,8 @@ The organizer schedule-builder URL is not used.
 - `/` previews the first four speakers in the server's deterministic ordering,
   with links to the full lineup and programme. `/speakers` is the dedicated
   speaker showcase, with biographies and associated sessions in profile modals.
-- `/schedule` displays the full chronological programme with search and room/date
-  filters. `/attend` groups tickets, venue, a six-session schedule preview, and FAQs.
+- `/schedule` displays the live Sessionize GridSmart agenda. `/attend` groups
+  tickets, venue, the same live agenda, and FAQs.
   The existing `/speakers-schedule` redirect remains intact.
 - Main navigation is Home, About, Speakers, Partners, and Attend. Attend groups tickets, venue,
   schedule, and FAQs in a desktop disclosure and the mobile menu. Other routes
@@ -321,9 +328,10 @@ The profiles supply `fullName`, `bio`, `tagLine`, `profilePicture`,
 `isTopSpeaker`, and social `links` (LinkedIn and Twitter). `tagLine` is displayed
 verbatim as the role/company line: no separate role/company split is inferred.
 Photos currently use `cdn.sessionize.com`. Abstracts use session `description`.
-No separate formats or tracks were exported; category fields are empty, so the
-UI filters by verified rooms rather than inventing those classifications.
-`GridSmart` adds grid layout, but no additional content needed by the cards.
+No separate formats or tracks were exported; category fields are empty, and
+the normalized API retains the verified rooms.
+These observations describe the JSON export ID `c1nslc55`. The agenda now uses
+the separate JavaScript embed ID `b7swgk5n` rather than those JSON records.
 
 ### Timezone policy
 
