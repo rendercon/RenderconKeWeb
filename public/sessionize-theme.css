@@ -1,0 +1,238 @@
+/* Loaded inside the iframe. The body prefix gives these rules precedence over
+   Sessionize's stylesheet, which arrives asynchronously. */
+:root {
+  color-scheme: dark;
+  --brand-purple: #6D3AA8;
+  --brand-purple-light: #8B5CF6;
+  --brand-gold: #F4B942;
+  --brand-dark: #0F0B1E;
+  --brand-dark-card: #1A1530;
+  --brand-dark-border: #2D2550;
+}
+
+body {
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body #sessionize.sessionize-wrapper {
+  font-family: var(--agenda-font, 'Poppins', sans-serif);
+  color: #e2e8f0;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+body #sessionize.sessionize-wrapper .sz-day__title {
+  padding: 8px 0 24px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--brand-dark-border);
+  text-align: left;
+  color: #fff;
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+body #sessionize.sessionize-wrapper .sz-cssgrid {
+  column-gap: 12px;
+}
+
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-cssgrid__track-label {
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: var(--brand-dark-card);
+  color: #c084fc;
+  border: 1px solid var(--brand-dark-border);
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-cssgrid__time-label {
+  padding: 14px 0;
+  color: var(--brand-gold);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-cssgrid__time-separator {
+  border-top: 1px solid var(--brand-dark-border);
+}
+
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session {
+  padding-bottom: 10px;
+}
+
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session__card {
+  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(109, 58, 168, 0.16), transparent), var(--brand-dark-card);
+  color: #f1f5f9;
+  border: 1px solid var(--brand-dark-border);
+  border-radius: 12px;
+  box-shadow: none;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session--service .sz-session__card {
+  padding: 14px 20px;
+  border-color: var(--brand-dark-border);
+  background: rgba(26, 21, 48, 0.5);
+}
+
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session__card:hover,
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session--service .sz-session__card:hover,
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session__card:focus-within {
+  background-color: rgba(109, 58, 168, 0.22);
+  border-color: var(--brand-purple-light);
+  box-shadow: none;
+}
+
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session--plenum .sz-session__card {
+  align-items: flex-start;
+  text-align: left;
+}
+
+body #sessionize.sessionize-wrapper .sz-session__title,
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session--plenum .sz-session__title {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+body #sessionize.sessionize-wrapper .sz-session__meta-group {
+  margin-bottom: 8px;
+}
+
+body #sessionize.sessionize-wrapper .sz-session__time {
+  color: var(--brand-gold);
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 1;
+}
+
+body #sessionize.sessionize-wrapper .sz-session__room,
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session__room {
+  padding: 3px 8px;
+  margin-right: 8px;
+  background: rgba(109, 58, 168, 0.18);
+  color: #c084fc;
+  border: 1px solid var(--brand-dark-border);
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: none;
+}
+
+body #sessionize.sessionize-wrapper .sz-session__speakers li {
+  margin-top: 6px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+body #sessionize.sessionize-wrapper a:hover,
+body #sessionize.sessionize-wrapper a:focus,
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session__card a:hover,
+body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session__card a:focus {
+  color: #e9d5ff;
+  box-shadow: none;
+  opacity: 1;
+}
+
+body #sessionize.sessionize-wrapper a:focus-visible,
+body #sessionize.sessionize-wrapper button:focus-visible {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+body #sessionize.sessionize-wrapper .sz-modal-overlay {
+  background: rgba(15, 11, 30, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+body #sessionize.sessionize-wrapper .sz-modal-container-inner {
+  max-height: 100%;
+}
+
+body #sessionize.sessionize-wrapper .sz-modal {
+  width: calc(100vw - 32px);
+  max-width: 620px;
+  max-height: calc(var(--agenda-viewport-height, 100vh) - 48px);
+  overflow-y: auto;
+  padding: 32px;
+  background: var(--brand-dark-card);
+  color: #cbd5e1;
+  border: 1px solid var(--brand-dark-border);
+  border-radius: 16px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+body #sessionize.sessionize-wrapper .sz-modal__close {
+  padding: 12px !important;
+  color: #cbd5e1;
+  background: var(--brand-dark-card);
+  border-color: var(--brand-dark-border);
+  border-radius: 0 16px 0 12px;
+  cursor: pointer;
+}
+
+body #sessionize.sessionize-wrapper .sz-session.sz-session--full .sz-session__title,
+body #sessionize.sessionize-wrapper .sz-speaker.sz-speaker--full .sz-speaker__name {
+  padding-right: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+body #sessionize.sessionize-wrapper .sz-session.sz-session--full .sz-session__description,
+body #sessionize.sessionize-wrapper .sz-speaker.sz-speaker--full .sz-speaker__bio {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+body #sessionize.sessionize-wrapper .sz-session.sz-session--full .sz-session__speakers li,
+body #sessionize.sessionize-wrapper .sz-speaker.sz-speaker--full .sz-speaker__tagline,
+body #sessionize.sessionize-wrapper .sz-speaker__links .sz-speaker__link {
+  color: #c084fc;
+  font-weight: 500;
+  border-color: var(--brand-dark-border);
+}
+
+body #sessionize.sessionize-wrapper .sz-session.sz-session--full .sz-session__room,
+body #sessionize.sessionize-wrapper .sz-session.sz-session--full .sz-session__time {
+  background: rgba(109, 58, 168, 0.18);
+  color: var(--brand-gold);
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+body #sessionize.sessionize-wrapper .sz-powered-by,
+body #sessionize.sessionize-wrapper .sz-powered-by :is(a, span, strong) {
+  color: #94a3b8;
+}
+
+body #sessionize.sessionize-wrapper .sz-spinner,
+body .sz-spinner {
+  background: var(--brand-purple-light);
+}
+
+@media (max-width: 639px) {
+  body #sessionize.sessionize-wrapper .sz-day__title {
+    padding-bottom: 20px;
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session__card,
+  body #sessionize.sessionize-wrapper .sz-cssgrid .sz-session--service .sz-session__card {
+    padding: 16px;
+  }
+
+  body #sessionize.sessionize-wrapper .sz-modal {
+    padding: 24px 20px;
+  }
+}
