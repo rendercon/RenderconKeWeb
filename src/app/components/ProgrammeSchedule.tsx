@@ -39,21 +39,27 @@ export default function ProgrammeSchedule({ compact = false }: { compact?: boole
     if (!frame) return;
 
     setStatus('loading');
+    let active = true;
     let observer: ResizeObserver | undefined;
     const timeout = window.setTimeout(() => setStatus('error'), 20000);
 
     const syncViewport = () => {
+      const root = frame.contentDocument?.documentElement;
+      if (!active || !root) return;
+
       const bounds = frame.getBoundingClientRect();
       const top = Math.max(0, -bounds.top);
       const height = Math.max(0, Math.min(bounds.bottom, window.innerHeight) - Math.max(0, bounds.top));
-      const style = frame.contentDocument?.documentElement.style;
-      style?.setProperty('--agenda-viewport-top', `${top}px`);
-      style?.setProperty('--agenda-viewport-height', `${height}px`);
+      root.style.setProperty('--agenda-viewport-top', `${top}px`);
+      root.style.setProperty('--agenda-viewport-height', `${height}px`);
     };
 
     frame.onload = () => {
       const doc = frame.contentDocument;
-      if (!doc?.body.hasAttribute('data-sessionize-embed')) return;
+      const root = doc?.documentElement;
+      const head = doc?.head;
+      const body = doc?.body;
+      if (!active || !doc || !root || !head || !body?.hasAttribute('data-sessionize-embed')) return;
 
       // Reuse Next's self-hosted font faces and the site's current palette in
       // the separate embed document, without loading another font service.
@@ -67,15 +73,18 @@ export default function ProgrammeSchedule({ compact = false }: { compact?: boole
           return [];
         }
       }).join('\n');
-      doc.head.appendChild(fontStyles);
+      head.appendChild(fontStyles);
       const rootStyles = getComputedStyle(document.documentElement);
       for (const token of ['--brand-purple', '--brand-purple-light', '--brand-gold', '--brand-dark', '--brand-dark-card', '--brand-dark-border']) {
-        doc.documentElement.style.setProperty(token, rootStyles.getPropertyValue(token));
+        root.style.setProperty(token, rootStyles.getPropertyValue(token));
       }
-      doc.documentElement.style.setProperty('--agenda-font', getComputedStyle(document.body).fontFamily);
+      root.style.setProperty('--agenda-font', getComputedStyle(document.body).fontFamily);
 
       const update = () => {
-        frame.style.height = `${Math.max(240, Math.ceil(doc.body.getBoundingClientRect().height))}px`;
+        // A queued resize may belong to the document replaced by a retry or
+        // navigation. Ignore it until the current iframe body is ready.
+        if (!active || frame.contentDocument !== doc || doc.body !== body) return;
+        frame.style.height = `${Math.max(240, Math.ceil(body.getBoundingClientRect().height))}px`;
         if (doc.getElementById('sessionize')) {
           window.clearTimeout(timeout);
           setStatus('ready');
@@ -85,7 +94,7 @@ export default function ProgrammeSchedule({ compact = false }: { compact?: boole
 
       observer?.disconnect();
       observer = new ResizeObserver(update);
-      observer.observe(doc.body);
+      observer.observe(body);
       update();
     };
 
@@ -94,6 +103,7 @@ export default function ProgrammeSchedule({ compact = false }: { compact?: boole
     frame.srcdoc = EMBED_DOCUMENT;
 
     return () => {
+      active = false;
       window.clearTimeout(timeout);
       observer?.disconnect();
       frame.onload = null;
