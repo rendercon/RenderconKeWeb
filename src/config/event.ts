@@ -38,6 +38,9 @@ export const EVENT_CONFIG = {
   // API endpoints
   api: {
     sessionize: {
+      // The agenda embed has its own published view; speaker JSON uses the
+      // existing API export above.
+      agendaEmbed: "https://sessionize.com/api/v2/b7swgk5n/view/GridSmart",
       all: `${SESSIONIZE_BASE_URL}/All`,
       gridSmart: `${SESSIONIZE_BASE_URL}/GridSmart`,
       sessions: `${SESSIONIZE_BASE_URL}/Sessions`,
