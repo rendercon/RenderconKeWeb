@@ -1,39 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-
-import LogoDevKenya from '../images/logos/devkenya_logo.png';
-import LogoReactDevsKe from '../images/logos/ReactdevskeLogo.png';
-import LogoOscaNairobi from '../images/logos/oscarnrb.png';
-import LogoSpaceYaTech from '../images/logos/SPACEYATECH_LOGO.png';
-import LogoSupaBase from '../images/logos/supabase_logo_wordmark.png';
-import LogoLemonade from '../images/logos/lemonade.png';
-import LogoPayd from '../images/logos/payd.png';
-import LogoCloudinary from '../images/logos/cloudinary_logo_white.png';
-import LogoMentorlist from '../images/logos/mentorlst.png';
-
-type Partner = {
-  name: string;
-  logo: StaticImageData | null;
-  link: string;
-  tier: 'sponsor' | 'organiser' | 'community';
-  height: number;
-  width: number;
-};
-
-const partners: Partner[] = [
-  { name: 'Cloudinary', logo: LogoCloudinary, link: 'https://cloudinary.com/', tier: 'sponsor', height: 32, width: 130 },
-  { name: 'Supabase', logo: LogoSupaBase, link: 'https://supabase.com/', tier: 'sponsor', height: 32, width: 120 },
-  { name: 'Lemonade', logo: LogoLemonade, link: 'https://mylemonade.io/', tier: 'sponsor', height: 36, width: 100 },
-  { name: 'Dev Kenya', logo: LogoDevKenya, link: 'https://smeresponse.clinic/2023/10/24/nurturing-mental-wellness-insights-from-entrepreneur-constanza/', tier: 'sponsor', height: 36, width: 100 },
-  { name: 'ReactDevsKe', logo: LogoReactDevsKe, link: 'https://reactdevske.org', tier: 'organiser', height: 36, width: 100 },
-  { name: 'Payd', logo: LogoPayd, link: 'https://paydexp.com/', tier: 'community', height: 36, width: 100 },
-  { name: 'OSCA Nairobi', logo: LogoOscaNairobi, link: 'https://github.com/OSCA-Nairobi', tier: 'community', height: 36, width: 100 },
-  { name: 'Space Ya Tech', logo: LogoSpaceYaTech, link: 'https://spaceyatech.com/', tier: 'community', height: 36, width: 100 },
-  { name: 'Mentorlist', logo: LogoMentorlist, link: 'https://mentorlist.io/', tier: 'community', height: 36, width: 100 },
-];
+import Sponsors from './Sponsors';
 
 const sponsorshipTiers = [
   {
@@ -86,107 +55,9 @@ export default function Partners() {
       />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Current Partners & Sponsors */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-24"
-        >
-          <div className="text-center mb-12">
-            <span className="section-label mb-4 inline-flex">Sponsors & Partners</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mt-4">
-              Backed by companies that<br />
-              <span className="gradient-text">invest in developers</span>
-            </h2>
-            <p className="mt-4 text-slate-400 max-w-xl mx-auto">
-              These organisations believe in the East African developer ecosystem
-              and invest in the community that builds it.
-            </p>
-          </div>
-
-          {/* Organiser */}
-          <div className="mb-8">
-            <p className="text-center text-xs font-semibold uppercase tracking-widest text-brand-gold mb-5">Organiser</p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              {partners.filter(p => p.tier === 'organiser').map((partner, i) => (
-                <motion.a
-                  key={partner.name}
-                  href={partner.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.06 }}
-                  className="partner-logo-card relative w-[160px] h-[80px] flex items-center justify-center rounded-2xl border border-brand-gold/30 bg-brand-dark-card/50"
-                >
-                  {partner.logo && (
-                    <div className="relative w-full h-full p-3">
-                      <Image src={partner.logo} alt={partner.name} fill className="object-contain filter brightness-200" unoptimized />
-                    </div>
-                  )}
-                </motion.a>
-              ))}
-            </div>
-          </div>
-
-          {/* Sponsors */}
-          <div className="mb-8">
-            <p className="text-center text-xs font-semibold uppercase tracking-widest text-purple-400 mb-5">Sponsors</p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              {partners.filter(p => p.tier === 'sponsor').map((partner, i) => (
-                <motion.a
-                  key={partner.name}
-                  href={partner.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.06 }}
-                  className="partner-logo-card relative w-[160px] h-[80px] flex items-center justify-center rounded-2xl border border-brand-dark-border bg-brand-dark-card/50"
-                >
-                  {partner.logo && (
-                    <div className="relative w-full h-full p-3">
-                      <Image src={partner.logo} alt={partner.name} fill className="object-contain filter brightness-200" unoptimized />
-                    </div>
-                  )}
-                </motion.a>
-              ))}
-            </div>
-          </div>
-
-          {/* Community Partners */}
-          <div>
-            <p className="text-center text-xs font-semibold uppercase tracking-widest text-slate-500 mb-5">Community Partners</p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              {partners.filter(p => p.tier === 'community').map((partner, i) => (
-                <motion.a
-                  key={partner.name}
-                  href={partner.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.06 }}
-                  className="partner-logo-card relative w-[160px] h-[80px] flex items-center justify-center rounded-2xl border border-brand-dark-border bg-brand-dark-card/50"
-                >
-                  {partner.logo
-                    ? (
-                      <div className="relative w-full h-full p-3">
-                        <Image src={partner.logo} alt={partner.name} fill className="object-contain filter brightness-200" unoptimized />
-                      </div>
-                    )
-                    : <span className="text-sm font-bold text-slate-300 px-4 text-center leading-tight">{partner.name}</span>
-                  }
-                </motion.a>
-              ))}
-            </div>
-          </div>
-        </motion.div>
+        <div className="mb-20">
+          <Sponsors />
+        </div>
 
         {/* Partnership Opportunities */}
         <motion.div

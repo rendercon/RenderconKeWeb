@@ -1,200 +1,33 @@
-'use client';
-
-import React from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { FaTwitter, FaLinkedin, FaGlobe, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
-import { IconWrapper } from '../../components/IconWrapper';
-import LogoLemonade from '../images/logos/lemonage_logo.jpg';
-import LogoPayd from '../images/logos/payd.png';
-import LogoReactDevsKe from '../images/logos/reactdevske.png';
-import LogoCloudinaryBlue from "../images/logos/cloudinary_stacked_logo_box.png";
+import type { Metadata } from 'next';
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Sponsors from '../components/Sponsors';
 import Technologies from '../components/Technologies';
+import { EVENT_CONFIG } from '@/config/event';
 
-type Sponsors = {
-  name: string;
-  logo: StaticImageData;
-  link: string;
-  description: string;
-  socials: { twitter?: string; linkedin?: string; facebook?: string; instagram?: string; youtube?: string; website?: string };
+export const metadata: Metadata = {
+  title: `Sponsors & Partners — RenderCon Kenya ${EVENT_CONFIG.year}`,
+  description: `Meet the sponsors and partners supporting RenderCon Kenya ${EVENT_CONFIG.year}, and the supporters of previous editions.`,
 };
 
-const sponsors: Sponsors[] = [
-  {
-    name: 'Cloudinary',
-    logo: LogoCloudinaryBlue,
-    link: 'https://cloudinary.com/',
-    description:
-      'Cloudinary is a cloud-based media management platform that enables developers and businesses to store, optimize, transform, and deliver images and videos with powerful APIs, AI-powered editing tools, and seamless integrations for scalable, high-performing digital experiences.',
-    socials: {
-      twitter: 'https://twitter.com/cloudinary',
-      linkedin: 'https://www.linkedin.com/company/cloudinary',
-      facebook: 'https://facebook.com/cloudinary',
-      instagram: 'https://instagram.com/cloudinary',
-      youtube: 'https://www.youtube.com/cloudinary',
-      website: 'https://cloudinary.com/',
-    },
-  },
-  {
-    name: 'ReactDevsKe',
-    logo: LogoReactDevsKe,
-    link: 'https://reactdevske.org',
-    description:
-      'ReactDevsKe is Kenya\'s leading community for React developers, fostering collaboration and growth through events, learning opportunities, and networking. It supports both beginners and experienced developers, driving innovation and development within the local tech ecosystem.',
-    socials: {
-      twitter: 'https://twitter.com/ReactDevsKe',
-      linkedin: 'https://www.linkedin.com/company/reactdevske',
-      website: 'https://reactdevske.org',
-    },
-  }
-];
-
-function Sponsorship() {
-  const addr = 'sponsors';
-  const tld = 'rendercon.org';
-
-  // Email click handler
-  const handleEmailClick = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    window.location.href = `mailto:${addr}@${tld}`;
-  };
-
+export default function Sponsorship() {
   return (
     <>
       <Navbar />
-      <section id="sponsors" aria-label="Sponsors" className="pt-10 sm:pt-32 sm:pb-20 bg-[#240046] font-mono">
-        <div className="container mx-auto px-6">
-          {/* Title */}
-          <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-purple-300 sm:text-5xl">
-            Our Sponsors
-          </h2>
-
-          {/* Attendees as Sponsors */}
-          <p className="text-center text-xl text-white mt-8">
-            A big thank you to our attendees, who are our main sponsors, for making this event possible!
-          </p>
-
-          {/* Sponsors List */}
-          <div className="mx-auto grid grid-cols-1 2xl:grid-cols-2 gap-16 mt-20 items-center">
-            {sponsors.length > 0 ? (
-              sponsors.map((sponsor) => (
-                <div
-                  key={sponsor.name}
-                  className="bg-[white] rounded-lg shadow-lg p-4 flex flex-col items-center min-h-[550px]"
-                >
-                  <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
-                    <Image
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      unoptimized
-                      height={150}
-                      width={300}
-                    />
-                  </a>
-                  <h3 className="text-xl font-semibold mt-0 text-black">
-                    {sponsor.name}
-                  </h3>
-                  <p className="text-center text-gray-700 mt-2">
-                    {sponsor.description}
-                  </p>
-                  
-                  {/* Social Media Links */}
-                  <div className="flex gap-4 mt-4">
-                    {sponsor.socials.twitter && (
-                      <a
-                        href={sponsor.socials.twitter}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <IconWrapper icon={FaTwitter} className="text-purple-500 text-2xl hover:text-yellow-500" />
-                      </a>
-                    )}
-                    {sponsor.socials.linkedin && (
-                      <a
-                        href={sponsor.socials.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <IconWrapper icon={FaLinkedin} className="text-purple-500 text-2xl hover:text-yellow-500" />
-                      </a>
-                    )}
-                    {sponsor.socials.facebook && (
-                      <a
-                        href={sponsor.socials.facebook}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <IconWrapper icon={FaFacebook} className="text-purple-500 text-2xl hover:text-yellow-500" />
-                      </a>
-                    )}
-                    {sponsor.socials.instagram && (
-                      <a
-                        href={sponsor.socials.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <IconWrapper icon={FaInstagram} className="text-purple-500 text-2xl hover:text-yellow-500" />
-                      </a>
-                    )}
-                    {sponsor.socials.youtube && (
-                      <a
-                        href={sponsor.socials.youtube}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <IconWrapper icon={FaYoutube} className="text-purple-500 text-2xl hover:text-yellow-500" />
-                      </a>
-                    )}
-                    {sponsor.socials.website && (
-                      <a
-                        href={sponsor.socials.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <IconWrapper icon={FaGlobe} className="text-purple-500 text-2xl hover:text-yellow-500" />
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))
-            ) : (
-              <p className="text-slate-300 text-xl font-mono text-center">
-                Leverage our platform to put your brand on the spotlight. Become a
-                part of RenderCon Kenya&apos;s mission to nurture innovation and
-                best practices within the React ecosystem.
-                <br /> Reach out for our sponsorship packages{' '}
-                <a
-                  href="#"
-                  onClick={handleEmailClick}
-                  className="hover:underline text-yellow-500"
-                >
-                  here
-                </a>
-              </p>
-            )}
+      <main className="pt-28 sm:pt-32">
+        <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8" aria-labelledby="sponsorships-title">
+          <h1 id="sponsorships-title" className="mb-4 text-center text-3xl font-bold text-white sm:text-4xl">Supporting RenderCon Kenya {EVENT_CONFIG.year}</h1>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-slate-400">Thank you to our sponsors, partners, and attendees for making RenderCon possible.</p>
+          <Sponsors />
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
+            <a href={`mailto:${EVENT_CONFIG.emails.sponsors}`} className="btn-primary">Become a Sponsor</a>
+            <Link href="/partners#prospectus" className="btn-secondary">View Sponsorship Prospectus</Link>
           </div>
-
-          {/* Call to Sponsor Button */}
-          <div className="flex justify-center pt-16">
-            <a
-              href="#"
-              onClick={handleEmailClick}
-              className="text-md md:text-lg bg-purple-500 hover:bg-yellow-500 text-white py-3 px-6 rounded-lg transition-colors duration-300"
-              >
-              Become a Sponsor
-            </a>
-          </div>
-        </div>
-      </section>
-      <div className="mt-16">
+        </section>
         <Technologies />
-      </div>
+      </main>
       <Footer />
     </>
   );
 }
-
-export default Sponsorship;

@@ -3,21 +3,11 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Metadata } from 'next';
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-// Logos
-import LogoCloudinary  from '../images/logos/cloudinary_logo_white.png';
-import LogoSupabase    from '../images/logos/supabase_logo_wordmark.png';
-import LogoLemonade    from '../images/logos/lemonade.png';
-import LogoPayd        from '../images/logos/payd.png';
-import LogoDevKenya    from '../images/logos/devkenya_logo.png';
-import LogoReactDevsKe from '../images/logos/ReactdevskeLogo.png';
-import LogoMentorlist  from '../images/logos/mentorlst.png';
-import LogoOscaNairobi from '../images/logos/oscarnrb.png';
-import LogoSpaceYaTech from '../images/logos/SPACEYATECH_LOGO.png';
+import Sponsors from '../components/Sponsors';
 
 // Event photos
 import Photo1 from '../images/assets/conf_web_asset_1.webp';
@@ -36,66 +26,6 @@ const impactStats = [
   { value: '20+',    label: 'Technical Sessions (2025)',       desc: 'Talks, workshops, and lightning sessions per edition',   color: 'gold'   },
   { value: '5+',     label: 'Countries Represented',          desc: 'Kenya, Uganda, Tanzania, Rwanda, Ethiopia, and beyond',  color: 'purple' },
   { value: '3rd',    label: 'Conference Edition in 2026',      desc: 'Growing year on year since the inaugural 2023 edition',  color: 'gold'   },
-];
-
-const partners = [
-  { name: 'Cloudinary',          logo: LogoCloudinary,  link: 'https://cloudinary.com/',             tier: 'Sponsor'   },
-  { name: 'Supabase',            logo: LogoSupabase,    link: 'https://supabase.com/',               tier: 'Sponsor'   },
-  { name: 'Lemonade',            logo: LogoLemonade,    link: 'https://mylemonade.io/',              tier: 'Sponsor'   },
-  { name: 'ReactDevsKe',         logo: LogoReactDevsKe, link: 'https://reactdevske.org',             tier: 'Organiser' },
-  { name: 'Dev Kenya',           logo: LogoDevKenya,    link: 'https://smeresponse.clinic/2023/10/24/nurturing-mental-wellness-insights-from-entrepreneur-constanza/',                tier: 'Sponsor'   },
-  { name: 'Payd',                logo: LogoPayd,        link: 'https://paydexp.com/',                tier: 'Community' },
-  { name: 'OSCA Nairobi',        logo: LogoOscaNairobi, link: 'https://github.com/OSCA-Nairobi',     tier: 'Community' },
-  { name: 'Space Ya Tech',       logo: LogoSpaceYaTech, link: 'https://spaceyatech.com/',            tier: 'Community' },
-  { name: 'Mentorlist',          logo: LogoMentorlist,  link: 'https://mentorlist.io/',              tier: 'Community' },
-];
-
-const spotlights = [
-  {
-    name: 'Cloudinary',
-    role: 'Sponsor',
-    tagline: 'Media infrastructure for the modern web.',
-    description:
-      'Cloudinary supported RenderCon developers with workshops on modern media workflows, image optimisation, and web performance — skills that directly impact what East African engineers ship.',
-    link: 'https://cloudinary.com/',
-    color: 'purple',
-  },
-  {
-    name: 'Supabase',
-    role: 'Sponsor',
-    tagline: 'The open source Firebase alternative.',
-    description:
-      'Supabase empowered builders at RenderCon to ship full-stack applications faster, bringing open source database tools and auth directly to the East African developer community.',
-    link: 'https://supabase.com/',
-    color: 'gold',
-  },
-  {
-    name: 'Lemonade',
-    role: 'Sponsor',
-    tagline: 'Built for the modern African market.',
-    description:
-      'Lemonade stepped up as a sponsor for RenderCon, investing in the East African developer ecosystem and aligning their mission of accessible, modern financial tools with the builders shaping Africa\'s tech future.',
-    link: 'https://mylemonade.io/',
-    color: 'purple',
-  },
-  {
-    name: 'Dev Kenya',
-    role: 'Sponsor',
-    tagline: 'Growing Kenya\'s developer ecosystem.',
-    description:
-      'Dev Kenya amplified RenderCon\'s reach by rallying their wide community of Kenyan developers — helping grow awareness, bring more builders into the room, and strengthen the East African React ecosystem.',
-    link: 'https://smeresponse.clinic/2023/10/24/nurturing-mental-wellness-insights-from-entrepreneur-constanza/',
-    color: 'gold',
-  },
-  {
-    name: 'ReactDevsKe',
-    role: 'Organiser',
-    tagline: 'RenderCon is brought to you by ReactDevsKe.',
-    description:
-      'ReactDevsKe is the community behind RenderCon — East Africa\'s largest React developer community, growing the ecosystem year-round through meetups, mentorship, newsletters, and East Africa\'s flagship React conference.',
-    link: 'https://reactdevske.org',
-    color: 'purple',
-  },
 ];
 
 const whyCards = [
@@ -282,128 +212,9 @@ export default function PartnersPage() {
           </div>
         </section>
 
-        {/* ── SECTION 3 — Trusted By ───────────────────────── */}
-        <section className="py-12 sm:py-16 relative overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(109,58,168,0.07) 0%, transparent 70%)' }} />
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-14">
-              <SectionLabel>Past Partners</SectionLabel>
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mt-4">
-                Trusted By Organisations<br />
-                <span className="gradient-text">Investing In Developers</span>
-              </h2>
-              <p className="mt-5 text-lg text-slate-400 max-w-2xl mx-auto">
-                These organisations have partnered with RenderCon and the ReactDevsKe community to support East African developers.
-              </p>
-            </motion.div>
-
-            {/* Organiser */}
-            <div className="mb-10">
-              <p className="text-xs font-semibold uppercase tracking-widest text-brand-gold mb-4">Organiser</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                {partners.filter(p => p.tier === 'Organiser').map((p, i) => (
-                  <motion.a key={p.name} href={p.link} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.05 }}
-                    className="partner-logo-card relative flex flex-col items-center justify-center gap-2 rounded-2xl border border-brand-gold/30 bg-brand-dark-card/60 h-[110px] overflow-hidden"
-                  >
-                    {p.logo && (
-                      <div className="relative w-full flex-1 px-4 pt-3">
-                        <Image src={p.logo} alt={p.name} fill className="object-contain brightness-200 filter" unoptimized />
-                      </div>
-                    )}
-                    <span className="text-xs text-slate-500 font-medium pb-2">{p.name}</span>
-                    <span className="absolute top-2 right-2 text-[9px] font-semibold uppercase tracking-wider text-brand-gold border border-brand-gold/30 rounded-full px-1.5 py-0.5">Organiser</span>
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-
-            {/* Sponsors */}
-            <div className="mb-10">
-              <p className="text-xs font-semibold uppercase tracking-widest text-purple-400 mb-4">Sponsors</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                {partners.filter(p => p.tier === 'Sponsor').map((p, i) => (
-                  <motion.a key={p.name} href={p.link} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.05 }}
-                    className="partner-logo-card relative flex flex-col items-center justify-center gap-2 rounded-2xl border border-brand-dark-border bg-brand-dark-card/60 h-[110px] overflow-hidden"
-                  >
-                    {p.logo && (
-                      <div className="relative w-full flex-1 px-4 pt-3">
-                        <Image src={p.logo} alt={p.name} fill className="object-contain brightness-200 filter" unoptimized />
-                      </div>
-                    )}
-                    <span className="text-xs text-slate-500 font-medium pb-2">{p.name}</span>
-                    <span className="absolute top-2 right-2 text-[9px] font-semibold uppercase tracking-wider text-purple-400 border border-purple-500/30 rounded-full px-1.5 py-0.5">Sponsor</span>
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-
-            {/* Community Partners */}
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">Community Partners</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                {partners.filter(p => p.tier === 'Community').map((p, i) => (
-                  <motion.a key={p.name} href={p.link} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.05 }}
-                    className="partner-logo-card relative flex flex-col items-center justify-center gap-2 rounded-2xl border border-brand-dark-border bg-brand-dark-card/60 h-[110px] overflow-hidden"
-                  >
-                    {p.logo
-                      ? (
-                        <div className="relative w-full flex-1 px-4 pt-3">
-                          <Image src={p.logo} alt={p.name} fill className="object-contain brightness-200 filter" unoptimized />
-                        </div>
-                      )
-                      : <span className="flex-1 flex items-center text-sm font-bold text-slate-300 text-center leading-tight px-4">{p.name}</span>
-                    }
-                    {p.logo && <span className="text-xs text-slate-500 font-medium pb-2">{p.name}</span>}
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── SECTION 4 — Partner Spotlights ───────────────── */}
-        <section className="py-12 sm:py-16 relative overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 70% 50% at 70% 50%, rgba(109,58,168,0.06) 0%, transparent 70%)' }} />
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-3xl mb-14">
-              <SectionLabel>Partner Spotlights</SectionLabel>
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mt-4">
-                Partners Who{' '}
-                <span className="gradient-text">Showed Up</span>
-              </h2>
-              <p className="mt-5 text-lg text-slate-400 leading-relaxed">
-                These organisations didn&apos;t just put a logo on a page — they showed up for the East African developer community.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {spotlights.map((s, i) => {
-                const isPurple = s.color === 'purple';
-                const isOrganiser = s.role === 'Organiser';
-                const badgeClass = isOrganiser
-                  ? 'bg-brand-gold/10 text-brand-gold border border-brand-gold/30'
-                  : s.role === 'Sponsor'
-                  ? 'bg-purple-500/10 text-purple-400 border border-purple-500/30'
-                  : 'bg-slate-500/10 text-slate-400 border border-slate-500/20';
-                return (
-                  <motion.div key={s.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }} className={`bento-card group relative flex flex-col ${isOrganiser ? 'md:col-span-2 lg:col-span-3' : ''} gradient-border`}>
-                    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ background: isPurple ? 'radial-gradient(ellipse at 20% 20%, rgba(109,58,168,0.18) 0%, transparent 60%)' : 'radial-gradient(ellipse at 20% 20%, rgba(244,185,66,0.1) 0%, transparent 60%)' }} />
-                    <div className="relative z-10 flex flex-col flex-1">
-                      <div className="flex items-start justify-between gap-3 mb-3">
-                        <h3 className={`text-lg font-bold ${isPurple ? 'gradient-text-purple' : 'text-brand-gold'}`}>{s.name}</h3>
-                        <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider flex-shrink-0 ${badgeClass}`}>{s.role}</span>
-                      </div>
-                      <p className="text-xs text-slate-500 mb-4 font-medium">{s.tagline}</p>
-                      <p className="text-sm text-slate-400 leading-relaxed flex-1">{s.description}</p>
-                      <a href={s.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 mt-5 text-xs text-purple-400 hover:text-purple-300 transition-colors font-medium">
-                        Visit {s.name}
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
-                      </a>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+        <section className="py-12 sm:py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Sponsors />
           </div>
         </section>
 
