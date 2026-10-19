@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '../images/logos/rendercon-logo.svg';
 import ReactDevsKeLogo from '../images/logos/ReactdevskeLogo.png';
+import { EVENT_CONFIG } from '@/config/event';
 
 const footerLinks = {
   Conference: [
@@ -92,7 +93,7 @@ export default function Footer() {
             {/* ReactDevsKe */}
             <div className="mt-6 flex items-center gap-3">
               <span className="text-xs text-slate-600">By</span>
-              <a href="https://reactdevske.org" target="_blank" rel="noopener noreferrer">
+              <a href={EVENT_CONFIG.links.community} target="_blank" rel="noopener noreferrer">
               <Image
                 src={ReactDevsKeLogo}
                 alt="ReactDevsKe"
@@ -150,7 +151,7 @@ export default function Footer() {
           <p className="text-xs text-slate-600">
             Organised by{' '}
             <a
-              href="https://reactdevske.org"
+              href={EVENT_CONFIG.links.community}
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 hover:text-white transition-colors"

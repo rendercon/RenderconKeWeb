@@ -27,6 +27,7 @@ export const EVENT_CONFIG = {
   
   // External links
   links: {
+    community: "https://reactdevske.com",
     tickets: "https://zenlipa.co.ke/events/k6NMNf",
     gallery2023: "https://bit.ly/rcke23pics",
     gallery2024: "https://bit.ly/rcke24pics",
@@ -109,32 +110,4 @@ export const getScheduleLink = () => {
   const previousYear = currentYear - 1;
   const previousYearSchedule = EVENT_CONFIG.links[`schedule${previousYear}` as keyof typeof EVENT_CONFIG.links];
   return previousYearSchedule as string || "/schedule";
-};
-
-// Sponsors configuration by year
-export const SPONSORS_BY_YEAR: Record<number, Array<{name: string; logo: string; link: string; height: number; width: number}>> = {
-  2026: [
-    // Add 2025 sponsors here when available
-  ],
-  2025: [
-    {
-      name: "Cloudinary",
-      logo: "/images/logos/cloudinary_logo_white.png",
-      link: "https://cloudinary.com/",
-      height: 200,
-      width: 500,
-    }
-  ],
-};
-
-// Helper to get current or show hall of fame
-export const getCurrentSponsors = () => {
-  const currentYear = EVENT_CONFIG.year;
-  const sponsors = SPONSORS_BY_YEAR[currentYear];
-  
-  return {
-    sponsors: sponsors || [],
-    showHallOfFame: !sponsors || sponsors.length === 0,
-    currentYear,
-  };
 };

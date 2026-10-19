@@ -403,7 +403,7 @@ images, API retry, and the unchanged 2024 archive and redirect.
 To update the site for a new conference edition:
 
 1. **Update Configuration** — Modify `EVENT_CONFIG` in `src/config/event.ts` with new dates, venue, URLs, and social links
-2. **Update Sponsors** — Add new sponsors to `SPONSORS_BY_YEAR`
+2. **Update Sponsors** — Update `SPONSORS_BY_YEAR` in `src/config/sponsors.ts` (categories and exact labels). The shared `Sponsors` component serves the homepage, `/partners`, and `/sponsorships`. Keep past-edition records and `HISTORICAL_SUPPORTERS`; current names are excluded from Past Sponsors automatically. Logos use existing static imports; missing logos render the organization name and category.
 3. **Update Programme** — Update the centralized Sessionize base URL, event year, and explicit timezone policy; verify the real exports
 4. **Update Content** — Update date/year-specific copy in components
 5. **Update Speakers and Sessions** — Manage public programme data in Sessionize; keep prior-edition records separate
